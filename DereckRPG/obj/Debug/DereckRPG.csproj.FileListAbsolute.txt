@@ -12,3 +12,11 @@ C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\De
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.csproj.GenerateResource.Cache
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.exe
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.pdb
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\EntityFramework.dll
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\MySql.Data.dll
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\EntityFramework.xml
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\Newtonsoft.Json.xml
