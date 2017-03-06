@@ -43,6 +43,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Faker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.Data.1.0.7\lib\net45\Faker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
       <Private>True</Private>
@@ -101,6 +105,8 @@
     <Compile Include="entities\enums\Race.cs" />
     <Compile Include="entities\enums\Rarete.cs" />
     <Compile Include="entities\EtreVivant.cs" />
+    <Compile Include="entities\generator\EntityGenerator.cs" />
+    <Compile Include="entities\generator\TypeEnum.cs" />
     <Compile Include="entities\Items.cs" />
     <Compile Include="entities\json\JsonManager.cs" />
     <Compile Include="entities\Monster.cs" />
@@ -110,6 +116,7 @@
     <Compile Include="entities\Pnj.cs" />
     <Compile Include="entities\Position.cs" />
     <Compile Include="entities\Quest.cs" />
+    <Compile Include="entities\reflection\Reflectionner.cs" />
     <Compile Include="entities\Regions.cs" />
     <Compile Include="entities\Stats.cs" />
     <Compile Include="logger\AlertMode.cs" />

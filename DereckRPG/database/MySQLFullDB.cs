@@ -1,5 +1,7 @@
-﻿using DereckRPG.entities;
+﻿using ClassLibrary2.Entities.Generator;
+using DereckRPG.entities;
 using DereckRPG.entities.json;
+using DereckRPG.logger;
 using System.Data.Entity;
 
 namespace DereckRPG.database
@@ -22,6 +24,9 @@ namespace DereckRPG.database
         public DbSet<Regions> regionsTable { get; set; }
         public DbSet<Stats> statsTable { get; set; }
 
+        Logger logger = new Logger("MySQLFullDB", LogMode.CURRENT_FOLDER, AlertMode.OVERLAY, "MYSQL", true);
+
+
         public MySQLFullDB()
             : base(JsonManager.Instance.ReadFile<ConnectionString>(@"..\..\..\jsonconfig\", @"MysqlConfig.json").ToString())
         {
@@ -34,13 +39,20 @@ namespace DereckRPG.database
         {
             if (this.Database.CreateIfNotExists())
             {
-                /*
-                EntityGenerator<Address> generatorAddress = new EntityGenerator<Address>();
-                for (int i = 0; i < 10; i++)
+                EntityGenerator<Planetes> generatorPlanete = new EntityGenerator<Planetes>();
+                for (int i = 0; i < 3; i++)
                 {
-                    AddressTable.Add(generatorAddress.GenerateItem());
+                    planetesTable.Add(generatorPlanete.GenerateItem());
+                    logger.Log("Initalisation Planete:" + i);
                 }
-                */
+
+                EntityGenerator<Regions> generatorRegions = new EntityGenerator<Regions>();
+                for (int i = 0; i < 15; i++)
+                {
+                    regionsTable.Add(generatorRegions.GenerateItem());
+                    logger.Log("Initalisation Regions:" + i);
+                }
+
                 this.SaveChangesAsync();
             }
         }

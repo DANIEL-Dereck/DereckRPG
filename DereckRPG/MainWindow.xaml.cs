@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DereckRPG.logger;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace DereckRPG
         public MainWindow()
         {
             InitializeComponent();
+            Logger logger = new Logger("myLogger", LogMode.CURRENT_FOLDER, AlertMode.OVERLAY, "INIT", true);
+            logger.Log("Initialisation application");
         }
+
+        /*
+        private void btnExempe_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Window();
+            window.Content = new <Page>Admin(); 
+            window.Show();
+        }
+        */
     }
 }
