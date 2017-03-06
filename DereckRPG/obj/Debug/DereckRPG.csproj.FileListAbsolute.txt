@@ -1,0 +1,14 @@
+c:\users\dereck\documents\visual studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\DereckRPG.exe.config
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.csprojResolveAssemblyReference.cache
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\MainWindow.g.cs
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\App.g.cs
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG_MarkupCompile.cache
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG_MarkupCompile.lref
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\DereckRPG.exe
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\Debug\DereckRPG.pdb
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\MainWindow.baml
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.g.resources
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.Properties.Resources.resources
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.csproj.GenerateResource.Cache
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.exe
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\DereckRPG.pdb
