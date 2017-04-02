@@ -1,5 +1,4 @@
-﻿using DereckRPG.entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,26 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DereckRPG.entities;
 
 namespace DereckRPG.views.usercontrols
 {
     /// <summary>
-    /// Logique d'interaction pour PositionUC.xaml
+    /// Logique d'interaction pour ItemUC.xaml
     /// </summary>
-    public partial class PositionUC : UserControlBase
+    public partial class ItemUC : UserControlBase
     {
-        private Position position;
+        private Items item;
 
-        public Position Position
+        public Items Item
         {
-            get { return position; }
-            set {
-                position = value;
-                base.OnPropertyChanged("Position");
+            get { return item; }
+            set { item = value;
+                base.OnPropertyChanged("Item");
             }
         }
 
-        public PositionUC()
+        public ItemUC()
         {
             InitializeComponent();
             base.DataContext = this;

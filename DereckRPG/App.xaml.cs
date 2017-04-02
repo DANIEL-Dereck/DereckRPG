@@ -94,15 +94,5 @@ namespace DereckRPG
         {
             logger.Log("App_Activated");
         }
-
-        #region Testing
-
-
-        private async void TestingZone()
-        {
-            #region AppDBTesting
-            #endregion
-        }
-        #endregion
     }
 }

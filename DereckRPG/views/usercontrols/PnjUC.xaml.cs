@@ -17,22 +17,21 @@ using System.Windows.Shapes;
 namespace DereckRPG.views.usercontrols
 {
     /// <summary>
-    /// Logique d'interaction pour PositionUC.xaml
+    /// Logique d'interaction pour PnjUC.xaml
     /// </summary>
-    public partial class PositionUC : UserControlBase
+    public partial class PnjUC : UserControlBase
     {
-        private Position position;
+        private Pnj pnj;
 
-        public Position Position
+        public Pnj Pnj
         {
-            get { return position; }
-            set {
-                position = value;
-                base.OnPropertyChanged("Position");
+            get { return pnj; }
+            set { pnj = value;
+                base.OnPropertyChanged("Pnj");
             }
         }
 
-        public PositionUC()
+        public PnjUC()
         {
             InitializeComponent();
             base.DataContext = this;

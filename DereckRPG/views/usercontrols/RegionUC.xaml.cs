@@ -17,25 +17,26 @@ using System.Windows.Shapes;
 namespace DereckRPG.views.usercontrols
 {
     /// <summary>
-    /// Logique d'interaction pour PositionUC.xaml
+    /// Logique d'interaction pour RegionUC.xaml
     /// </summary>
-    public partial class PositionUC : UserControlBase
+    public partial class RegionUC : UserControlBase
     {
-        private Position position;
+        private Regions regions;
 
-        public Position Position
+        public Regions Regions
         {
-            get { return position; }
-            set {
-                position = value;
-                base.OnPropertyChanged("Position");
+            get { return regions; }
+            set { regions = value;
+                base.OnPropertyChanged("Regions");
             }
         }
 
-        public PositionUC()
+
+        public RegionUC()
         {
             InitializeComponent();
-            base.DataContext = this;
+            base.dataContext = this;
+
         }
     }
 }

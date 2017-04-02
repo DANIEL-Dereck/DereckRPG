@@ -81,14 +81,41 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="views\usercontrols\base\UserControlBase.cs" />
+    <Compile Include="views\usercontrols\CaracteristiqueUC.xaml.cs">
+      <DependentUpon>CaracteristiqueUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\DonjonUC.xaml.cs">
+      <DependentUpon>DonjonUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\EtreVivantUC.xaml.cs">
+      <DependentUpon>EtreVivantUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ItemUC.xaml.cs">
+      <DependentUpon>ItemUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\MonsterUC.xaml.cs">
+      <DependentUpon>MonsterUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ObjectifUC.xaml.cs">
+      <DependentUpon>ObjectifUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\usercontrols\PlaneteUC.xaml.cs">
       <DependentUpon>PlaneteUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PlayerUC.xaml.cs">
+      <DependentUpon>PlayerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PnjUC.xaml.cs">
+      <DependentUpon>PnjUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\PositionUC.xaml.cs">
       <DependentUpon>PositionUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\QuestUC.xaml.cs">
       <DependentUpon>QuestUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\RegionUC.xaml.cs">
+      <DependentUpon>RegionUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\StatsUC.xaml.cs">
       <DependentUpon>StatsUC.xaml</DependentUpon>
@@ -138,7 +165,39 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="views\usercontrols\CaracteristiqueUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\DonjonUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\EtreVivantUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ItemUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\MonsterUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ObjectifUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\usercontrols\PlaneteUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\PlayerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\PnjUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\usercontrols\QuestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\RegionUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

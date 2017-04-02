@@ -27,7 +27,7 @@ namespace DereckRPG.views.usercontrols
         {
             get { return planete; }
             set { planete = value;
-                base.onPropertiesChange("Planete");
+                base.OnPropertyChanged("Planete");
             }
         }
 

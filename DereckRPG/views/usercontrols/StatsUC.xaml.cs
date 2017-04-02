@@ -28,7 +28,7 @@ namespace DereckRPG.views.usercontrols
         {
             get { return stats; }
             set { stats = value;
-                base.onPropartiesChange("Stats");
+                base.OnPropertyChanged("Stats");
             }
         }
 
