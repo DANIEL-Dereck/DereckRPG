@@ -11,6 +11,14 @@ namespace DereckRPG.entities
     {
         private String name;
         private List<Regions> region;
+        private Position position;
+
+        public Position Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
 
         public List<Regions> Region
         {

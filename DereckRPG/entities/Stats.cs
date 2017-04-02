@@ -12,13 +12,6 @@ namespace DereckRPG.entities
         private int attaque;
         private int defence;
         private int critique;
-        private Elements element;
-
-        public Elements Element
-        {
-            get { return element; }
-            set { element = value; }
-        }
 
         public int Critique
         {

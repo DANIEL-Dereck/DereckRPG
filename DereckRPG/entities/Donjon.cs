@@ -13,6 +13,14 @@ namespace DereckRPG.entities
         private Monster miniBoss;
         private List<Monster> monster;
         private List<Pnj> pnjDonjon;
+        private Position position;
+
+        public Position Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
 
         public List<Pnj> PnjDonjon
         {

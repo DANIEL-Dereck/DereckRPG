@@ -84,8 +84,14 @@
     <Compile Include="views\usercontrols\PlaneteUC.xaml.cs">
       <DependentUpon>PlaneteUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\usercontrols\RegionUC.xaml.cs">
-      <DependentUpon>RegionUC.xaml</DependentUpon>
+    <Compile Include="views\usercontrols\PositionUC.xaml.cs">
+      <DependentUpon>PositionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\QuestUC.xaml.cs">
+      <DependentUpon>QuestUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\StatsUC.xaml.cs">
+      <DependentUpon>StatsUC.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -104,10 +110,8 @@
     <Compile Include="entities\Caracteristiques.cs" />
     <Compile Include="entities\ConnectionString.cs" />
     <Compile Include="entities\Donjon.cs" />
-    <Compile Include="entities\Elements.cs" />
     <Compile Include="entities\enums\Classe.cs" />
     <Compile Include="entities\enums\Climate.cs" />
-    <Compile Include="entities\enums\Element.cs" />
     <Compile Include="entities\enums\ItemCategory.cs" />
     <Compile Include="entities\enums\Race.cs" />
     <Compile Include="entities\enums\Rarete.cs" />
@@ -138,7 +142,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\usercontrols\RegionUC.xaml">
+    <Page Include="views\usercontrols\PositionUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\QuestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\StatsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

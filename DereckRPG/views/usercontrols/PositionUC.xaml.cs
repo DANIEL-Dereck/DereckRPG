@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DereckRPG.entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,26 +13,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DereckRPG.entities;
 
 namespace DereckRPG.views.usercontrols
 {
     /// <summary>
-    /// Logique d'interaction pour PlaneteUC.xaml
+    /// Logique d'interaction pour PositionUC.xaml
     /// </summary>
-    public partial class PlaneteUC : UserControlBase
+    public partial class PositionUC : UserControlBase
     {
-        private Planetes planete;
+        private Position position;
 
-        public Planetes Planete
+        public Position Position
         {
-            get { return planete; }
-            set { planete = value;
-                base.onPropertiesChange("Planete");
+            get { return position; }
+            set {
+                position = value;
+                base.onPropertiesChange("Position");
             }
         }
 
-        public PlaneteUC()
+        public PositionUC()
         {
             InitializeComponent();
             base.DataContext = this;

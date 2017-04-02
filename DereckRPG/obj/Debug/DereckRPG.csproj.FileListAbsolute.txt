@@ -24,3 +24,6 @@ C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\bin\De
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\views\usercontrols\PlaneteUserControl.g.cs
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\views\usercontrols\PlaneteUC.g.cs
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\views\usercontrols\RegionUC.g.cs
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\views\usercontrols\PositionUC.g.cs
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\views\usercontrols\QuestUC.g.cs
+C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\obj\Debug\views\usercontrols\StatsUC.g.cs

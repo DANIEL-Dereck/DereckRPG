@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dereck\Documents\Visual Studio 2015\Projects\DereckRPG\DereckRPG\App.xaml
-41648628136
+5-1964894697
 
-48-538931464
+471622715306
 20374150668
-MainWindow.xaml;views\usercontrols\PlaneteUC.xaml;views\usercontrols\QuestUC.xaml;views\usercontrols\StatsUC.xaml;
+MainWindow.xaml;views\usercontrols\PlaneteUC.xaml;views\usercontrols\PositionUC.xaml;views\usercontrols\QuestUC.xaml;views\usercontrols\StatsUC.xaml;
 
-False
+True
 

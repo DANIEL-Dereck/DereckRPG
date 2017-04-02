@@ -13,6 +13,14 @@ namespace DereckRPG.entities
         private String name;
         private Climate climate;
         private List<Donjon> donjon;
+        private Position position;
+
+        public Position Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
 
         public List<Donjon> Donjon
         {

@@ -11,7 +11,6 @@ namespace DereckRPG.database
     {
         public DbSet<Caracteristiques> caracteristiquesTable { get; set; }
         public DbSet<Donjon> donjonTable { get; set; }
-        public DbSet<Elements> elementsTable { get; set; }
         public DbSet<EtreVivant> etreVivantTable { get; set; }
         public DbSet<Items> itemsTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }

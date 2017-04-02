@@ -15,6 +15,14 @@ namespace DereckRPG.entities
         private List<Items> stuff;
         private Caracteristiques caracteristique;
         private Race race;
+        private Position position;
+
+        public Position Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
 
 
 
