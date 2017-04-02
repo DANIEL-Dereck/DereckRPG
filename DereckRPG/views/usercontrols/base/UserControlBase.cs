@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace wpfzoo.views.usercontrols
+namespace DereckRPG.views.usercontrols
 {
     public class UserControlBase : UserControl, INotifyPropertyChanged
     {
@@ -15,7 +15,6 @@ namespace wpfzoo.views.usercontrols
         protected void OnPropertyChanged(String name)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
-
             if (handler != null)
 
             {
