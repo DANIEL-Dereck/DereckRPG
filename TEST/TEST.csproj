@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3EE30C6-E547-414C-9B8A-6867EBA430AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TEST</RootNamespace>
+    <AssemblyName>TEST</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="views\usercontrols\base\UserControlBase.cs" />
+    <Compile Include="views\usercontrols\CaracteristiqueUC.xaml.cs">
+      <DependentUpon>CaracteristiqueUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\DonjonUC.xaml.cs">
+      <DependentUpon>DonjonUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\EtreVivantUC.xaml.cs">
+      <DependentUpon>EtreVivantUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ItemUC.xaml.cs">
+      <DependentUpon>ItemUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\MonsterUC.xaml.cs">
+      <DependentUpon>MonsterUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ObjectifUC.xaml.cs">
+      <DependentUpon>ObjectifUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PlaneteUC.xaml.cs">
+      <DependentUpon>PlaneteUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PlayerUC.xaml.cs">
+      <DependentUpon>PlayerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PnjUC.xaml.cs">
+      <DependentUpon>PnjUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PositionUC.xaml.cs">
+      <DependentUpon>PositionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\QuestUC.xaml.cs">
+      <DependentUpon>QuestUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\RegionUC.xaml.cs">
+      <DependentUpon>RegionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\StatsUC.xaml.cs">
+      <DependentUpon>StatsUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="commandworker\CommandWorker.cs" />
+    <Compile Include="commandworker\ManualResetAction.cs" />
+    <Compile Include="database\MySQLFullDB.cs" />
+    <Compile Include="database\MySQLManager.cs" />
+    <Compile Include="entities\base\BaseDBEntity.cs" />
+    <Compile Include="entities\base\BaseEntity.cs" />
+    <Compile Include="entities\Caracteristiques.cs" />
+    <Compile Include="entities\ConnectionString.cs" />
+    <Compile Include="entities\Donjon.cs" />
+    <Compile Include="entities\enums\Classe.cs" />
+    <Compile Include="entities\enums\Climate.cs" />
+    <Compile Include="entities\enums\ItemCategory.cs" />
+    <Compile Include="entities\enums\Race.cs" />
+    <Compile Include="entities\enums\Rarete.cs" />
+    <Compile Include="entities\EtreVivant.cs" />
+    <Compile Include="entities\generator\EntityGenerator.cs" />
+    <Compile Include="entities\generator\TypeEnum.cs" />
+    <Compile Include="entities\Items.cs" />
+    <Compile Include="entities\json\JsonManager.cs" />
+    <Compile Include="entities\Monster.cs" />
+    <Compile Include="entities\Objectif.cs" />
+    <Compile Include="entities\Planetes.cs" />
+    <Compile Include="entities\Player.cs" />
+    <Compile Include="entities\Pnj.cs" />
+    <Compile Include="entities\Position.cs" />
+    <Compile Include="entities\Quest.cs" />
+    <Compile Include="entities\reflection\Reflectionner.cs" />
+    <Compile Include="entities\Regions.cs" />
+    <Compile Include="entities\Stats.cs" />
+    <Compile Include="logger\AlertMode.cs" />
+    <Compile Include="logger\Logger.cs" />
+    <Compile Include="logger\Logger2.cs" />
+    <Compile Include="logger\LogMode.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="views\usercontrols\CaracteristiqueUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\DonjonUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\EtreVivantUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\ItemUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\MonsterUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\ObjectifUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\PlaneteUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\PlayerUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\PnjUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\PositionUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\QuestUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\RegionUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\StatsUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="viewmodel\" />
+    <Folder Include="views\administration\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

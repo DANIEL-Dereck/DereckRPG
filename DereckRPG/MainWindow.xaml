@@ -7,32 +7,5 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Button x:Name="btnAdministration" Click="btnAdmin_Click" Content="Play"  Grid.Row="2" Grid.Column="0" />
-        <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Administration"  Grid.Row="2" Grid.Column="2" />
-
-        <DockPanel x:Name="notificationDock" Visibility="Hidden" Height="140" Width="280" VerticalAlignment="Top" HorizontalAlignment="Right">
-            <Border CornerRadius="6" BorderBrush="Gray" Background="LightGray" BorderThickness="2" DockPanel.Dock="Top">
-                <StackPanel x:Name="notification" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Azure" >
-                    <TextBlock x:Name="title" Text=""/>
-                    <TextBlock x:Name="message" Text="" />
-                    <StackPanel x:Name="buttons" Orientation="Horizontal" Background="Cornsilk">
-                        <Button x:Name="yes" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                        <Button x:Name="no" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-        </DockPanel>
-
     </Grid>
 </Window>

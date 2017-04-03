@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DereckRPG.views.usercontrols.PositionUC"
+﻿<local:UserControlBase x:Class="DereckRPG.views.usercontrols.PositionUC"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -20,4 +20,4 @@
         <Label x:Name="lblPosY" Content="PosY" Grid.Column="0" Grid.Row="1" />
         <TextBox x:Name="txtBPosY" Text="{Binding Position.PosY, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"/>
     </Grid>
-</UserControl>
+</local:UserControlBase>
