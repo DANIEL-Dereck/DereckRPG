@@ -35,7 +35,7 @@ namespace Dereck_RPG.views.usercontrols
         public QuestUC()
         {
             InitializeComponent();
-            base.dataContext = this;
+            base.DataContext = this;
         }
     }
 }

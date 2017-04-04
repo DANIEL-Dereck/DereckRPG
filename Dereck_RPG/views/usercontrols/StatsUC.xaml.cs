@@ -36,7 +36,7 @@ namespace Dereck_RPG.views.usercontrols
         public StatsUC()
         {
             InitializeComponent();
-            base.dataContext = this;
+            base.DataContext = this;
         }
     }
 }
