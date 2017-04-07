@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DereckRPG", "DereckRPG\DereckRPG.csproj", "{15DC1B15-C0E0-402F-B776-131D855D39BF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dereck_RPG", "Dereck_RPG\Dereck_RPG.csproj", "{749FF301-589D-4A84-9F83-72F76F0D7244}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{15DC1B15-C0E0-402F-B776-131D855D39BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15DC1B15-C0E0-402F-B776-131D855D39BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15DC1B15-C0E0-402F-B776-131D855D39BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15DC1B15-C0E0-402F-B776-131D855D39BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{749FF301-589D-4A84-9F83-72F76F0D7244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{749FF301-589D-4A84-9F83-72F76F0D7244}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{749FF301-589D-4A84-9F83-72F76F0D7244}.Release|Any CPU.ActiveCfg = Release|Any CPU

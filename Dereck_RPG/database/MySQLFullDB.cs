@@ -11,17 +11,17 @@ namespace Dereck_RPG.database
     {
         public DbSet<Caracteristiques> caracteristiquesTable { get; set; }
         public DbSet<Donjon> donjonTable { get; set; }
-        public DbSet<EtreVivant> etreVivantTable { get; set; }
+        public DbSet<Player> playerTable { get; set; }
+        public DbSet<Pnj> pnjTable { get; set; }
         public DbSet<Items> itemsTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
         public DbSet<Objectif> objectifTable { get; set; }
         public DbSet<Planetes> planetesTable { get; set; }
-        public DbSet<Player> playerTable { get; set; }
-        public DbSet<Pnj> pnjTable { get; set; }
         public DbSet<Position> positionTable { get; set; }
         public DbSet<Quest> questTable { get; set; }
         public DbSet<Regions> regionsTable { get; set; }
         public DbSet<Stats> statsTable { get; set; }
+//        public DbSet<EtreVivant> etreVivantTable { get; set; }
 
         Logger logger = new Logger("MySQLFullDB", LogMode.CURRENT_FOLDER, AlertMode.OVERLAY, "MYSQL", true);
 
@@ -51,7 +51,6 @@ namespace Dereck_RPG.database
                     regionsTable.Add(generatorRegions.GenerateItem());
                     logger.Log("Initalisation Regions:" + i);
                 }
-
                 this.SaveChangesAsync();
             }
         }

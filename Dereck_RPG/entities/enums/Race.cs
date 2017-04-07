@@ -13,7 +13,7 @@ namespace Dereck_RPG.entities.enums
         ELFE,
         NAIN,
         ROBOT,
-        LAPOURSE,
+        LAPOURS,
         OURPIN,
         PANDICORNE,
     }

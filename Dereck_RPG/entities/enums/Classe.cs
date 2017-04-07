@@ -13,5 +13,6 @@ namespace Dereck_RPG.entities.enums
         BARBARE,
         TEMPLIER,
         PRETRE,
+        NOOB,
     }
 }

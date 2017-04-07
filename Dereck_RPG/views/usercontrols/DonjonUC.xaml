@@ -6,6 +6,24 @@
              xmlns:local="clr-namespace:Dereck_RPG.views.usercontrols"
              mc:Ignorable="d">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnBoss" Content="Boss" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"/>
+        <Button x:Name="btnMiniBoss" Content="MiniBoss" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Button x:Name="btnMobList" Content="MobList" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
+
+        <Button x:Name="btnPnj" Content="Pnj" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
+        <local:PositionUC x:Name="UCposition" Grid.ColumnSpan="2" Grid.Row="4"/>
+
     </Grid>
 </local:UserControlBase>
