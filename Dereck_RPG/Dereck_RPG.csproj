@@ -95,6 +95,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="views\MenuAdministration.xaml.cs">
+      <DependentUpon>MenuAdministration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\usercontrols\base\UserControlBase.cs" />
     <Compile Include="views\usercontrols\CaracteristiqueUC.xaml.cs">
       <DependentUpon>CaracteristiqueUC.xaml</DependentUpon>
@@ -180,6 +183,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="views\MenuAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\usercontrols\CaracteristiqueUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

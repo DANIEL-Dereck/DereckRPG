@@ -1,5 +1,6 @@
 ﻿using Dereck_RPG.database;
 using Dereck_RPG.logger;
+using Dereck_RPG.views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,14 +38,14 @@ namespace Dereck_RPG
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            //window.Content = newAdministrationAdmin();
+            //window.Content = new PlayAdmin();
             window.Show();
         }
 
         private void btnAdministration_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            //window.Content = newPlayAdmin();
+            window.Content = new MenuAdministration();
             window.Show();
         }
 
