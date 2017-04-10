@@ -1,0 +1,30 @@
+﻿<Page x:Class="Dereck_RPG.views.MenuAdministration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dereck_RPG.views"
+      mc:Ignorable="d" 
+      Title="MenuAdministration">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planetes"  Grid.Row="0" Grid.Column="0" />
+        <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region"  Grid.Row="0" Grid.Column="1" />
+        <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon"  Grid.Row="0" Grid.Column="2" />
+
+        <Button x:Name="btnEtreVivant" Click="btnEtreVivant_Click" Content="EtreVivant"  Grid.Row="1" Grid.Column="0" />
+        <Button x:Name="btnItem" Click="btnItem_Click" Content="Item"  Grid.Row="1" Grid.Column="1" />
+        <Button x:Name="btnQuest" Click="btnQuest_Click" Content="Quest"  Grid.Row="1" Grid.Column="2" />
+        <Button x:Name="btnObjectif" Click="btnObjectif_Click" Content="Objectif"  Grid.Row="1" Grid.Column="3" />
+    </Grid>
+</Page>

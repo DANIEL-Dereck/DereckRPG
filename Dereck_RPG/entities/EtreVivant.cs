@@ -7,24 +7,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities
-{
+{        
     public class EtreVivant : BaseDBEntity
     {
         private String name;
         private int lvl;
         private List<Items> stuff;
         private Caracteristiques caracteristique;
+        private Stats stats;
         private Race race;
         private Position position;
+
+        public Stats Stats
+        {
+            get { return stats; }
+            set { stats = value; }
+        }
+
 
         public Position Position
         {
             get { return position; }
             set { position = value; }
         }
-
-
-
 
         public String Name
         {
