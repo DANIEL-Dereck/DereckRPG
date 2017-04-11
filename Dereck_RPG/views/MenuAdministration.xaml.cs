@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dereck_RPG.views.administration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,8 @@ namespace Dereck_RPG.views
 
         private void btnPlanetes_Click(object sender, RoutedEventArgs e)
         {
+            Page page = new Page();
+            NavigationService.Navigate(new PlanetesAdmin());
         }
 
         private void btnQuest_Click(object sender, RoutedEventArgs e)

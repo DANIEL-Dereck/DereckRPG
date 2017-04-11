@@ -95,6 +95,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="viewmodel\PlaneteAdminVM.cs" />
     <Compile Include="views\administration\PlanetesAdmin.xaml.cs">
       <DependentUpon>PlanetesAdmin.xaml</DependentUpon>
     </Compile>
@@ -113,6 +114,12 @@
     </Compile>
     <Compile Include="views\usercontrols\ItemUC.xaml.cs">
       <DependentUpon>ItemUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListPlaneteUC.xaml.cs">
+      <DependentUpon>ListPlaneteUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListRegionUC.xaml.cs">
+      <DependentUpon>ListRegionUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\MonsterUC.xaml.cs">
       <DependentUpon>MonsterUC.xaml</DependentUpon>
@@ -210,6 +217,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="views\usercontrols\ListPlaneteUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ListRegionUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\usercontrols\MonsterUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -275,9 +290,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="viewmodel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
