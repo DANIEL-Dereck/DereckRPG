@@ -9,18 +9,22 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="imgTitle" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Source="http://img4.hostingpics.net/pics/693962parchemin9002copy.png" />
+        <Image x:Name="imgTitle" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3" Source="http://img4.hostingpics.net/pics/693962parchemin9002copy.png" />
 
-        <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration"  Grid.Row="2" Grid.Column="0" />
-        <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play"  Grid.Row="2" Grid.Column="1" />
+        <StackPanel VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
+            <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration"/>
+            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play"/>
+        </StackPanel>
 
         <DockPanel x:Name="notificationDock" Visibility="Hidden" Height="140" Width="280" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Border CornerRadius="6" BorderBrush="Gray" Background="LightGray" BorderThickness="2" DockPanel.Dock="Top">

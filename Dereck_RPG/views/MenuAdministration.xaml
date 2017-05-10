@@ -10,21 +10,25 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="6*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planetes"  Grid.Row="0" Grid.Column="0" />
-        <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region"  Grid.Row="0" Grid.Column="1" />
-        <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon"  Grid.Row="0" Grid.Column="2" />
+        
+        <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
+            <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planete"/>
+            <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region"/>
+            <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon"/>
+        </StackPanel>
 
-        <Button x:Name="btnEtreVivant" Click="btnEtreVivant_Click" Content="EtreVivant"  Grid.Row="1" Grid.Column="0" />
-        <Button x:Name="btnItem" Click="btnItem_Click" Content="Item"  Grid.Row="1" Grid.Column="1" />
-        <Button x:Name="btnQuest" Click="btnQuest_Click" Content="Quest"  Grid.Row="1" Grid.Column="2" />
-        <Button x:Name="btnObjectif" Click="btnObjectif_Click" Content="Objectif"  Grid.Row="1" Grid.Column="3" />
+        <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
+            <Button x:Name="btnEtreVivant" Click="btnEtreVivant_Click" Content="Etre Vivant"/>
+            <Button x:Name="btnItem" Click="btnItem_Click" Content="Item"/>
+            <Button x:Name="btnQuest" Click="btnQuest_Click" Content="Quest"/>
+            <Button x:Name="btnObjectif" Click="btnObjectif_Click" Content="Objectif"/>
+        </StackPanel>
     </Grid>
 </Page>

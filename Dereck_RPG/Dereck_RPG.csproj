@@ -96,8 +96,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="viewmodel\PlaneteAdminVM.cs" />
+    <Compile Include="viewmodel\RegionAdminVM.cs" />
     <Compile Include="views\administration\PlanetesAdmin.xaml.cs">
       <DependentUpon>PlanetesAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\administration\RegionsAdmin.xaml.cs">
+      <DependentUpon>RegionsAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\MenuAdministration.xaml.cs">
       <DependentUpon>MenuAdministration.xaml</DependentUpon>
@@ -194,6 +198,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="views\administration\PlanetesAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\administration\RegionsAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

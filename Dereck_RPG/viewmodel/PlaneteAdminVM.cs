@@ -17,7 +17,7 @@ namespace Dereck_RPG.viewmodel
         private Planetes currentPlanete;
         private PlanetesAdmin planeteAdmin;
         MySQLManager<Planetes> planeteManager = new MySQLManager<Planetes>();
-        ObservableCollection<Planetes> scheduleList = new ObservableCollection<Planetes>();
+        ObservableCollection<Planetes> planeteList = new ObservableCollection<Planetes>();
 
         public PlaneteAdminVM(PlanetesAdmin planeteAdmin)
         {
