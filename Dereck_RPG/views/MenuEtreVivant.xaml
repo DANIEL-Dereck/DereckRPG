@@ -1,0 +1,28 @@
+﻿<Page x:Class="Dereck_RPG.views.MenuEtreVivant"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dereck_RPG.views"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MenuEtreVivant">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
+            <Button x:Name="btnPnj" Click="btnPnj_Click" Content="Pnj"/>
+            <Button x:Name="btnPlayer" Click="btnPlayer_Click" Content="Player"/>
+            <Button x:Name="btnMonster" Click="btnMonster_Click" Content="Monster"/>
+        </StackPanel>
+    </Grid>
+
+</Page>

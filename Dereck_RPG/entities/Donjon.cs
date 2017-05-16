@@ -9,11 +9,18 @@ namespace Dereck_RPG.entities
 {
     public class Donjon : BaseDBEntity
     {
+        private String name;
         private Monster boss;
         private Monster miniBoss;
         private List<Monster> monster;
         private List<Pnj> pnjDonjon;
         private Position position;
+
+        public String Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
         public Position Position
         {

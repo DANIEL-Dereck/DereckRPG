@@ -95,8 +95,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="viewmodel\DonjonAdminVM.cs" />
     <Compile Include="viewmodel\PlaneteAdminVM.cs" />
     <Compile Include="viewmodel\RegionAdminVM.cs" />
+    <Compile Include="views\administration\DonjonAdmin.xaml.cs">
+      <DependentUpon>DonjonAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\administration\PlanetesAdmin.xaml.cs">
       <DependentUpon>PlanetesAdmin.xaml</DependentUpon>
     </Compile>
@@ -105,6 +109,12 @@
     </Compile>
     <Compile Include="views\MenuAdministration.xaml.cs">
       <DependentUpon>MenuAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\MenuEtreVivant.xaml.cs">
+      <DependentUpon>MenuEtreVivant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListDonjonUC.xaml.cs">
+      <DependentUpon>ListDonjonUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\base\UserControlBase.cs" />
     <Compile Include="views\usercontrols\CaracteristiqueUC.xaml.cs">
@@ -197,6 +207,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="views\administration\DonjonAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\administration\PlanetesAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +220,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\MenuAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\MenuEtreVivant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ListDonjonUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -298,7 +320,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
@@ -310,6 +331,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DereckRPGBackground.jpg" />
+    <Resource Include="images\DereckRPGMenu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

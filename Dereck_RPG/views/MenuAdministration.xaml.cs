@@ -28,10 +28,14 @@ namespace Dereck_RPG.views
 
         private void btnDonjon_Click(object sender, RoutedEventArgs e)
         {
+            Page page = new Page();
+            NavigationService.Navigate(new DonjonAdmin());
         }
 
         private void btnEtreVivant_Click(object sender, RoutedEventArgs e)
         {
+            Page page = new Page();
+            NavigationService.Navigate(new MenuEtreVivant());
         }
 
         private void btnItem_Click(object sender, RoutedEventArgs e)
