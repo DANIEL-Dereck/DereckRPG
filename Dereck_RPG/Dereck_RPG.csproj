@@ -129,8 +129,17 @@
     <Compile Include="views\usercontrols\ItemUC.xaml.cs">
       <DependentUpon>ItemUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\usercontrols\ListMonsterUC.xaml.cs">
+      <DependentUpon>ListMonsterUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\usercontrols\ListPlaneteUC.xaml.cs">
       <DependentUpon>ListPlaneteUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListPlayerUC.xaml.cs">
+      <DependentUpon>ListPlayerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListPnjUC.xaml.cs">
+      <DependentUpon>ListPnjUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\ListRegionUC.xaml.cs">
       <DependentUpon>ListRegionUC.xaml</DependentUpon>
@@ -247,7 +256,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="views\usercontrols\ListMonsterUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\usercontrols\ListPlaneteUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ListPlayerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ListPnjUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
