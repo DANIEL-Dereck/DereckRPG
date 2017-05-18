@@ -31,7 +31,6 @@ namespace Dereck_RPG.views.usercontrols
             }
         }
 
-
         public MonsterUC()
         {
             InitializeComponent();

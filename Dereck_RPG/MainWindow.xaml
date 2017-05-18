@@ -22,16 +22,15 @@
         <Grid Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
-            <Image x:Name="imgTitle" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+            <Image x:Name="imgTitle" Grid.Row="1" Grid.Column="1"/>
         </Grid>
 
         <StackPanel VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">

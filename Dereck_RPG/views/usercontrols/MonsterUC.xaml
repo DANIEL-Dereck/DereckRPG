@@ -29,18 +29,13 @@
 
         <Button x:Name="btnStats" Content="Stats" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
         <Button x:Name="btnStuff" Content="Stuff" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
-        <Button x:Name="btnCaracteristiques" Content="Caracteristiques" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"/>
+        <Button x:Name="btnLoot" Content="Loot" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"/>
+        <Button x:Name="btnCaracteristiques" Content="Caracteristiques" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5"/>
 
-        <Label x:Name="lblRace" Content="Race" Grid.Column="0" Grid.Row="5" />
-        <ComboBox x:Name="txtBRace" Text="{Binding Monster.Race, Mode=TwoWay}" Grid.Column="1" Grid.Row="5"/>
+        <Label x:Name="lblRace" Content="Race" Grid.Column="0" Grid.Row="6" />
+        <ComboBox x:Name="txtBRace" Text="{Binding Monster.Race, Mode=TwoWay}" Grid.Column="1" Grid.Row="6"/>
 
-        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="6" />
-
-        <Label x:Name="lblClasse" Content="Classe" Grid.Column="0" Grid.Row="7" />
-        <ComboBox x:Name="txtBClasse" Text="{Binding Monster.Classe, Mode=TwoWay}" Grid.Column="1" Grid.Row="7"/>
-
-        <Button x:Name="btnQuest" Content="Quest" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8"/>
-
+        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" />
 
     </Grid>
 </local:UserControlBase>

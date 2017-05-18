@@ -1,5 +1,6 @@
 ﻿using Dereck_RPG.database;
 using Dereck_RPG.entities;
+using Dereck_RPG.entities.enums;
 using Dereck_RPG.views.administration;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,10 @@ namespace Dereck_RPG.viewmodel
         {
             currentRegion = new Regions();
             this.regionAdmin.RegionUC.Regions = currentRegion;
+            foreach (Climate climate in Enum.GetValues(typeof(Climate)))
+            {
+                this.regionAdmin.RegionUC.txtBClimate.Items.Add(climate);
+            }
         }
 
         private async void InitLists()

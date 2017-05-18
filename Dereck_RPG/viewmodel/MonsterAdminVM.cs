@@ -1,5 +1,6 @@
 ﻿using Dereck_RPG.database;
 using Dereck_RPG.entities;
+using Dereck_RPG.entities.enums;
 using Dereck_RPG.views.administration;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,11 @@ namespace Dereck_RPG.viewmodel
         {
             currentMonster = new Monster();
             this.monsterAdmin.MonsterUC.Monster = currentMonster;
+
+            foreach (Race race in Enum.GetValues(typeof(Race)))
+            {
+                this.monsterAdmin.MonsterUC.txtBRace.Items.Add(race);
+            }
         }
 
         private async void InitLists()
