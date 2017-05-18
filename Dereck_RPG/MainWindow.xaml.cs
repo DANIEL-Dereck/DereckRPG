@@ -62,7 +62,7 @@ namespace Dereck_RPG
             window.Show();
         }
 
-        private void btnLeft_Click(object sender, RoutedEventArgs e)
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
             window.Content = new MenuAdministration();

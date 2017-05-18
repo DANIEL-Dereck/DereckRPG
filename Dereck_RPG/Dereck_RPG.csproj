@@ -96,10 +96,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="viewmodel\DonjonAdminVM.cs" />
+    <Compile Include="viewmodel\MonsterAdminVM.cs" />
     <Compile Include="viewmodel\PlaneteAdminVM.cs" />
+    <Compile Include="viewmodel\PlayerAdminVM.cs" />
+    <Compile Include="viewmodel\PnjAdminVM.cs" />
     <Compile Include="viewmodel\RegionAdminVM.cs" />
     <Compile Include="views\administration\DonjonAdmin.xaml.cs">
       <DependentUpon>DonjonAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\administration\MonsterAdmin.xaml.cs">
+      <DependentUpon>MonsterAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\administration\PlanetesAdmin.xaml.cs">
       <DependentUpon>PlanetesAdmin.xaml</DependentUpon>
@@ -217,6 +223,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="views\administration\DonjonAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\administration\MonsterAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
