@@ -64,9 +64,7 @@ namespace Dereck_RPG
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Content = new MenuAdministration();
-            window.Show();
+
         }
 
         /*

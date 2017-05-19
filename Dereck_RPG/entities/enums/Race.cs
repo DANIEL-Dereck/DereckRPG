@@ -9,6 +9,7 @@ namespace Dereck_RPG.entities.enums
     public enum Race
     {
         ORC,
+        ZOMBIE,
         HUMAIN,
         ELFE,
         NAIN,

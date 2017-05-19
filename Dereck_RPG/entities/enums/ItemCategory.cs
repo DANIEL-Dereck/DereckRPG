@@ -12,7 +12,5 @@ namespace Dereck_RPG.entities.enums
         ARMURE,
         BIJOUX,
         FAMILIER,
-        CONSOMABLE,
-        RESOURCES,
     }
 }

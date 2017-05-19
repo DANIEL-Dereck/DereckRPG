@@ -110,6 +110,12 @@
     <Compile Include="views\administration\PlanetesAdmin.xaml.cs">
       <DependentUpon>PlanetesAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\administration\PlayerAdmin.xaml.cs">
+      <DependentUpon>PlayerAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\administration\PnjAdmin.xaml.cs">
+      <DependentUpon>PnjAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\administration\RegionsAdmin.xaml.cs">
       <DependentUpon>RegionsAdmin.xaml</DependentUpon>
     </Compile>
@@ -231,6 +237,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\administration\PlanetesAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\administration\PlayerAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\administration\PnjAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

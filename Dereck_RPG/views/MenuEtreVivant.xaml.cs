@@ -34,8 +34,8 @@ namespace Dereck_RPG.views
 
         private void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
-//            Page page = new Page();
-//            NavigationService.Navigate(new PlayerAdmin());
+            Page page = new Page();
+            NavigationService.Navigate(new PlayerAdmin());
         }
 
         private void btnMonster_Click(object sender, RoutedEventArgs e)

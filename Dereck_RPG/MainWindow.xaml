@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dereck_RPG"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid x:Name="menuGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,9 +34,12 @@
         </Grid>
 
         <StackPanel VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
-            <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration" Background="Azure" BorderBrush="Black"/>
-            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play"/>
-            <Button x:Name="btnQuit" Click="btnQuit_Click" Content="Quit"/>
+            <StackPanel.Background>
+                <ImageBrush/>
+            </StackPanel.Background>
+            <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals"/>
+            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals"/>
+            <Button x:Name="btnQuit" Click="btnQuit_Click" Content="Quit" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals"/>
         </StackPanel>
 
         <DockPanel x:Name="notificationDock" Visibility="Hidden" Height="140" Width="280" VerticalAlignment="Top" HorizontalAlignment="Right">

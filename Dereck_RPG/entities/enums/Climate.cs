@@ -9,10 +9,9 @@ namespace Dereck_RPG.entities.enums
     public enum Climate
     {
         ARIDE,
-        HUMIDE,
+        CONTINENTAL,
+        MONTAGNARD,
+        POLAIRE,
         TROPICAL,
-        DESERTIQUE,
-        FROID,
-        GLACIAL,
     }
 }
