@@ -8,6 +8,9 @@
       Title="MenuAdministration">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Dereck_RPG;component/images/DereckRPGBackground.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="6*"/>
@@ -15,20 +18,16 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
-            <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planete"/>
-            <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region"/>
-            <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon"/>
-        </StackPanel>
-
-        <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
-            <Button x:Name="btnEtreVivant" Click="btnEtreVivant_Click" Content="Etre Vivant"/>
-            <Button x:Name="btnItem" Click="btnItem_Click" Content="Item"/>
-            <Button x:Name="btnQuest" Click="btnQuest_Click" Content="Quest"/>
-            <Button x:Name="btnObjectif" Click="btnObjectif_Click" Content="Objectif"/>
+            <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planete" Margin="0,7"/>
+            <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region" Margin="0,7"/>
+            <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon" Margin="0,7"/>
+            <Button x:Name="btnEtreVivant" Click="btnEtreVivant_Click" Content="Etre Vivant" Margin="0,7"/>
+            <Button x:Name="btnItem" Click="btnItem_Click" Content="Item" Margin="0,7"/>
+            <Button x:Name="btnQuest" Click="btnQuest_Click" Content="Quest" Margin="0,7"/>
+            <Button x:Name="btnObjectif" Click="btnObjectif_Click" Content="Objectif" Margin="0,7"/>
         </StackPanel>
     </Grid>
 </Page>

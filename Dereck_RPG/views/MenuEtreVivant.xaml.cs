@@ -28,8 +28,8 @@ namespace Dereck_RPG.views
 
         private void btnPnj_Click(object sender, RoutedEventArgs e)
         {
-//            Page page = new Page();
-//            NavigationService.Navigate(new PnjAdmin());
+            Page page = new Page();
+            NavigationService.Navigate(new PnjAdmin());
         }
 
         private void btnPlayer_Click(object sender, RoutedEventArgs e)

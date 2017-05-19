@@ -32,6 +32,8 @@ namespace Dereck_RPG
             // Background image
             Image BgMenuI = new Image();
             ImageBrush BgMenuIB = new ImageBrush();
+
+            // Ajouter random pour selection images 
             BgMenuI.Source = new BitmapImage(new Uri(@"../../images/DereckRPGBackground.jpg", UriKind.Relative));
             BgMenuIB.ImageSource = BgMenuI.Source;
             menuGrid.Background = BgMenuIB;

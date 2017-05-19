@@ -10,6 +10,7 @@ namespace Dereck_RPG.database
     public class MySQLFullDB : DbContext
     {
         const int genernumber = 10;
+        public DbSet<EtreVivant> etreVivantTable { get; set; }
         public DbSet<Caracteristiques> caracteristiquesTable { get; set; }
         public DbSet<Donjon> donjonTable { get; set; }
         public DbSet<Player> playerTable { get; set; }
@@ -22,7 +23,7 @@ namespace Dereck_RPG.database
         public DbSet<Quest> questTable { get; set; }
         public DbSet<Regions> regionsTable { get; set; }
         public DbSet<Stats> statsTable { get; set; }
-//        public DbSet<EtreVivant> etreVivantTable { get; set; }
+        
 
         Logger logger = new Logger("MySQLFullDB", LogMode.CURRENT_FOLDER, AlertMode.OVERLAY, "MYSQL", true);
 
@@ -66,6 +67,10 @@ namespace Dereck_RPG.database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
+
+
+
         }
     }
 

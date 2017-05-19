@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dereck_RPG.database;
+using Dereck_RPG.entities;
+using Dereck_RPG.viewmodel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,21 @@ namespace Dereck_RPG.views.administration
     /// </summary>
     public partial class PnjAdmin : Page
     {
+
         public PnjAdmin()
         {
             InitializeComponent();
+            this.DataContext = new PnjAdminVM(this);
+            InitLists();
+        }
+
+
+        private async void InitLists()
+        {
+            MySQLManager<Pnj> pnjManager = new MySQLManager<Pnj>();
+            this.ListPnjUC.LoadItems((await pnjManager.Get()).ToList());
         }
     }
+
 }
+

@@ -34,12 +34,11 @@
         <Label x:Name="lblRace" Content="Race" Grid.Column="0" Grid.Row="5" />
         <ComboBox x:Name="txtBRace" Text="{Binding Pnj.Race, Mode=TwoWay}" Grid.Column="1" Grid.Row="5"/>
 
-        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="6" />
 
-        <Label x:Name="lblClasse" Content="Classe" Grid.Column="0" Grid.Row="7" />
-        <ComboBox x:Name="txtBClasse" Text="{Binding Pnj.Classe, Mode=TwoWay}" Grid.Column="1" Grid.Row="7"/>
+        <Button x:Name="btnQuest" Content="Quest" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6"/>
+        <Button x:Name="btnLoot" Content="Loot" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7"/>
 
-        <Button x:Name="btnQuest" Content="Quest" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8"/>
+        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2"/>
 
 
     </Grid>

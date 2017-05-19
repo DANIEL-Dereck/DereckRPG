@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities
 {        
-    public class EtreVivant : BaseDBEntity
+    public abstract class EtreVivant : BaseDBEntity
     {
         private String name;
         private int lvl;

@@ -37,9 +37,11 @@
             <StackPanel.Background>
                 <ImageBrush/>
             </StackPanel.Background>
-            <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals"/>
-            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals"/>
-            <Button x:Name="btnQuit" Click="btnQuit_Click" Content="Quit" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals"/>
+            <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals" Margin="0,5"/>
+
+            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals" Margin="0,5"/>
+
+            <Button x:Name="btnQuit" Click="btnQuit_Click" Content="Quit" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals" Margin="0,5"/>
         </StackPanel>
 
         <DockPanel x:Name="notificationDock" Visibility="Hidden" Height="140" Width="280" VerticalAlignment="Top" HorizontalAlignment="Right">
