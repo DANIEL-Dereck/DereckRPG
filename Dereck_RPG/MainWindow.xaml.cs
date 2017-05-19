@@ -39,8 +39,6 @@ namespace Dereck_RPG
             // Menu image
             imgTitle.Source = new BitmapImage(new Uri(@"images/DereckRPGMenu.png", UriKind.Relative));
 
-
-
             //logger.Log("Test1");
             //logger.Log("Test2", LogMode.NONE, AlertMode.TOAST);
             //logger.Log("Test3", LogMode.NONE, AlertMode.MESSAGE_BOX);
@@ -64,17 +62,7 @@ namespace Dereck_RPG
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
-
-        /*
-        private void btn[OBJET]_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationWindow window = new NavigationWindow();
-            window.Content = new [OBJET]Admin();
-            window.Show();
-        }
-        */
-
     }
 }
