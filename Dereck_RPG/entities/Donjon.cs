@@ -13,7 +13,6 @@ namespace Dereck_RPG.entities
         private Monster boss;
         private Monster miniBoss;
         private List<Monster> monster;
-        private List<Pnj> pnjDonjon;
         private Position position;
 
         public String Name
@@ -26,13 +25,6 @@ namespace Dereck_RPG.entities
         {
             get { return position; }
             set { position = value; }
-        }
-
-
-        public List<Pnj> PnjDonjon
-        {
-            get { return pnjDonjon; }
-            set { pnjDonjon = value; }
         }
 
         public List<Monster> Monster

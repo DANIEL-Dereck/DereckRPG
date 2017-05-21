@@ -2,18 +2,18 @@
 using Dereck_RPG.entities.enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities
-{        
+{
     public abstract class EtreVivant : BaseDBEntity
     {
         private String name;
         private int lvl;
-        private List<Items> stuff;
-        private Caracteristiques caracteristique;
+        private int vie;
         private Stats stats;
         private Race race;
         private Position position;
@@ -24,6 +24,11 @@ namespace Dereck_RPG.entities
             set { stats = value; }
         }
 
+        public int Vie
+        {
+            get { return vie; }
+            set { vie = value; }
+        }
 
         public Position Position
         {
@@ -41,21 +46,68 @@ namespace Dereck_RPG.entities
             get { return lvl; }
             set { lvl = value; }
         }
-        public List<Items> Stuff
-        {
-            get { return stuff; }
-            set { stuff = value; }
-        }
-        public Caracteristiques Caracteristique
-        {
-            get { return caracteristique; }
-            set { caracteristique = value; }
-        }
+        
         public Race Race
         {
             get { return race; }
             set { race = value; }
         }
+
+        public void attaque(EtreVivant adversaire)
+        {
+            //Attaque (stats attaque) - def enemie
+            //si Crit attaque + 150%
+            if (doACrit())
+            {
+            }
+            else
+            {
+                
+            }
+        }
+
+        public void defence()
+        {
+            //bloque une attaque
+            // si crit +150%def
+            if (doACrit())
+            {
+            }
+            else
+            {
+            }
+
+        }
+
+        public void regeneration()
+        {
+            //Regeneration de 7% de la vie actuel
+            //si Crit Regeneration de 15% de la vie actuel
+            int regen;
+
+            if (doACrit())
+            {
+                regen = this.vie % 15;
+            }
+            else
+            {
+                regen = this.vie % 7;
+            }
+            this.vie = this.vie + regen;
+        }
+
+        private bool doACrit()
+        {
+            Random rnd = new Random();
+            if (rnd.Next(0, 100) <= this.stats.Critique)
+            {
+                return (true);
+            } else
+            {
+                return (false);
+            }
+        }
+
 
     }
 }

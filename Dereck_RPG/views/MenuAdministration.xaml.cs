@@ -40,20 +40,14 @@ namespace Dereck_RPG.views
 
         private void btnItem_Click(object sender, RoutedEventArgs e)
         {
-        }
-
-        private void btnObjectif_Click(object sender, RoutedEventArgs e)
-        {
+            Page page = new Page();
+            NavigationService.Navigate(new ItemAdmin());
         }
 
         private void btnPlanetes_Click(object sender, RoutedEventArgs e)
         {
             Page page = new Page();
             NavigationService.Navigate(new PlanetesAdmin());
-        }
-
-        private void btnQuest_Click(object sender, RoutedEventArgs e)
-        {
         }
 
         private void btnRegion_Click(object sender, RoutedEventArgs e)

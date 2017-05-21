@@ -12,30 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Dereck_RPG.entities;
 
-namespace Dereck_RPG.views.usercontrols
+namespace Dereck_RPG.views
 {
     /// <summary>
-    /// Logique d'interaction pour ObjectifUC.xaml
+    /// Logique d'interaction pour MenuPlay.xaml
     /// </summary>
-    public partial class ObjectifUC : UserControlBase
+    public partial class MenuPlay : Page
     {
-        private Objectif objectif;
-
-        public Objectif Objectif
-        {
-            get { return objectif; }
-            set { objectif = value;
-                base.OnPropertyChanged("Objectif");
-            }
-        }
-
-
-        public ObjectifUC()
+        public MenuPlay()
         {
             InitializeComponent();
-            base.DataContext = this;
         }
     }
 }

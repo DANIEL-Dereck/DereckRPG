@@ -11,9 +11,6 @@
             ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListView.ContextMenu>
                 <ContextMenu Name="ZoneIformationList" StaysOpen="true" Background="WhiteSmoke">
-                    <ContextMenu.BitmapEffect>
-                        <BitmapEffectGroup/>
-                    </ContextMenu.BitmapEffect>
                     <MenuItem Header="Duplicate" x:Name="DuplicateAddressContextMenu" />
                     <MenuItem Header="Remove" x:Name="RemoveAddressContextMenu" />
                 </ContextMenu>

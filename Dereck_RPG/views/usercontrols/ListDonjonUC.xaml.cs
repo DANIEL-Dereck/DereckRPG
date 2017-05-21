@@ -21,7 +21,7 @@ namespace Dereck_RPG.views.usercontrols
     /// Logique d'interaction pour ListDonjonUC.xaml
     /// </summary>
     public partial class ListDonjonUC : UserControl
-{
+    {
     public ListView ItemsList { get; set; }
     public ObservableCollection<Donjon> Obs { get; set; }
 

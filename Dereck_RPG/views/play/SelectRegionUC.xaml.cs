@@ -1,5 +1,4 @@
-﻿using Dereck_RPG.entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views.usercontrols
+namespace Dereck_RPG.views.play
 {
     /// <summary>
-    /// Logique d'interaction pour PnjUC.xaml
+    /// Logique d'interaction pour SelectRegionUC.xaml
     /// </summary>
-    public partial class PnjUC : UserControlBase
+    public partial class SelectRegionUC : UserControl
     {
-        private Pnj pnj;
-
-        public Pnj Pnj
-        {
-            get { return pnj; }
-            set { pnj = value;
-                base.OnPropertyChanged("Pnj");
-            }
-        }
-
-        public PnjUC()
+        public SelectRegionUC()
         {
             InitializeComponent();
-            base.DataContext = this;
         }
     }
 }

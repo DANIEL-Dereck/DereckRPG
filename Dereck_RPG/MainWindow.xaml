@@ -34,9 +34,7 @@
         </Grid>
 
         <StackPanel VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
-            <StackPanel.Background>
-                <ImageBrush/>
-            </StackPanel.Background>
+
             <Button x:Name="btnAdministration" Click="btnAdministration_Click" Content="Administration" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals" Margin="0,5"/>
 
             <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play" Background="#FF84E2AE" FontFamily="Matura MT Script Capitals" Margin="0,5"/>

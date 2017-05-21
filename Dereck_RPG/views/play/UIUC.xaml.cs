@@ -1,5 +1,4 @@
-﻿using Dereck_RPG.entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,28 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views.usercontrols
+namespace Dereck_RPG.views.play
 {
     /// <summary>
-    /// Logique d'interaction pour QuestUC.xaml
+    /// Logique d'interaction pour UIUC.xaml
     /// </summary>
-    public partial class QuestUC : UserControlBase
+    public partial class UIUC : UserControl
     {
-        private Quest quest;
-
-        public Quest Quest
-        {
-            get { return quest; }
-            set {
-                quest = value;
-                base.OnPropertyChanged("Quest");
-            }
-        }
-
-        public QuestUC()
+        public UIUC()
         {
             InitializeComponent();
-            base.DataContext = this;
         }
     }
 }

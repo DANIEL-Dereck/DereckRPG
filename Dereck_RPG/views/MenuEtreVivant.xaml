@@ -9,9 +9,6 @@
       Title="MenuEtreVivant">
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Dereck_RPG;component/images/DereckRPGBackground.jpg"/>
-        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="6*"/>
@@ -22,7 +19,6 @@
         </Grid.RowDefinitions>
 
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
-            <Button x:Name="btnPnj" Click="btnPnj_Click" Content="Pnj"/>
             <Button x:Name="btnPlayer" Click="btnPlayer_Click" Content="Player" Margin="0,25"/>
             <Button x:Name="btnMonster" Click="btnMonster_Click" Content="Monster"/>
         </StackPanel>

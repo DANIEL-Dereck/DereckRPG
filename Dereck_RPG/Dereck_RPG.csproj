@@ -96,13 +96,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="viewmodel\DonjonAdminVM.cs" />
+    <Compile Include="viewmodel\ItemAdminVM.cs" />
     <Compile Include="viewmodel\MonsterAdminVM.cs" />
     <Compile Include="viewmodel\PlaneteAdminVM.cs" />
     <Compile Include="viewmodel\PlayerAdminVM.cs" />
-    <Compile Include="viewmodel\PnjAdminVM.cs" />
     <Compile Include="viewmodel\RegionAdminVM.cs" />
     <Compile Include="views\administration\DonjonAdmin.xaml.cs">
       <DependentUpon>DonjonAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\administration\ItemAdmin.xaml.cs">
+      <DependentUpon>ItemAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\administration\MonsterAdmin.xaml.cs">
       <DependentUpon>MonsterAdmin.xaml</DependentUpon>
@@ -112,9 +115,6 @@
     </Compile>
     <Compile Include="views\administration\PlayerAdmin.xaml.cs">
       <DependentUpon>PlayerAdmin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\administration\PnjAdmin.xaml.cs">
-      <DependentUpon>PnjAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\administration\RegionsAdmin.xaml.cs">
       <DependentUpon>RegionsAdmin.xaml</DependentUpon>
@@ -129,9 +129,6 @@
       <DependentUpon>ListDonjonUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\base\UserControlBase.cs" />
-    <Compile Include="views\usercontrols\CaracteristiqueUC.xaml.cs">
-      <DependentUpon>CaracteristiqueUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\usercontrols\DonjonUC.xaml.cs">
       <DependentUpon>DonjonUC.xaml</DependentUpon>
     </Compile>
@@ -140,6 +137,9 @@
     </Compile>
     <Compile Include="views\usercontrols\ItemUC.xaml.cs">
       <DependentUpon>ItemUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListItemUC.xaml.cs">
+      <DependentUpon>ListItemUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\ListMonsterUC.xaml.cs">
       <DependentUpon>ListMonsterUC.xaml</DependentUpon>
@@ -150,17 +150,11 @@
     <Compile Include="views\usercontrols\ListPlayerUC.xaml.cs">
       <DependentUpon>ListPlayerUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\usercontrols\ListPnjUC.xaml.cs">
-      <DependentUpon>ListPnjUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\usercontrols\ListRegionUC.xaml.cs">
       <DependentUpon>ListRegionUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\MonsterUC.xaml.cs">
       <DependentUpon>MonsterUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\usercontrols\ObjectifUC.xaml.cs">
-      <DependentUpon>ObjectifUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\PlaneteUC.xaml.cs">
       <DependentUpon>PlaneteUC.xaml</DependentUpon>
@@ -168,14 +162,8 @@
     <Compile Include="views\usercontrols\PlayerUC.xaml.cs">
       <DependentUpon>PlayerUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\usercontrols\PnjUC.xaml.cs">
-      <DependentUpon>PnjUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\usercontrols\PositionUC.xaml.cs">
       <DependentUpon>PositionUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\usercontrols\QuestUC.xaml.cs">
-      <DependentUpon>QuestUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\RegionUC.xaml.cs">
       <DependentUpon>RegionUC.xaml</DependentUpon>
@@ -197,7 +185,6 @@
     <Compile Include="database\MySQLManager.cs" />
     <Compile Include="entities\base\BaseDBEntity.cs" />
     <Compile Include="entities\base\BaseEntity.cs" />
-    <Compile Include="entities\Caracteristiques.cs" />
     <Compile Include="entities\ConnectionString.cs" />
     <Compile Include="entities\Donjon.cs" />
     <Compile Include="entities\enums\Classe.cs" />
@@ -211,12 +198,9 @@
     <Compile Include="entities\Items.cs" />
     <Compile Include="entities\json\JsonManager.cs" />
     <Compile Include="entities\Monster.cs" />
-    <Compile Include="entities\Objectif.cs" />
     <Compile Include="entities\Planetes.cs" />
     <Compile Include="entities\Player.cs" />
-    <Compile Include="entities\Pnj.cs" />
     <Compile Include="entities\Position.cs" />
-    <Compile Include="entities\Quest.cs" />
     <Compile Include="entities\reflection\Reflectionner.cs" />
     <Compile Include="entities\Regions.cs" />
     <Compile Include="entities\Stats.cs" />
@@ -232,6 +216,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\administration\ItemAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\administration\MonsterAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -241,10 +229,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\administration\PlayerAdmin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\administration\PnjAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,10 +248,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\usercontrols\CaracteristiqueUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="views\usercontrols\DonjonUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -279,6 +259,10 @@
     <Page Include="views\usercontrols\ItemUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\ListItemUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\usercontrols\ListMonsterUC.xaml">
       <SubType>Designer</SubType>
@@ -292,19 +276,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\usercontrols\ListPnjUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="views\usercontrols\ListRegionUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\usercontrols\MonsterUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="views\usercontrols\ObjectifUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -316,15 +292,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="views\usercontrols\PnjUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="views\usercontrols\PositionUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="views\usercontrols\QuestUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -381,6 +349,8 @@
     <EmbeddedResource Include="images\DereckRPGBackground.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="images\DereckRPGMenu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

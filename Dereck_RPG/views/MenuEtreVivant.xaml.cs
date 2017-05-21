@@ -26,12 +26,6 @@ namespace Dereck_RPG.views
             InitializeComponent();
         }
 
-        private void btnPnj_Click(object sender, RoutedEventArgs e)
-        {
-            Page page = new Page();
-            NavigationService.Navigate(new PnjAdmin());
-        }
-
         private void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
             Page page = new Page();

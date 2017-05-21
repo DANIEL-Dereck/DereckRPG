@@ -2,6 +2,7 @@
 using Dereck_RPG.entities;
 using Dereck_RPG.entities.json;
 using Dereck_RPG.logger;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
 namespace Dereck_RPG.database
@@ -10,17 +11,15 @@ namespace Dereck_RPG.database
     public class MySQLFullDB : DbContext
     {
         const int genernumber = 10;
-        public DbSet<EtreVivant> etreVivantTable { get; set; }
-        public DbSet<Caracteristiques> caracteristiquesTable { get; set; }
-        public DbSet<Donjon> donjonTable { get; set; }
+
+//        public DbSet<EtreVivant> etreVivantTable { get; set; }
         public DbSet<Player> playerTable { get; set; }
-        public DbSet<Pnj> pnjTable { get; set; }
-        public DbSet<Items> itemsTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
-        public DbSet<Objectif> objectifTable { get; set; }
+
+        public DbSet<Donjon> donjonTable { get; set; }
+        public DbSet<Items> itemsTable { get; set; }
         public DbSet<Planetes> planetesTable { get; set; }
         public DbSet<Position> positionTable { get; set; }
-        public DbSet<Quest> questTable { get; set; }
         public DbSet<Regions> regionsTable { get; set; }
         public DbSet<Stats> statsTable { get; set; }
         
@@ -33,8 +32,6 @@ namespace Dereck_RPG.database
         {
             InitLocalMySQL();
         }
-
-        public object ZooTable { get; private set; }
 
         public void InitLocalMySQL()
         {
@@ -67,11 +64,9 @@ namespace Dereck_RPG.database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
-
-
-
+            //Chercher TPC EF6 pour crée table Etre vivant + monstre + player
         }
+
     }
 
 }

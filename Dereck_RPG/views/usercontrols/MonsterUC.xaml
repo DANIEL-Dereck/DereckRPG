@@ -18,8 +18,6 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Label x:Name="lblName" Content="Name" Grid.Column="0" Grid.Row="0" />
         <TextBox x:Name="txtBName" Text="{Binding Monster.Name, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"/>
@@ -27,15 +25,16 @@
         <Label x:Name="lblLvl" Content="Lvl" Grid.Column="0" Grid.Row="1" />
         <TextBox x:Name="txtBLvl" Text="{Binding Monster.Lvl, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"/>
 
-        <Button x:Name="btnStats" Content="Stats" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
-        <Button x:Name="btnStuff" Content="Stuff" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
+        <Label x:Name="lblVie" Content="Vie" Grid.Column="0" Grid.Row="2" />
+        <TextBox x:Name="txtBVie" Text="{Binding Monster.Vie, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"/>
+
+        <Button x:Name="btnStats" Content="Stats" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
         <Button x:Name="btnLoot" Content="Loot" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"/>
-        <Button x:Name="btnCaracteristiques" Content="Caracteristiques" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5"/>
 
-        <Label x:Name="lblRace" Content="Race" Grid.Column="0" Grid.Row="6" />
-        <ComboBox x:Name="txtBRace" Text="{Binding Monster.Race, Mode=TwoWay}" Grid.Column="1" Grid.Row="6"/>
+        <Label x:Name="lblRace" Content="Race" Grid.Column="0" Grid.Row="5" />
+        <ComboBox x:Name="txtBRace" Text="{Binding Monster.Race, Mode=TwoWay}" Grid.Column="1" Grid.Row="5"/>
 
-        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" />
+        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" />
 
     </Grid>
 </local:UserControlBase>

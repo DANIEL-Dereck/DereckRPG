@@ -18,23 +18,23 @@ using System.Windows.Shapes;
 namespace Dereck_RPG.views.usercontrols
 {
     /// <summary>
-    /// Logique d'interaction pour ListPnjUC.xaml
+    /// Logique d'interaction pour ListItemUC.xaml
     /// </summary>
-    public partial class ListPnjUC : UserControl
+    public partial class ListItemUC : UserControl
     {
         public ListView ItemsList { get; set; }
-        public ObservableCollection<Pnj> Obs { get; set; }
+        public ObservableCollection<Items> Obs { get; set; }
 
-        public ListPnjUC()
+        public ListItemUC()
         {
             InitializeComponent();
-            Obs = new ObservableCollection<Pnj>();
+            Obs = new ObservableCollection<Items>();
             this.itemList.ItemsSource = Obs;
             this.ItemsList = this.itemList;
             this.ItemsList.SelectionMode = SelectionMode.Single;
         }
 
-        public void LoadItems(List<Pnj> items)
+        public void LoadItems(List<Items> items)
         {
             Obs.Clear();
             foreach (var item in items)
@@ -43,12 +43,12 @@ namespace Dereck_RPG.views.usercontrols
             }
         }
 
-        public void AddItem(Pnj item)
+        public void AddItem(Items item)
         {
             Obs.Add(item);
         }
 
-        public void RemoveItem(Pnj item)
+        public void RemoveItem(Items item)
         {
             Obs.Remove(item);
         }

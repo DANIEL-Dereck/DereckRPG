@@ -15,7 +15,6 @@ namespace Dereck_RPG.entities.enums
         NAIN,
         ROBOT,
         LAPOURS,
-        OURPIN,
         PANDICORNE,
     }
 }

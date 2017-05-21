@@ -19,25 +19,30 @@ using System.Windows.Shapes;
 namespace Dereck_RPG.views.administration
 {
     /// <summary>
-    /// Logique d'interaction pour PnjAdmin.xaml
+    /// Logique d'interaction pour ItemAdmin.xaml
     /// </summary>
-    public partial class PnjAdmin : Page
+    public partial class ItemAdmin : Page
     {
-
-        public PnjAdmin()
+        public ItemAdmin()
         {
             InitializeComponent();
-            this.DataContext = new PnjAdminVM(this);
+            this.DataContext = new ItemAdminVM(this);
             InitLists();
         }
 
+        public ItemAdmin(ItemAdminVM itemAdminVM)
+        {
+            /*
+                        InitializeComponent();
+                        this.DataContext = donjonAdminVM;
+                        planeteAdminVM.LoadDonjonPage(this);
+         */
+        }
 
         private async void InitLists()
         {
-            MySQLManager<Pnj> pnjManager = new MySQLManager<Pnj>();
-            this.ListPnjUC.LoadItems((await pnjManager.Get()).ToList());
+            MySQLManager<Items> itemManager = new MySQLManager<Items>();
+            this.ListItemUC.LoadItems((await itemManager.Get()).ToList());
         }
     }
-
 }
-
