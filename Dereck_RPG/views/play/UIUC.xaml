@@ -11,15 +11,27 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        
-        
         <Grid Grid.Row="0">
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Image Source="/Dereck_RPG;component/images/DereckRPGBackground.jpg" Grid.ColumnSpan="4"/>
+
+            <Label Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Grid.Row="1" Grid.Column="1"/>
+            <Label Grid.Row="1" Grid.Column="2"/>
+            <TextBlock Grid.Row="1" Grid.Column="3"/>
+
         </Grid>
-        
-        
-        
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

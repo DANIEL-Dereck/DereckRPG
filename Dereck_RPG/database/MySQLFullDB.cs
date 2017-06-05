@@ -65,8 +65,22 @@ namespace Dereck_RPG.database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Chercher TPC EF6 pour crée table Etre vivant + monstre + player
-        }
+            modelBuilder.Entity<EtreVivant>()
+                .Property(c => c.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
+            modelBuilder.Entity<Player>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Player");
+            });
+
+            modelBuilder.Entity<Monster>().Map(m =>
+            {
+                m.MapInheritedProperties();
+                m.ToTable("Monster");
+            });
+        }
     }
 
 }

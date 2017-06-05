@@ -15,8 +15,14 @@ namespace Dereck_RPG.entities
         private int lvl;
         private int vie;
         private Stats stats;
-        private Race race;
         private Position position;
+        private List<Items> stuff;
+
+        public List<Items> Stuff
+        {
+            get { return stuff; }
+            set { stuff = value; }
+        }
 
         public Stats Stats
         {
@@ -45,12 +51,6 @@ namespace Dereck_RPG.entities
         {
             get { return lvl; }
             set { lvl = value; }
-        }
-        
-        public Race Race
-        {
-            get { return race; }
-            set { race = value; }
         }
 
         public void attaque(EtreVivant adversaire)

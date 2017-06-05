@@ -1,4 +1,5 @@
 ﻿using Dereck_RPG.entities.bases;
+using Dereck_RPG.entities.enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,12 +11,13 @@ namespace Dereck_RPG.entities
 {
     public class Monster : EtreVivant
     {
-        private List<Items> loot;
+       private MonsterRace monsterRace;
 
-        public List<Items> Loot
+        public MonsterRace MonsterRace
         {
-            get { return loot; }
-            set { loot = value; }
+            get { return monsterRace; }
+            set { monsterRace = value; }
         }
+
     }
 }

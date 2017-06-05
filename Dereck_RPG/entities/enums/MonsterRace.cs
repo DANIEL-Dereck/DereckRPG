@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities.enums
 {
-    public enum Race
+    public enum MonsterRace
     {
-        HUMAIN,
-        ELFE,
-        NAIN,
-        LAPOURS,
-        PANDICORNE,
+        ORC,
+        GOBLIN,
+        SQUELETTE,
+        ZOMBIE,
     }
 }

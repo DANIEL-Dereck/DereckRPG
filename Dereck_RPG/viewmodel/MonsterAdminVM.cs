@@ -34,9 +34,9 @@ namespace Dereck_RPG.viewmodel
             currentMonster = new Monster();
             this.monsterAdmin.MonsterUC.Monster = currentMonster;
 
-            foreach (Race race in Enum.GetValues(typeof(Race)))
+            foreach (MonsterRace monsterRace in Enum.GetValues(typeof(MonsterRace)))
             {
-                this.monsterAdmin.MonsterUC.txtBRace.Items.Add(race);
+                this.monsterAdmin.MonsterUC.txtBRace.Items.Add(monsterRace);
             }
         }
 

@@ -11,17 +11,21 @@ namespace Dereck_RPG.entities
     public class Player : EtreVivant
     {
         private Classe classe;
-        private List<Items> stuff;
+        private Race race;
+
+        public Race Race
+        {
+            get { return race; }
+            set { race = value; }
+        }
 
         public Classe Classe
         {
             get { return classe; }
             set { classe = value; }
         }
-        public List<Items> Stuff
-        {
-            get { return stuff; }
-            set { stuff = value; }
-        }
+
+
+
     }
 }

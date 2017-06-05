@@ -95,6 +95,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="entities\enums\MonsterRace.cs" />
     <Compile Include="viewmodel\DonjonAdminVM.cs" />
     <Compile Include="viewmodel\ItemAdminVM.cs" />
     <Compile Include="viewmodel\MonsterAdminVM.cs" />
@@ -124,6 +125,18 @@
     </Compile>
     <Compile Include="views\MenuEtreVivant.xaml.cs">
       <DependentUpon>MenuEtreVivant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\MenuPlay.xaml.cs">
+      <DependentUpon>MenuPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\play\SelectPlaneteUC.xaml.cs">
+      <DependentUpon>SelectPlaneteUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\play\SelectRegionUC.xaml.cs">
+      <DependentUpon>SelectRegionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\play\UIUC.xaml.cs">
+      <DependentUpon>UIUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\ListDonjonUC.xaml.cs">
       <DependentUpon>ListDonjonUC.xaml</DependentUpon>
@@ -244,6 +257,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\MenuPlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\play\SelectPlaneteUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\play\SelectRegionUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\play\UIUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\usercontrols\ListDonjonUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -353,6 +382,7 @@
   <ItemGroup>
     <Resource Include="images\DereckRPGMenu.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
