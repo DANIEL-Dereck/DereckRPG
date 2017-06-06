@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities
 {
+    [Table("Player")]
     public class Player : EtreVivant
     {
         private Classe classe;

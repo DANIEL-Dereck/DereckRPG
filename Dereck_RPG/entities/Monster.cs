@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities
 {
+    [Table("Monster")]
     public class Monster : EtreVivant
     {
        private MonsterRace monsterRace;

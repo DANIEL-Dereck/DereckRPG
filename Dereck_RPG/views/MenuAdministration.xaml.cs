@@ -55,5 +55,10 @@ namespace Dereck_RPG.views
             Page page = new Page();
             NavigationService.Navigate(new RegionsAdmin());
         }
+
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Window).Close();
+        }
     }
 }

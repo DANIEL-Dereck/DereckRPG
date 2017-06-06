@@ -31,7 +31,7 @@
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
                         <Label x:Name="lblName" Grid.Column="0" Grid.Row="0" />
-                        <TextBlock x:Name="txtBName" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0"/>
+                        <TextBlock x:Name="txtBName" TextWrapping="Wrap" Text="{Binding Nom, Mode=TwoWay}" Grid.Column="1" Grid.Row="0"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

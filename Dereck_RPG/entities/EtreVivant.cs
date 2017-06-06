@@ -2,6 +2,7 @@
 using Dereck_RPG.entities.enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,14 @@ using System.Threading.Tasks;
 
 namespace Dereck_RPG.entities
 {
+    [Table("EtreVivant")]
     public abstract class EtreVivant : BaseDBEntity
     {
         private String name;
         private int lvl;
         private int vie;
         private Stats stats;
+        [Association("", "", "")]
         private Position position;
         private List<Items> stuff;
 

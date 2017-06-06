@@ -51,7 +51,7 @@ namespace Dereck_RPG
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            //window.Content = new PlayAdmin();
+            window.Content = new MenuPlay();
             window.Show();
         }
 

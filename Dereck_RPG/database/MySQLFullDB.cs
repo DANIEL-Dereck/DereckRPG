@@ -12,7 +12,7 @@ namespace Dereck_RPG.database
     {
         const int genernumber = 10;
 
-//        public DbSet<EtreVivant> etreVivantTable { get; set; }
+        public DbSet<EtreVivant> etreVivantTable { get; set; }
         public DbSet<Player> playerTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
 
@@ -65,6 +65,7 @@ namespace Dereck_RPG.database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Chercher TPC EF6 pour crée table Etre vivant + monstre + player
+/*
             modelBuilder.Entity<EtreVivant>()
                 .Property(c => c.Id)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
@@ -80,6 +81,7 @@ namespace Dereck_RPG.database
                 m.MapInheritedProperties();
                 m.ToTable("Monster");
             });
+            */
         }
     }
 

@@ -23,6 +23,7 @@
             <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon" Margin="0,7"/>
             <Button x:Name="btnEtreVivant" Click="btnEtreVivant_Click" Content="Etre Vivant" Margin="0,7"/>
             <Button x:Name="btnItem" Click="btnItem_Click" Content="Item" Margin="0,7"/>
+            <Button x:Name="btnQuit" Click="btnQuit_Click" Content="Quit" Margin="0,7"/>
         </StackPanel>
     </Grid>
 </Page>
