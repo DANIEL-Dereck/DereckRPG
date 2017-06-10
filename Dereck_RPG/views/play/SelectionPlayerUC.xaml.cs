@@ -16,13 +16,27 @@ using System.Windows.Shapes;
 namespace Dereck_RPG.views.play
 {
     /// <summary>
-    /// Logique d'interaction pour SelectPlaneteUC.xaml
+    /// Logique d'interaction pour SelectionPlayerUC.xaml
     /// </summary>
-    public partial class SelectPlaneteUC : UserControl
+    public partial class SelectionPlayerUC : UserControl
     {
-        public SelectPlaneteUC()
+        public SelectionPlayerUC()
         {
             InitializeComponent();
+        }
+
+        private void btnGo_Click(object sender, RoutedEventArgs e)
+        {
+            /*
+            Page page = new Page();
+            NavigationService.Navigate(new DonjonAdmin());
+            */
+        }
+
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Window).Close();
+
         }
     }
 }

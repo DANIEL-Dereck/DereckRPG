@@ -24,5 +24,19 @@ namespace Dereck_RPG.views.play
         {
             InitializeComponent();
         }
+
+        private void btnGo_Click(object sender, RoutedEventArgs e)
+        {
+            /*
+            Page page = new Page();
+            NavigationService.Navigate(new DonjonAdmin());
+            */
+        }
+
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Window).Close();
+
+        }
     }
 }

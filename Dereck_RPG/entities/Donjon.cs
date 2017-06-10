@@ -13,18 +13,11 @@ namespace Dereck_RPG.entities
         private Monster boss;
         private Monster miniBoss;
         private List<Monster> monster;
-        private Position position;
 
         public String Name
         {
             get { return name; }
             set { name = value; }
-        }
-
-        public Position Position
-        {
-            get { return position; }
-            set { position = value; }
         }
 
         public List<Monster> Monster

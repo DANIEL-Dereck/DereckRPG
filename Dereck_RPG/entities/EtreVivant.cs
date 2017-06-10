@@ -17,8 +17,7 @@ namespace Dereck_RPG.entities
         private int lvl;
         private int vie;
         private Stats stats;
-        [Association("", "", "")]
-        private Position position;
+//        [Association("", "", "")]
         private List<Items> stuff;
 
         public List<Items> Stuff
@@ -37,12 +36,6 @@ namespace Dereck_RPG.entities
         {
             get { return vie; }
             set { vie = value; }
-        }
-
-        public Position Position
-        {
-            get { return position; }
-            set { position = value; }
         }
 
         public String Name

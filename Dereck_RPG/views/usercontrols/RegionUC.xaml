@@ -24,7 +24,5 @@
         <ComboBox x:Name="txtBClimate" Text="{Binding Regions.Climate, Mode=TwoWay}" Grid.Column="1" Grid.Row="1"/>
 
         <Button x:Name="btnDonjon" Content="Donjon" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" />
-
-        <local:PositionUC x:Name="UCposition" Grid.ColumnSpan="2" Grid.Row="3"/>
     </Grid>
 </local:UserControlBase>

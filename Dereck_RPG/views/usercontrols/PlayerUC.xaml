@@ -18,7 +18,6 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Label x:Name="lblName" Content="Name" Grid.Column="0" Grid.Row="0" />
         <TextBox x:Name="txtBName" Text="{Binding Player.Name, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"/>
@@ -37,8 +36,6 @@
 
         <Label x:Name="lblClasse" Content="Classe" Grid.Column="0" Grid.Row="6" />
         <ComboBox x:Name="txtBClasse" Text="{Binding Player.Classe, Mode=TwoWay}" Grid.Column="1" Grid.Row="6"/>
-
-        <local:PositionUC x:Name="UCPosition" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2"/>
 
     </Grid>
 </local:UserControlBase>

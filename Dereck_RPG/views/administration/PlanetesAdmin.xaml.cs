@@ -32,11 +32,11 @@ namespace Dereck_RPG.views.administration
 
         public PlanetesAdmin(PlaneteAdminVM planeteAdminVM)
         {
-/*
-            InitializeComponent();
-            this.DataContext = planeteAdminVM;
-            planeteAdminVM.LoadPlanetePage(this);
-            */
+            /*
+                        InitializeComponent();
+                        this.DataContext = planeteAdminVM;
+                        planeteAdminVM.LoadPlanetePage(this);
+                        */
         }
 
         private async void InitLists()

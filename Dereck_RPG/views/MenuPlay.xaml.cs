@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dereck_RPG.database;
+using Dereck_RPG.entities;
+using Dereck_RPG.viewmodel.playviewmodel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +26,16 @@ namespace Dereck_RPG.views
         public MenuPlay()
         {
             InitializeComponent();
+            this.DataContext = new PlanetePlayVM(this);
+            InitLists();
         }
+
+        private async void InitLists()
+        {
+            MySQLManager<Planetes> planetesManager = new MySQLManager<Planetes>();
+            this.ListPlaneteUC.LoadItems((await planetesManager.Get()).ToList());
+        }
+
 
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {

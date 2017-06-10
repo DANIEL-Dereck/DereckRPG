@@ -14,12 +14,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Label x:Name="lblName" Content="Name" Grid.Column="0" Grid.Row="0" />
         <TextBox x:Name="txtBName" Text="{Binding Planete.Name, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"/>
         <Button x:Name="btnRegion" Content="Region" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" />
-        <local:PositionUC x:Name="UCposition" Grid.ColumnSpan="2" Grid.Row="2"/>
 
     </Grid>
 </local:UserControlBase>

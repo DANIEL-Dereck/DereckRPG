@@ -19,7 +19,6 @@ namespace Dereck_RPG.database
         public DbSet<Donjon> donjonTable { get; set; }
         public DbSet<Items> itemsTable { get; set; }
         public DbSet<Planetes> planetesTable { get; set; }
-        public DbSet<Position> positionTable { get; set; }
         public DbSet<Regions> regionsTable { get; set; }
         public DbSet<Stats> statsTable { get; set; }
         
@@ -60,6 +59,11 @@ namespace Dereck_RPG.database
                 }
                 this.SaveChangesAsync();
             }
+        }
+
+        private void generateDefaultPlanete()
+        {
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
