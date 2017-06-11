@@ -95,6 +95,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="database\entitieslinks\MySQLDonjonManager.cs" />
+    <Compile Include="database\entitieslinks\MySQLEtreViventManager.cs" />
+    <Compile Include="database\entitieslinks\MySQLItemManager.cs" />
+    <Compile Include="database\entitieslinks\MySQLPlaneteManager.cs" />
+    <Compile Include="database\entitieslinks\MySQLRegionManager.cs" />
     <Compile Include="entities\enums\MonsterRace.cs" />
     <Compile Include="viewmodel\DonjonAdminVM.cs" />
     <Compile Include="viewmodel\ItemAdminVM.cs" />

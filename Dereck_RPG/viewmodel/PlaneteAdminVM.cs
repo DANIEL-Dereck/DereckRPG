@@ -25,6 +25,8 @@ namespace Dereck_RPG.viewmodel
 
             InitUC();
             InitActions();
+            this.planeteAdmin.PlaneteUC.Planete= new Planetes();
+            this.planeteAdmin.ListPlaneteUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
 

@@ -12,9 +12,9 @@ namespace Dereck_RPG.database
     {
         const int genernumber = 10;
 
-//        public DbSet<EtreVivant> etreVivantTable { get; set; }
         public DbSet<Player> playerTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
+        public DbSet<EtreVivant> etreVivantTable { get; set; }
 
         public DbSet<Donjon> donjonTable { get; set; }
         public DbSet<Items> itemsTable { get; set; }

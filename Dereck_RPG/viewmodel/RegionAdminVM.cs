@@ -26,6 +26,8 @@ namespace Dereck_RPG.viewmodel
 
             InitUC();
             InitActions();
+            this.regionAdmin.RegionUC.Regions= new Regions();
+            this.regionAdmin.ListRegionUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
 

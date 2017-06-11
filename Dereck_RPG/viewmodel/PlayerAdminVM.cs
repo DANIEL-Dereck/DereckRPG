@@ -26,6 +26,8 @@ namespace Dereck_RPG.viewmodel
 
             InitUC();
             InitActions();
+            this.playerAdmin.PlayerUC.Player= new Player();
+            this.playerAdmin.ListPlayerUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
 

@@ -25,6 +25,8 @@ namespace Dereck_RPG.viewmodel
 
             InitUC();
             InitActions();
+            this.donjonAdmin.DonjonUC.Donjon= new Donjon();
+            this.donjonAdmin.ListDonjonUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
 

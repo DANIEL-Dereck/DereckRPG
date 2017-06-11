@@ -26,6 +26,8 @@ namespace Dereck_RPG.viewmodel
 
             InitUC();
             InitActions();
+            this.monsterAdmin.MonsterUC.Monster = new Monster();
+            this.monsterAdmin.ListMonsterUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
 
