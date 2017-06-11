@@ -17,36 +17,42 @@ namespace Dereck_RPG.entities
         private int lvl;
         private int vie;
         private Stats stats;
-//        [Association("", "", "")]
-        private List<Items> stuff;
+                private List<Items> stuff;
 
-        public List<Items> Stuff
+
+        public EtreVivant()
         {
-            get { return stuff; }
-            set { stuff = value; }
+            this.stuff = new List<Items>();
         }
 
-        public Stats Stats
+
+                public List<Items> Stuff
+                {
+                    get { return stuff; }
+                    set { stuff = value; OnPropertyChanged("Stuff");}
+                }
+
+    public Stats Stats
         {
             get { return stats; }
-            set { stats = value; }
+            set { stats = value; OnPropertyChanged("Stats"); }
         }
 
         public int Vie
         {
             get { return vie; }
-            set { vie = value; }
+            set { vie = value; OnPropertyChanged("Vie"); }
         }
 
         public String Name
         {
             get { return name; }
-            set { name = value; }
+            set { name = value; OnPropertyChanged("Name"); }
         }
         public int Lvl
         {
             get { return lvl; }
-            set { lvl = value; }
+            set { lvl = value; OnPropertyChanged("Lvl"); }
         }
 
         public void attaque(EtreVivant adversaire)

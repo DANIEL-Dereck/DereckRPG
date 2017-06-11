@@ -14,28 +14,33 @@ namespace Dereck_RPG.entities
         private Monster miniBoss;
         private List<Monster> monster;
 
+        public Donjon()
+        {
+            this.monster = new List<Monster>();
+        }
+
         public String Name
         {
             get { return name; }
-            set { name = value; }
+            set { name = value; OnPropertyChanged("Name"); }
         }
 
         public List<Monster> Monster
         {
             get { return monster; }
-            set { monster = value; }
+            set { monster = value; OnPropertyChanged("Monster"); }
         }
 
         public Monster MiniBoss
         {
             get { return miniBoss; }
-            set { miniBoss = value; }
+            set { miniBoss = value; OnPropertyChanged("MiniBoss"); }
         }
 
         public Monster Boss
         {
             get { return boss; }
-            set { boss = value; }
+            set { boss = value; OnPropertyChanged("Boss"); }
         }
     }
 }

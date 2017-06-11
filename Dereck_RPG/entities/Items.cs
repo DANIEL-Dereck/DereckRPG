@@ -19,31 +19,31 @@ namespace Dereck_RPG.entities
         public Rarete Rarete
         {
             get { return rarete; }
-            set { rarete = value; }
+            set { rarete = value; OnPropertyChanged("Rarete"); }
         }
 
         public Stats Statistique
         {
             get { return statistique; }
-            set { statistique = value; }
+            set { statistique = value; OnPropertyChanged("Statistique"); }
         }
 
         public ItemCategory Categorie
         {
             get { return categorie; }
-            set { categorie = value; }
+            set { categorie = value; OnPropertyChanged("Categorie"); }
         }
 
         public String Description
         {
             get { return description; }
-            set { description = value; }
+            set { description = value; OnPropertyChanged("Description"); }
         }
 
         public String Nom
         {
             get { return nom; }
-            set { nom = value; }
+            set { nom = value; OnPropertyChanged("Nom"); }
         }
 
     }

@@ -12,13 +12,12 @@ namespace Dereck_RPG.entities
     [Table("Monster")]
     public class Monster : EtreVivant
     {
-       private MonsterRace monsterRace;
+        private MonsterRace monsterRace;
 
         public MonsterRace MonsterRace
         {
             get { return monsterRace; }
-            set { monsterRace = value; }
+            set { monsterRace = value; OnPropertyChanged("MonsterRace"); }
         }
-
     }
 }

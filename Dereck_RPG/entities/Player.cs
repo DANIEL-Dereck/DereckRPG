@@ -17,16 +17,15 @@ namespace Dereck_RPG.entities
         public Race Race
         {
             get { return race; }
-            set { race = value; }
+            set { race = value; OnPropertyChanged("Race"); }
         }
 
         public Classe Classe
         {
             get { return classe; }
-            set { classe = value; }
+            set { classe = value; OnPropertyChanged("Classe"); }
         }
-
-
-
     }
+
+
 }

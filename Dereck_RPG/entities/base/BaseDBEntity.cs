@@ -12,6 +12,7 @@ namespace Dereck_RPG.entities.bases
     {
         private Int32 id;
 
+        [Key]
         public Int32 Id
         {
             get { return id; }

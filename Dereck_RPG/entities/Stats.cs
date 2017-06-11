@@ -16,19 +16,19 @@ namespace Dereck_RPG.entities
         public int Critique
         {
             get { return critique; }
-            set { critique = value; }
+            set { critique = value; OnPropertyChanged("Critique"); }
         }
 
         public int Defence
         {
             get { return defence; }
-            set { defence = value; }
+            set { defence = value; OnPropertyChanged("Defence"); }
         }
 
         public int Attaque
         {
             get { return attaque; }
-            set { attaque = value; }
+            set { attaque = value; OnPropertyChanged("Attaque"); }
         }
 
     }

@@ -12,7 +12,7 @@ namespace Dereck_RPG.database
     {
         const int genernumber = 10;
 
-        public DbSet<EtreVivant> etreVivantTable { get; set; }
+//        public DbSet<EtreVivant> etreVivantTable { get; set; }
         public DbSet<Player> playerTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
 
@@ -57,7 +57,40 @@ namespace Dereck_RPG.database
                     donjonTable.Add(generatorDonjon.GenerateItem());
                     logger.Log("Initalisation Donjon:" + i);
                 }
+
+                EntityGenerator<Items> generatorItems = new EntityGenerator<Items>();
+                for (int i = 0; i < genernumber; i++)
+                {
+                    itemsTable.Add(generatorItems.GenerateItem());
+                    logger.Log("Initalisation Items:" + i);
+                }
                 this.SaveChangesAsync();
+
+                EntityGenerator<Stats> generatorStats = new EntityGenerator<Stats>();
+                for (int i = 0; i < genernumber; i++)
+                {
+                    statsTable.Add(generatorStats.GenerateItem());
+                    logger.Log("Initalisation Stats:" + i);
+                }
+                this.SaveChangesAsync();
+
+                /* TEST */
+                EntityGenerator<Monster> generatorMonster = new EntityGenerator<Monster>();
+                for (int i = 0; i < genernumber; i++)
+                {
+                    monsterTable.Add(generatorMonster.GenerateItem());
+                    logger.Log("Initalisation Monster:" + i);
+                }
+                this.SaveChangesAsync();
+
+                EntityGenerator<Player> generatorPlayer = new EntityGenerator<Player>();
+                for (int i = 0; i < genernumber; i++)
+                {
+                    playerTable.Add(generatorPlayer.GenerateItem());
+                    logger.Log("Initalisation Player:" + i);
+                }
+                this.SaveChangesAsync();
+
             }
         }
 

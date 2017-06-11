@@ -12,17 +12,21 @@ namespace Dereck_RPG.entities
         private String name;
         private List<Regions> region;
 
+        public Planetes()
+        {
+            this.region = new List<Regions>();
+        }
 
         public List<Regions> Region
         {
             get { return region; }
-            set { region = value; }
+            set { region = value; OnPropertyChanged("Region"); }
         }
 
         public String Name
         {
             get { return name; }
-            set { name = value; }
+            set { name = value; OnPropertyChanged("Name"); }
         }
     }
 }
