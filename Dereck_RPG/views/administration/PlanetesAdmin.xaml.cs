@@ -30,15 +30,6 @@ namespace Dereck_RPG.views.administration
             InitLists();
         }
 
-        public PlanetesAdmin(PlaneteAdminVM planeteAdminVM)
-        {
-            /*
-                        InitializeComponent();
-                        this.DataContext = planeteAdminVM;
-                        planeteAdminVM.LoadPlanetePage(this);
-                        */
-        }
-
         private async void InitLists()
         {
             MySQLManager<Planetes> planetesManager = new MySQLManager<Planetes>();

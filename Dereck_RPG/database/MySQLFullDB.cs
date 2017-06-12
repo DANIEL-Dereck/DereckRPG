@@ -23,7 +23,7 @@ namespace Dereck_RPG.database
         public DbSet<Stats> statsTable { get; set; }
         
 
-        Logger logger = new Logger("MySQLFullDB", LogMode.CURRENT_FOLDER, AlertMode.OVERLAY, "MYSQL", true);
+        Logger logger = new Logger("MySQLFullDB", LogMode.CURRENT_FOLDER, AlertMode.CONSOLE, "MYSQL", true);
 
 
         public MySQLFullDB()

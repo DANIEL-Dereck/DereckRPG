@@ -1,9 +1,12 @@
-﻿using Dereck_RPG.database;
+﻿using ClassLibrary2.Entities.Reflection;
+using Dereck_RPG.database;
+using Dereck_RPG.database.entitieslinks;
 using Dereck_RPG.entities;
 using Dereck_RPG.views.administration;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,26 +17,28 @@ namespace Dereck_RPG.viewmodel
 {
     public class DonjonAdminVM
     {
+        #region Attribute
         private Donjon currentDonjon;
         private DonjonAdmin donjonAdmin;
-        MySQLManager<Donjon> donjonManager = new MySQLManager<Donjon>();
+        MySQLDonjonManager donjonManager = new MySQLDonjonManager();
         ObservableCollection<Donjon> donjonList = new ObservableCollection<Donjon>();
+        #endregion
 
+        #region ctor
         public DonjonAdminVM(DonjonAdmin donjonAdmin)
         {
             this.donjonAdmin = donjonAdmin;
 
+            InitLists();
             InitUC();
             InitActions();
-            this.donjonAdmin.DonjonUC.Donjon= new Donjon();
-            this.donjonAdmin.ListDonjonUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
-            InitLists();
         }
+        #endregion
 
+        #region init method
         private void InitUC()
         {
-            currentDonjon = new Donjon();
-            this.donjonAdmin.DonjonUC.Donjon = currentDonjon;
+            this.resetDonjon();
         }
 
         private async void InitLists()
@@ -41,63 +46,139 @@ namespace Dereck_RPG.viewmodel
             this.donjonAdmin.ListDonjonUC.LoadItems((await donjonManager.Get()).ToList());
         }
 
-        private void AddInList()
-        {
-            this.donjonAdmin.ListDonjonUC.AddItem(this.donjonAdmin.DonjonUC.Donjon);
-        }
-
-        private void SupInList()
-        {
-            this.donjonAdmin.ListDonjonUC.RemoveItem(this.donjonAdmin.DonjonUC.Donjon);
-        }
-
         private void InitActions()
         {
-            this.donjonAdmin.btnDelete.Click += btnDelete_Click;
+            this.donjonAdmin.btnDelete.Click += BtnDelete_Click;
             this.donjonAdmin.btnOk.Click += btnOk_Click;
             this.donjonAdmin.btnNew.Click += btnNew_Click;
             this.donjonAdmin.ListDonjonUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
+            this.donjonAdmin.ListDonjonUC.RemoveDonjonContextMenu.Click += RemoveDonjonContextMenu_OnClick;
+            this.donjonAdmin.ListDonjonUC.DuplicateDonjonContextMenu.Click += DuplicateDonjonContextMenu_OnClick;
         }
+        #endregion
 
-        private async void btnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.donjonAdmin.DonjonUC.Donjon.Id != 0)
-            {
-                await donjonManager.Delete(this.donjonAdmin.DonjonUC.Donjon);
-                SupInList();
-            }
-        }
+        #region event
+        #region list
 
-        private async void btnOk_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.donjonAdmin.DonjonUC.Donjon != null)
-            {
-                if (this.donjonAdmin.DonjonUC.Donjon.Id > 0)
-                {
-                    await donjonManager.Update(this.donjonAdmin.DonjonUC.Donjon);
-                }
-                else
-                {
-                    await donjonManager.Insert(this.donjonAdmin.DonjonUC.Donjon);
-                    AddInList();
-                }
-            }
-        }
-
-        private void btnNew_Click(object sender, RoutedEventArgs e)
-        {
-            this.donjonAdmin.DonjonUC.Donjon = new Donjon();
-        }
 
         private void ItemsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
                 Donjon item = (e.AddedItems[0] as Donjon);
-                this.donjonAdmin.DonjonUC.Donjon = item;
+                currentDonjon = item;
+                donjonManager.GetBoss(currentDonjon);
+                donjonManager.GetMiniBoss(currentDonjon);
+                donjonManager.GetMonster(currentDonjon);
+                this.donjonAdmin.DonjonUC.Donjon = currentDonjon;
+            }
+        }
+        #endregion
+
+        #region Btn
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            currentDonjon = this.donjonAdmin.DonjonUC.Donjon;
+
+            if (currentDonjon.Id == 0)
+            {
+                MessageBox.Show("Cannot delete new element in database");
+            }
+            else
+            {
+                MessageBoxResult mbr = MessageBox.Show("Do you really want to delete this item ?", "Confirm", MessageBoxButton.OKCancel, MessageBoxImage.Exclamation);
+
+                if (mbr == MessageBoxResult.OK)
+                {
+                    confirmDelete();                }
             }
         }
 
-    }
+        private async void btnOk_Click(object sender, RoutedEventArgs e)
+        {
+            currentDonjon = this.donjonAdmin.DonjonUC.Donjon;
 
+            if (currentDonjon.Id != 0)
+            {
+                try
+                {
+                    await donjonManager.Update(currentDonjon);
+                }
+                catch (DbEntityValidationException dbe)
+                {
+                    MessageBox.Show("One or more fields are not valid.");
+                    Console.WriteLine(dbe);
+                }
+            }
+            else
+            {
+                try
+                {
+                    await donjonManager.Insert(currentDonjon);
+                    this.donjonAdmin.ListDonjonUC.AddItem(currentDonjon);
+                }
+                catch (DbEntityValidationException dbe)
+                {
+                    MessageBox.Show("One or more fields are not valid.");
+                    Console.WriteLine(dbe);
+                }
+            }
+        }
+    
+
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            resetDonjon();
+        }
+
+        #endregion
+
+        #region ContextMenu
+        private void RemoveDonjonContextMenu_OnClick(object sender, RoutedEventArgs e)
+        {
+         //   confirmDelete();
+        }
+
+        /**
+         * Callback on "Duplicate" item in Context menu
+         */
+        private async void DuplicateDonjonContextMenu_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (this.donjonAdmin.ListDonjonUC.ItemsList.SelectedIndex > -1)
+            {
+                var donjon = new Donjon();
+                donjon = (Donjon)this.donjonAdmin.ListDonjonUC.ItemsList.SelectedItem;
+                donjonManager.GetBoss(donjon);
+                donjonManager.GetMiniBoss(donjon);
+                donjonManager.GetMonster(donjon);
+                await donjonManager.Insert(donjon);
+                this.donjonAdmin.ListDonjonUC.LoadItems((await donjonManager.Get()).ToList());
+            }
+
+        }
+        #endregion
+
+        #endregion
+
+        #region util
+        private async void confirmDelete()
+        {
+            MessageBoxResult mbr = MessageBox.Show("Do you really want to delete this item ?", "Confirm", MessageBoxButton.OKCancel, MessageBoxImage.Exclamation);
+
+            if (mbr == MessageBoxResult.OK)
+            {
+                await donjonManager.Delete(currentDonjon);
+                this.donjonAdmin.ListDonjonUC.RemoveItem(currentDonjon);
+                this.resetDonjon();
+            }
+        }
+
+        private void resetDonjon()
+        {
+            currentDonjon = new Donjon();
+            this.donjonAdmin.DonjonUC.Donjon = currentDonjon;
+        }
+
+    #endregion
+}
 }

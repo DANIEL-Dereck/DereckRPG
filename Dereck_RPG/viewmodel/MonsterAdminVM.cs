@@ -99,9 +99,15 @@ namespace Dereck_RPG.viewmodel
         {
             if (e.AddedItems.Count > 0)
             {
+                this.monsterAdmin.MonsterUC.Monster = (e.AddedItems[0] as Monster);
+            }
+            /*
+            if (e.AddedItems.Count > 0)
+            {
                 Monster item = (e.AddedItems[0] as Monster);
                 this.monsterAdmin.MonsterUC.Monster = item;
             }
+            */
         }
 
     }

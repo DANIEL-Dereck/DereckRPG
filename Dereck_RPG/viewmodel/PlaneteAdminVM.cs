@@ -93,9 +93,15 @@ namespace Dereck_RPG.viewmodel
         {
             if (e.AddedItems.Count > 0)
             {
+                this.planeteAdmin.PlaneteUC.Planete = (e.AddedItems[0] as Planetes);
+            }
+            /*
+            if (e.AddedItems.Count > 0)
+            {
                 Planetes item = (e.AddedItems[0] as Planetes);
                 this.planeteAdmin.PlaneteUC.Planete = item;
             }
+            */
         }
 
     }

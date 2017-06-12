@@ -102,9 +102,15 @@ namespace Dereck_RPG.viewmodel
         {
             if (e.AddedItems.Count > 0)
             {
+                this.playerAdmin.PlayerUC.Player = (e.AddedItems[0] as Player);
+            }
+            /*
+            if (e.AddedItems.Count > 0)
+            {
                 Player item = (e.AddedItems[0] as Player);
                 this.playerAdmin.PlayerUC.Player = item;
             }
+            */
         }
     }
 }

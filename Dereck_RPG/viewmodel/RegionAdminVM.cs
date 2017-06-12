@@ -98,9 +98,15 @@ namespace Dereck_RPG.viewmodel
         {
             if (e.AddedItems.Count > 0)
             {
+                this.regionAdmin.RegionUC.Regions = (e.AddedItems[0] as Regions);
+            }
+            /*
+            if (e.AddedItems.Count > 0)
+            {
                 Regions item = (e.AddedItems[0] as Regions);
                 this.regionAdmin.RegionUC.Regions = item;
             }
+            */
         }
     }
 }
