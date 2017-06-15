@@ -19,8 +19,6 @@
 
         <Label x:Name="lblName" Content="Name" Grid.Column="0" Grid.Row="0" />
         <TextBox x:Name="txtBName" Text="{Binding Donjon.Name, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"/>
-
-
         <Button x:Name="btnBoss" Content="Boss" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"/>
         <Button x:Name="btnMiniBoss" Content="MiniBoss" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
         <Button x:Name="btnMobList" Content="MobList" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>

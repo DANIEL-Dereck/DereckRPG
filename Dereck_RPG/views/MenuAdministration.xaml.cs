@@ -32,10 +32,16 @@ namespace Dereck_RPG.views
             NavigationService.Navigate(new DonjonAdmin());
         }
 
-        private void btnEtreVivant_Click(object sender, RoutedEventArgs e)
+        private void btnMonster_Click(object sender, RoutedEventArgs e)
         {
             Page page = new Page();
-            NavigationService.Navigate(new MenuEtreVivant());
+            NavigationService.Navigate(new MonsterAdmin());
+        }
+
+        private void btnPlayer_Click(object sender, RoutedEventArgs e)
+        {
+            Page page = new Page();
+            NavigationService.Navigate(new PlayerAdmin());
         }
 
         private void btnItem_Click(object sender, RoutedEventArgs e)

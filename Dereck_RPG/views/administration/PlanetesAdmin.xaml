@@ -21,6 +21,7 @@
 
         <StackPanel  Grid.Column="0" Grid.Row="0">
             <UC:PlaneteUC x:Name="PlaneteUC"/>
+            <Button x:Name="btnRegion" Content="Region" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="5" />
         </StackPanel>
         <StackPanel  Grid.Column="1" Grid.Row="0">
             <UC:ListPlaneteUC x:Name="ListPlaneteUC" Grid.RowSpan="2"/>

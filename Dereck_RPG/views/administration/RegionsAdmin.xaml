@@ -13,6 +13,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -24,6 +25,9 @@
         </StackPanel>
         <StackPanel  Grid.Column="1" Grid.Row="0">
             <UC:ListRegionUC x:Name="ListRegionUC" Grid.RowSpan="2"/>
+        </StackPanel>
+        <StackPanel  Grid.Column="1" Grid.Row="0">
+            <UC:ListRegionUC x:Name="ListRegionLUC" Grid.RowSpan="2"/>
         </StackPanel>
         <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
             <Button x:Name="btnNew" Content="New"/>

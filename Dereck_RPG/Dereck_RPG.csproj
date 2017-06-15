@@ -96,7 +96,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="database\entitieslinks\MySQLDonjonManager.cs" />
-    <Compile Include="database\entitieslinks\MySQLEtreViventManager.cs" />
     <Compile Include="database\entitieslinks\MySQLItemManager.cs" />
     <Compile Include="database\entitieslinks\MySQLPlaneteManager.cs" />
     <Compile Include="database\entitieslinks\MySQLRegionManager.cs" />
@@ -129,9 +128,6 @@
     <Compile Include="views\MenuAdministration.xaml.cs">
       <DependentUpon>MenuAdministration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\MenuEtreVivant.xaml.cs">
-      <DependentUpon>MenuEtreVivant.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\MenuPlay.xaml.cs">
       <DependentUpon>MenuPlay.xaml</DependentUpon>
     </Compile>
@@ -150,9 +146,6 @@
     <Compile Include="views\usercontrols\base\UserControlBase.cs" />
     <Compile Include="views\usercontrols\DonjonUC.xaml.cs">
       <DependentUpon>DonjonUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\usercontrols\EtreVivantUC.xaml.cs">
-      <DependentUpon>EtreVivantUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\ItemUC.xaml.cs">
       <DependentUpon>ItemUC.xaml</DependentUpon>
@@ -208,7 +201,6 @@
     <Compile Include="entities\enums\ItemCategory.cs" />
     <Compile Include="entities\enums\Race.cs" />
     <Compile Include="entities\enums\Rarete.cs" />
-    <Compile Include="entities\EtreVivant.cs" />
     <Compile Include="entities\generator\EntityGenerator.cs" />
     <Compile Include="entities\generator\TypeEnum.cs" />
     <Compile Include="entities\Items.cs" />
@@ -255,10 +247,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\MenuEtreVivant.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="views\MenuPlay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -280,10 +268,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\usercontrols\DonjonUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="views\usercontrols\EtreVivantUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

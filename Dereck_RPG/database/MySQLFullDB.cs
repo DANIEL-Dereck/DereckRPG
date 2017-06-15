@@ -14,7 +14,6 @@ namespace Dereck_RPG.database
 
         public DbSet<Player> playerTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
-        public DbSet<EtreVivant> etreVivantTable { get; set; }
 
         public DbSet<Donjon> donjonTable { get; set; }
         public DbSet<Items> itemsTable { get; set; }
@@ -74,7 +73,6 @@ namespace Dereck_RPG.database
                 }
                 this.SaveChangesAsync();
 
-                /* TEST */
                 EntityGenerator<Monster> generatorMonster = new EntityGenerator<Monster>();
                 for (int i = 0; i < genernumber; i++)
                 {
@@ -90,7 +88,6 @@ namespace Dereck_RPG.database
                     logger.Log("Initalisation Player:" + i);
                 }
                 this.SaveChangesAsync();
-
             }
         }
 
@@ -101,24 +98,7 @@ namespace Dereck_RPG.database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Chercher TPC EF6 pour crée table Etre vivant + monstre + player
-/*
-            modelBuilder.Entity<EtreVivant>()
-                .Property(c => c.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
-            modelBuilder.Entity<Player>().Map(m =>
-            {
-                m.MapInheritedProperties();
-                m.ToTable("Player");
-            });
-
-            modelBuilder.Entity<Monster>().Map(m =>
-            {
-                m.MapInheritedProperties();
-                m.ToTable("Monster");
-            });
-            */
         }
     }
 

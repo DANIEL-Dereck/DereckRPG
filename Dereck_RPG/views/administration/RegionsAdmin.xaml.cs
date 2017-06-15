@@ -30,13 +30,11 @@ namespace Dereck_RPG.views.administration
             InitLists();
         }
 
-        public RegionsAdmin(RegionAdminVM regionAdminVM)
+        public RegionsAdmin(PlaneteAdminVM planeteVM)
         {
-            /*
                         InitializeComponent();
-                        this.DataContext = planeteAdminVM;
-                        planeteAdminVM.LoadPlanetePage(this);
-                        */
+                        this.DataContext = planeteVM;
+                        planeteVM.LoadRegionPage(this);
         }
 
         private async void InitLists()

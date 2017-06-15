@@ -179,6 +179,22 @@ namespace Dereck_RPG.viewmodel
             this.donjonAdmin.DonjonUC.Donjon = currentDonjon;
         }
 
-    #endregion
-}
+        #endregion
+
+        #region navigate
+        private void btnBoss_Click(object sender, RoutedEventArgs e)
+        {
+            this.donjonAdmin.NavigationService.Navigate(new MonsterAdmin());
+        }
+        private void btnMiniBoss_Click(object sender, RoutedEventArgs e)
+        {
+            this.donjonAdmin.NavigationService.Navigate(new MonsterAdmin());
+        }
+        private void btnMobList_Click(object sender, RoutedEventArgs e)
+        {
+            this.donjonAdmin.NavigationService.Navigate(new MonsterAdmin());
+        }
+        #endregion
+
+    }
 }
