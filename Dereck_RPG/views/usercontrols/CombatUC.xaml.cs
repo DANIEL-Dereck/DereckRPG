@@ -1,5 +1,4 @@
-﻿using Dereck_RPG.entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,26 +16,13 @@ using System.Windows.Shapes;
 namespace Dereck_RPG.views.usercontrols
 {
     /// <summary>
-    /// Logique d'interaction pour StatsUC.xaml
+    /// Logique d'interaction pour CombatUC.xaml
     /// </summary>
-    public partial class StatsUC : UserControlBase
+    public partial class CombatUC : UserControlBase
     {
-
-        private Stats stats;
-
-        public Stats Stats
-        {
-            get { return stats; }
-            set { stats = value;
-                base.OnPropertyChanged("Stats");
-            }
-        }
-
-        public StatsUC()
+        public CombatUC()
         {
             InitializeComponent();
-            base.DataContext = this;
         }
-
     }
 }

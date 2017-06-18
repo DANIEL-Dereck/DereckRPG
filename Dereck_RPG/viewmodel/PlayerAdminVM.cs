@@ -65,6 +65,7 @@ namespace Dereck_RPG.viewmodel
             this.playerAdmin.btnDelete.Click += btnDelete_Click;
             this.playerAdmin.btnOk.Click += btnOk_Click;
             this.playerAdmin.btnNew.Click += btnNew_Click;
+            this.playerAdmin.PlayerUC.btnStats.Click += btnStats_Click;
             this.playerAdmin.ListPlayerUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
         }
 
@@ -112,5 +113,11 @@ namespace Dereck_RPG.viewmodel
             }
             */
         }
+
+        private void btnStats_Click(object sender, RoutedEventArgs e)
+        {
+            this.playerAdmin.NavigationService.Navigate(new StatsAdmin(this));
+        }
+
     }
 }

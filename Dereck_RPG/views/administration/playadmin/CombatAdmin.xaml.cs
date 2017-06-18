@@ -28,13 +28,15 @@ namespace Dereck_RPG.views.administration.playadmin
         public CombatAdmin()
         {
             InitializeComponent();
-            this.DataContext = new ComatAdminVM();
+            this.DataContext = new CombatAdminVM(this);
         }
 
         public CombatAdmin(Player currentPlayer, Monster currentMonster)
         {
             this.currentPlayer = currentPlayer;
             this.currentMonster = currentMonster;
+            this.DataContext = new CombatAdminVM(this, currentPlayer, currentMonster);
+            InitializeComponent();
         }
     }
 }

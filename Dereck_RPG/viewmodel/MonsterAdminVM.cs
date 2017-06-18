@@ -62,6 +62,7 @@ namespace Dereck_RPG.viewmodel
             this.monsterAdmin.btnDelete.Click += btnDelete_Click;
             this.monsterAdmin.btnOk.Click += btnOk_Click;
             this.monsterAdmin.btnNew.Click += btnNew_Click;
+            this.monsterAdmin.MonsterUC.btnStats.Click += btnStats_Click;
             this.monsterAdmin.ListMonsterUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
         }
 
@@ -93,6 +94,11 @@ namespace Dereck_RPG.viewmodel
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
             this.monsterAdmin.MonsterUC.Monster = new Monster();
+        }
+
+        private void btnStats_Click(object sender, RoutedEventArgs e)
+        {
+            this.monsterAdmin.NavigationService.Navigate(new StatsAdmin(this));
         }
 
         private void ItemsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

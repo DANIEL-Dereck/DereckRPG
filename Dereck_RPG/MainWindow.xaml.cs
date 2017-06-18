@@ -33,7 +33,6 @@ namespace Dereck_RPG
             Image BgMenuI = new Image();
             ImageBrush BgMenuIB = new ImageBrush();
 
-            // Ajouter random pour selection images 
             BgMenuI.Source = new BitmapImage(new Uri(@"../../images/DereckRPGBackground.jpg", UriKind.Relative));
             BgMenuIB.ImageSource = BgMenuI.Source;
             menuGrid.Background = BgMenuIB;
@@ -51,6 +50,14 @@ namespace Dereck_RPG
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
+
+            int height = 500;
+            int width = 730;
+
+            window.MaxHeight = height;
+            window.MaxWidth = width;
+            window.MinHeight = height;
+            window.MinWidth = width;
             window.Content = new MenuPlay();
             window.Show();
         }
@@ -58,6 +65,13 @@ namespace Dereck_RPG
         private void btnAdministration_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
+            int height = 500;
+            int width = 730;
+
+            window.MaxHeight = height;
+            window.MaxWidth = width;
+            window.MinHeight = height;
+            window.MinWidth = width;
             window.Content = new MenuAdministration();
             window.Show();
         }

@@ -6,7 +6,6 @@
       xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
       xmlns:local="clr-namespace:Dereck_RPG.views"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
       Title="MenuPlay">
 
     <Grid>
@@ -23,10 +22,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Monster"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Monster" Background="Red"/>
             <UC:ListMonsterUC Grid.Row="1" Grid.Column="0" x:Name="ListMonsterUC"/>
             
-            <Label Grid.Row="0" Grid.Column="1" Content="Player"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Player" Background="Green"/>
             <UC:ListPlayerUC Grid.Row="1" Grid.Column="1" x:Name="ListPlayerUC"/>
         </Grid>
         <Grid Grid.Row="1">

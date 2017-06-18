@@ -98,7 +98,8 @@
     <Compile Include="entities\enums\MonsterRace.cs" />
     <Compile Include="viewmodel\MonsterAdminVM.cs" />
     <Compile Include="viewmodel\PlayerAdminVM.cs" />
-    <Compile Include="viewmodel\playviewmodel\ComatAdminVM.cs" />
+    <Compile Include="viewmodel\playviewmodel\CombatAdminVM.cs" />
+    <Compile Include="viewmodel\StatsAdminVM.cs" />
     <Compile Include="views\administration\MonsterAdmin.xaml.cs">
       <DependentUpon>MonsterAdmin.xaml</DependentUpon>
     </Compile>
@@ -108,21 +109,27 @@
     <Compile Include="views\administration\PlayerAdmin.xaml.cs">
       <DependentUpon>PlayerAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\administration\StatsAdmin.xaml.cs">
+      <DependentUpon>StatsAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\MenuAdministration.xaml.cs">
       <DependentUpon>MenuAdministration.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\MenuPlay.xaml.cs">
       <DependentUpon>MenuPlay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\play\CombatUC.xaml.cs">
+    <Compile Include="views\usercontrols\base\UserControlBase.cs" />
+    <Compile Include="views\usercontrols\CombatUC.xaml.cs">
       <DependentUpon>CombatUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\usercontrols\base\UserControlBase.cs" />
     <Compile Include="views\usercontrols\ListMonsterUC.xaml.cs">
       <DependentUpon>ListMonsterUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\ListPlayerUC.xaml.cs">
       <DependentUpon>ListPlayerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\ListStatsUC.xaml.cs">
+      <DependentUpon>ListStatsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\MonsterUC.xaml.cs">
       <DependentUpon>MonsterUC.xaml</DependentUpon>
@@ -177,6 +184,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\administration\StatsAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\MenuAdministration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,7 +196,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\play\CombatUC.xaml">
+    <Page Include="views\usercontrols\CombatUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\usercontrols\ListPlayerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\usercontrols\ListStatsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -251,14 +266,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="images\DereckRPGBackground.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\DereckRPGMenu.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\2DereckRPGBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DereckRPGBackground.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       Title="MenuAdministration">
 
-    <Grid>
+    <Grid x:Name="menuGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="6*"/>
@@ -16,7 +16,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
             <Button x:Name="btnPlayer" Click="btnPlayer_Click" Content="Player" Margin="0,7"/>
             <Button x:Name="btnMonster" Click="btnMonster_Click" Content="Monster" Margin="0,7"/>
