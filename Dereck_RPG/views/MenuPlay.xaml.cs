@@ -54,9 +54,6 @@ namespace Dereck_RPG.views
             MySQLManager<Planetes> planetesManager = new MySQLManager<Planetes>();
             this.ListPlaneteUC.LoadItems((await planetesManager.Get()).ToList());
 
-            planeteManager.GetRegion(currentPlanete);
-
-
             MySQLManager<Regions> regionManager = new MySQLManager<Regions>();
             this.ListRegionUC.LoadItems((await regionManager.Get()).ToList());
 
@@ -73,6 +70,7 @@ namespace Dereck_RPG.views
             this.ListPlaneteUC.ItemsList.SelectionChanged += PlaneteList_SelectionChanged;
             this.ListRegionUC.ItemsList.SelectionChanged += RegionList_SelectionChanged;
             this.ListDonjonUC.ItemsList.SelectionChanged += DonjonList_SelectionChanged;
+            this.ListPlayerUC.ItemsList.SelectionChanged += PlayerList_SelectionChanged;
         }
 
         private void btnGo_Click(object sender, RoutedEventArgs e)
@@ -86,6 +84,7 @@ namespace Dereck_RPG.views
         private void InitLUCPlanete()
         {
             planeteManager.GetRegion(currentPlanete);
+            regionManager.GetDonjon(currentRegion);
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
@@ -100,24 +99,36 @@ namespace Dereck_RPG.views
         {
             if (e.AddedItems.Count > 0)
             {
+                Planetes item = (e.AddedItems[0] as Planetes);
+                this.currentPlanete = item;
             }
         }
+
         private void RegionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
+                Regions item = (e.AddedItems[0] as Regions);
+                this.currentRegion = item;
             }
         }
         private void DonjonList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
+                Donjon item = (e.AddedItems[0] as Donjon);
+                this.currentDonjon = item;
             }
         }
         private void PlayerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
+                if (e.AddedItems.Count > 0)
+                {
+                    Player item = (e.AddedItems[0] as Player);
+                    this.currentPlayer = item;
+                }
             }
         }
         #endregion

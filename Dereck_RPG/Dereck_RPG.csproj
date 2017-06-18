@@ -131,14 +131,8 @@
     <Compile Include="views\MenuPlay.xaml.cs">
       <DependentUpon>MenuPlay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\play\SelectionPlayerUC.xaml.cs">
-      <DependentUpon>SelectionPlayerUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\play\SelectRegionUC.xaml.cs">
-      <DependentUpon>SelectRegionUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\play\UIUC.xaml.cs">
-      <DependentUpon>UIUC.xaml</DependentUpon>
+    <Compile Include="views\play\CombatUC.xaml.cs">
+      <DependentUpon>CombatUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\ListDonjonUC.xaml.cs">
       <DependentUpon>ListDonjonUC.xaml</DependentUpon>
@@ -251,15 +245,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\play\SelectionPlayerUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\play\SelectRegionUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\play\UIUC.xaml">
+    <Page Include="views\play\CombatUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
