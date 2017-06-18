@@ -85,7 +85,8 @@ namespace Dereck_RPG.viewmodel
 
         private async void btnDeleteRegion_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            await planeteManager.Delete(this.planeteAdmin.PlaneteUC.Planete);
+            InitLUCRegion();
         }
         private async void btnOkRegion_Click(object sender, RoutedEventArgs e)
         {
@@ -95,7 +96,7 @@ namespace Dereck_RPG.viewmodel
 
         private async void btnDonjon_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void InitLUCRegion()

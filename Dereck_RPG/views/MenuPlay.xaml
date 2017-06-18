@@ -15,9 +15,28 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid>
-            <StackPanel>
-                <UC:ListPlaneteUC x:Name="ListPlaneteUC" Grid.RowSpan="2"/>
-            </StackPanel>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition  Height="4*"/>
+                    </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Planete"/>
+            <UC:ListPlaneteUC Grid.Row="1" Grid.Column="0" x:Name="ListPlaneteUC"/>
+            
+            <Label Grid.Row="0" Grid.Column="1" Content="Region"/>
+            <UC:ListRegionUC Grid.Row="1" Grid.Column="1" x:Name="ListRegionUC"/>
+            
+            <Label Grid.Row="0" Grid.Column="2" Content="Donjon"/>
+            <UC:ListDonjonUC Grid.Row="1" Grid.Column="2" x:Name="ListDonjonUC"/>
+
+            <Label Grid.Row="0" Grid.Column="3" Content="Player"/>
+            <UC:ListPlayerUC Grid.Row="1" Grid.Column="3" x:Name="ListPlayerUC"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
