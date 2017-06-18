@@ -20,7 +20,6 @@
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
             <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planete" Margin="0,7"/>
             <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region" Margin="0,7"/>
-            <Button x:Name="btnDonjon" Click="btnDonjon_Click" Content="Donjon" Margin="0,7"/>
 
             <Button x:Name="btnPlayer" Click="btnPlayer_Click" Content="Player" Margin="0,7"/>
             <Button x:Name="btnMonster" Click="btnMonster_Click" Content="Monster" Margin="0,7"/>

@@ -12,29 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Dereck_RPG.entities;
 
-namespace Dereck_RPG.views.usercontrols
+namespace Dereck_RPG.views.administration.playadmin
 {
     /// <summary>
-    /// Logique d'interaction pour DonjonUC.xaml
+    /// Logique d'interaction pour CombatAdmin.xaml
     /// </summary>
-    public partial class DonjonUC : UserControlBase
+    public partial class CombatAdmin : Page
     {
-        private Donjon donjon;
-
-        public Donjon Donjon
-        {
-            get { return donjon; }
-            set { donjon = value;
-                base.OnPropertyChanged("Donjon");
-            }
-        }
-
-        public DonjonUC()
+        public CombatAdmin()
         {
             InitializeComponent();
-            base.DataContext = this;
         }
     }
 }

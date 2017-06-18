@@ -95,21 +95,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="database\entitieslinks\MySQLDonjonManager.cs" />
     <Compile Include="database\entitieslinks\MySQLItemManager.cs" />
     <Compile Include="database\entitieslinks\MySQLPlaneteManager.cs" />
     <Compile Include="database\entitieslinks\MySQLRegionManager.cs" />
     <Compile Include="entities\enums\MonsterRace.cs" />
-    <Compile Include="viewmodel\DonjonAdminVM.cs" />
     <Compile Include="viewmodel\ItemAdminVM.cs" />
     <Compile Include="viewmodel\MonsterAdminVM.cs" />
     <Compile Include="viewmodel\PlaneteAdminVM.cs" />
     <Compile Include="viewmodel\PlayerAdminVM.cs" />
     <Compile Include="viewmodel\playviewmodel\PlanetePlayVM.cs" />
     <Compile Include="viewmodel\RegionAdminVM.cs" />
-    <Compile Include="views\administration\DonjonAdmin.xaml.cs">
-      <DependentUpon>DonjonAdmin.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\administration\ItemAdmin.xaml.cs">
       <DependentUpon>ItemAdmin.xaml</DependentUpon>
     </Compile>
@@ -134,13 +129,7 @@
     <Compile Include="views\play\CombatUC.xaml.cs">
       <DependentUpon>CombatUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\usercontrols\ListDonjonUC.xaml.cs">
-      <DependentUpon>ListDonjonUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\usercontrols\base\UserControlBase.cs" />
-    <Compile Include="views\usercontrols\DonjonUC.xaml.cs">
-      <DependentUpon>DonjonUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\usercontrols\ItemUC.xaml.cs">
       <DependentUpon>ItemUC.xaml</DependentUpon>
     </Compile>
@@ -189,7 +178,6 @@
     <Compile Include="entities\base\BaseDBEntity.cs" />
     <Compile Include="entities\base\BaseEntity.cs" />
     <Compile Include="entities\ConnectionString.cs" />
-    <Compile Include="entities\Donjon.cs" />
     <Compile Include="entities\enums\Classe.cs" />
     <Compile Include="entities\enums\Climate.cs" />
     <Compile Include="entities\enums\ItemCategory.cs" />
@@ -213,10 +201,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="views\administration\DonjonAdmin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="views\administration\ItemAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -248,14 +232,6 @@
     <Page Include="views\play\CombatUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\usercontrols\ListDonjonUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\usercontrols\DonjonUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="views\usercontrols\ItemUC.xaml">
       <Generator>MSBuild:Compile</Generator>

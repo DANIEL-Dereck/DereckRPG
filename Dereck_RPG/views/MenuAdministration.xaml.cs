@@ -26,12 +26,6 @@ namespace Dereck_RPG.views
             InitializeComponent();
         }
 
-        private void btnDonjon_Click(object sender, RoutedEventArgs e)
-        {
-            Page page = new Page();
-            NavigationService.Navigate(new DonjonAdmin());
-        }
-
         private void btnMonster_Click(object sender, RoutedEventArgs e)
         {
             Page page = new Page();

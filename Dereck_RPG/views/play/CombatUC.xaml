@@ -7,12 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -26,25 +21,9 @@
 
             <Image Source="/Dereck_RPG;component/images/DereckRPGBackground.jpg" Grid.ColumnSpan="4"/>
 
-            <Label Grid.Row="1" Grid.Column="0"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="PlayerLife"/>
             <TextBlock Grid.Row="1" Grid.Column="1"/>
-            <Label Grid.Row="1" Grid.Column="2"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="MonsterLife"/>
             <TextBlock Grid.Row="1" Grid.Column="3"/>
-
-        </Grid>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Button x:Name="Attaque" Content="Attaque" Grid.Column="0" Grid.Row="0"></Button>
-            <Button x:Name="Defence" Content="Defence" Grid.Column="1" Grid.Row="0"></Button>
-            <Button x:Name="Abandonner" Content="Abandonner" Grid.Column="0" Grid.Row="1"></Button>
-            <Button x:Name="Regeneration" Content="Regeneration" Grid.Column="1" Grid.Row="1"></Button>
-        </Grid>
     </Grid>
 </UserControl>

@@ -16,7 +16,6 @@ namespace Dereck_RPG.database
         public DbSet<Player> playerTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
 
-        public DbSet<Donjon> donjonTable { get; set; }
         public DbSet<Items> itemsTable { get; set; }
         public DbSet<Planetes> planetesTable { get; set; }
         public DbSet<Regions> regionsTable { get; set; }
@@ -50,13 +49,6 @@ namespace Dereck_RPG.database
                     logger.Log("Initalisation Regions:" + i);
                 }
                 this.SaveChangesAsync();
-
-                EntityGenerator<Donjon> generatorDonjon = new EntityGenerator<Donjon>();
-                for (int i = 0; i < genernumber; i++)
-                {
-                    donjonTable.Add(generatorDonjon.GenerateItem());
-                    logger.Log("Initalisation Donjon:" + i);
-                }
 
                 EntityGenerator<Items> generatorItems = new EntityGenerator<Items>();
                 for (int i = 0; i < genernumber; i++)

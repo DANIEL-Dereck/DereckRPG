@@ -31,10 +31,10 @@
             
             <Label Grid.Row="0" Grid.Column="1" Content="Region"/>
             <UC:ListRegionUC Grid.Row="1" Grid.Column="1" x:Name="ListRegionUC"/>
-            
-            <Label Grid.Row="0" Grid.Column="2" Content="Donjon"/>
-            <UC:ListDonjonUC Grid.Row="1" Grid.Column="2" x:Name="ListDonjonUC"/>
 
+            <Label Grid.Row="0" Grid.Column="2" Content="Monster"/>
+            <UC:ListMonsterUC Grid.Row="1" Grid.Column="2" x:Name="ListMonsterUC"/>
+            
             <Label Grid.Row="0" Grid.Column="3" Content="Player"/>
             <UC:ListPlayerUC Grid.Row="1" Grid.Column="3" x:Name="ListPlayerUC"/>
         </Grid>

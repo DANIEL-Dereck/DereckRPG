@@ -12,17 +12,11 @@ namespace Dereck_RPG.entities
     {
         private String name;
         private Climate climate;
-        private List<Donjon> donjon;
+        private List<Monster> monster;
 
         public Regions()
         {
-            this.donjon = new List<Donjon>();
-        }
-
-        public List<Donjon> Donjon
-        {
-            get { return donjon; }
-            set { donjon = value; OnPropertyChanged("Donjon"); }
+            this.monster = new List<Monster>();
         }
 
         public Climate Climate
@@ -37,5 +31,10 @@ namespace Dereck_RPG.entities
             set { name = value; OnPropertyChanged("Name"); }
         }
 
+        public List<Monster> Monster
+        {
+            get { return monster; }
+            set { monster = value; OnPropertyChanged("Monster"); }
+        }
     }
 }

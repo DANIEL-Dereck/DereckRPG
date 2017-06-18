@@ -94,7 +94,7 @@ namespace Dereck_RPG.viewmodel
             InitLUCRegion();
         }
 
-        private async void btnDonjon_Click(object sender, RoutedEventArgs e)
+        private async void btnMonster_Click(object sender, RoutedEventArgs e)
         {
             //throw new NotImplementedException();
         }
@@ -177,7 +177,7 @@ namespace Dereck_RPG.viewmodel
             this.regionAdmin.btnDelete.Click += btnDeleteRegion_Click;
             this.regionAdmin.btnOk.Click += btnOkRegion_Click;
 
-            this.regionAdmin.RegionUC.btnDonjon.Click += btnDonjon_Click;
+            this.regionAdmin.RegionUC.btnMonster.Click += btnMonster_Click;
         }
         #endregion
 

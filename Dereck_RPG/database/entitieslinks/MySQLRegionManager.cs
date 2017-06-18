@@ -10,12 +10,12 @@ namespace Dereck_RPG.database.entitieslinks
 {
     public class MySQLRegionManager : MySQLManager<Regions>
     {
-        public void GetDonjon(Regions region) 
+        public void GetMonster(Regions region)
         {
             bool isDetached = this.Entry(region).State == EntityState.Detached;
             if (isDetached)
                 this.DbSetT.Attach(region);
-            this.Entry(region).Collection(x => x.Donjon).Load();
+            this.Entry(region).Collection(x => x.Monster).Load();
         }
     }
 }

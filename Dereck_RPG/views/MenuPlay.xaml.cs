@@ -27,17 +27,17 @@ namespace Dereck_RPG.views
     {
         private Planetes currentPlanete;
         private Regions currentRegion;
-        private Donjon currentDonjon;
+        private Monster currentMonster;
         private Player currentPlayer;
 
         MySQLPlaneteManager planeteManager = new MySQLPlaneteManager();
         MySQLRegionManager regionManager = new MySQLRegionManager();
-        MySQLDonjonManager donjonManager = new MySQLDonjonManager();
+        MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
         MySQLManager<Player> playerManager = new MySQLManager<Player>();
 
         ObservableCollection<Planetes> planeteList = new ObservableCollection<Planetes>();
         ObservableCollection<Regions> regionList = new ObservableCollection<Regions>();
-        ObservableCollection<Donjon> donjonList = new ObservableCollection<Donjon>();
+        ObservableCollection<Monster> monsterList = new ObservableCollection<Monster>();
         ObservableCollection<Player> playerList = new ObservableCollection<Player>();
 
 
@@ -57,8 +57,8 @@ namespace Dereck_RPG.views
             MySQLManager<Regions> regionManager = new MySQLManager<Regions>();
             this.ListRegionUC.LoadItems((await regionManager.Get()).ToList());
 
-            MySQLManager<Donjon> donjonManager = new MySQLManager<Donjon>();
-            this.ListDonjonUC.LoadItems((await donjonManager.Get()).ToList());
+            MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
+            this.ListMonsterUC.LoadItems((await monsterManager.Get()).ToList());
 
             MySQLManager<Player> playerManager = new MySQLManager<Player>();
             this.ListPlayerUC.LoadItems((await playerManager.Get()).ToList());
@@ -69,22 +69,21 @@ namespace Dereck_RPG.views
         {
             this.ListPlaneteUC.ItemsList.SelectionChanged += PlaneteList_SelectionChanged;
             this.ListRegionUC.ItemsList.SelectionChanged += RegionList_SelectionChanged;
-            this.ListDonjonUC.ItemsList.SelectionChanged += DonjonList_SelectionChanged;
+            this.ListMonsterUC.ItemsList.SelectionChanged += MonsterList_SelectionChanged;
             this.ListPlayerUC.ItemsList.SelectionChanged += PlayerList_SelectionChanged;
         }
 
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {
-            /*
             Page page = new Page();
-            NavigationService.Navigate(new DonjonAdmin());
-            */
+            NavigationService.Navigate(new CombatAdmin(currentPlayer, currentMonster));
         }
 
         private void InitLUCPlanete()
         {
             planeteManager.GetRegion(currentPlanete);
-            regionManager.GetDonjon(currentRegion);
+            regionManager.GetMonster(currentRegion);
+
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
@@ -112,23 +111,22 @@ namespace Dereck_RPG.views
                 this.currentRegion = item;
             }
         }
-        private void DonjonList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void MonsterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
-                Donjon item = (e.AddedItems[0] as Donjon);
-                this.currentDonjon = item;
+                Monster item = (e.AddedItems[0] as Monster);
+                this.currentMonster = item;
             }
         }
+
         private void PlayerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
-                if (e.AddedItems.Count > 0)
-                {
                     Player item = (e.AddedItems[0] as Player);
                     this.currentPlayer = item;
-                }
             }
         }
         #endregion
