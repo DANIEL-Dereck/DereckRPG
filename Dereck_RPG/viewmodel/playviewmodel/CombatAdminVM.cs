@@ -25,12 +25,5 @@ namespace Dereck_RPG.viewmodel.playviewmodel
             this.currentPlayer = player;
             this.currentMonster = monster;
         }
-
-        private void fight()
-        {
-
-        }
-
-
     }
 }

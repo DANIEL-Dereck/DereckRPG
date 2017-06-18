@@ -95,6 +95,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="database\entiteslinks\MySQLMonsterManager.cs" />
+    <Compile Include="database\entiteslinks\MySQLPlayerManager.cs" />
     <Compile Include="entities\enums\MonsterRace.cs" />
     <Compile Include="viewmodel\MonsterAdminVM.cs" />
     <Compile Include="viewmodel\PlayerAdminVM.cs" />
