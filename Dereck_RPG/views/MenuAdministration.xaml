@@ -18,13 +18,8 @@
         </Grid.RowDefinitions>
         
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="0">
-            <Button x:Name="btnPlanetes" Click="btnPlanetes_Click" Content="Planete" Margin="0,7"/>
-            <Button x:Name="btnRegion" Click="btnRegion_Click" Content="Region" Margin="0,7"/>
-
             <Button x:Name="btnPlayer" Click="btnPlayer_Click" Content="Player" Margin="0,7"/>
             <Button x:Name="btnMonster" Click="btnMonster_Click" Content="Monster" Margin="0,7"/>
-
-            <Button x:Name="btnItem" Click="btnItem_Click" Content="Item" Margin="0,7"/>
             <Button x:Name="btnQuit" Click="btnQuit_Click" Content="Quit" Margin="0,7"/>
         </StackPanel>
     </Grid>

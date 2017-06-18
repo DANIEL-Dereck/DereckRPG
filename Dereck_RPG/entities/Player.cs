@@ -16,7 +16,6 @@ namespace Dereck_RPG.entities
         private int lvl;
         private int vie;
         private Stats stats;
-        private List<Items> stuff;
         private Classe classe;
         private Race race;
         #endregion
@@ -24,7 +23,6 @@ namespace Dereck_RPG.entities
         #region ctor
         public Player()
         {
-            this.stuff = new List<Items>();
         }
         #endregion
 
@@ -51,12 +49,6 @@ namespace Dereck_RPG.entities
         {
             get { return stats; }
             set { stats = value; OnPropertyChanged("Stats"); }
-        }
-
-        public List<Items> Stuff
-        {
-            get { return stuff; }
-            set { stuff = value; OnPropertyChanged("Stuff"); }
         }
 
         public Classe Classe

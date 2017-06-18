@@ -1,7 +1,7 @@
 ﻿using Dereck_RPG.database;
-using Dereck_RPG.database.entitieslinks;
 using Dereck_RPG.entities;
 using Dereck_RPG.viewmodel.playviewmodel;
+using Dereck_RPG.views.administration.playadmin;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,18 +25,12 @@ namespace Dereck_RPG.views
     /// </summary>
     public partial class MenuPlay : Page
     {
-        private Planetes currentPlanete;
-        private Regions currentRegion;
         private Monster currentMonster;
         private Player currentPlayer;
 
-        MySQLPlaneteManager planeteManager = new MySQLPlaneteManager();
-        MySQLRegionManager regionManager = new MySQLRegionManager();
         MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
         MySQLManager<Player> playerManager = new MySQLManager<Player>();
 
-        ObservableCollection<Planetes> planeteList = new ObservableCollection<Planetes>();
-        ObservableCollection<Regions> regionList = new ObservableCollection<Regions>();
         ObservableCollection<Monster> monsterList = new ObservableCollection<Monster>();
         ObservableCollection<Player> playerList = new ObservableCollection<Player>();
 
@@ -45,18 +39,11 @@ namespace Dereck_RPG.views
         public MenuPlay()
         {
             InitializeComponent();
-            this.DataContext = new PlanetePlayVM(this);
             InitLists();
         }
 
         private async void InitLists()
         {
-            MySQLManager<Planetes> planetesManager = new MySQLManager<Planetes>();
-            this.ListPlaneteUC.LoadItems((await planetesManager.Get()).ToList());
-
-            MySQLManager<Regions> regionManager = new MySQLManager<Regions>();
-            this.ListRegionUC.LoadItems((await regionManager.Get()).ToList());
-
             MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
             this.ListMonsterUC.LoadItems((await monsterManager.Get()).ToList());
 
@@ -67,8 +54,6 @@ namespace Dereck_RPG.views
 
         private void InitActions()
         {
-            this.ListPlaneteUC.ItemsList.SelectionChanged += PlaneteList_SelectionChanged;
-            this.ListRegionUC.ItemsList.SelectionChanged += RegionList_SelectionChanged;
             this.ListMonsterUC.ItemsList.SelectionChanged += MonsterList_SelectionChanged;
             this.ListPlayerUC.ItemsList.SelectionChanged += PlayerList_SelectionChanged;
         }
@@ -81,9 +66,6 @@ namespace Dereck_RPG.views
 
         private void InitLUCPlanete()
         {
-            planeteManager.GetRegion(currentPlanete);
-            regionManager.GetMonster(currentRegion);
-
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
@@ -94,24 +76,6 @@ namespace Dereck_RPG.views
 
 
         #region SelectionChange
-        private void PlaneteList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count > 0)
-            {
-                Planetes item = (e.AddedItems[0] as Planetes);
-                this.currentPlanete = item;
-            }
-        }
-
-        private void RegionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count > 0)
-            {
-                Regions item = (e.AddedItems[0] as Regions);
-                this.currentRegion = item;
-            }
-        }
-
         private void MonsterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)

@@ -2,6 +2,7 @@
 using Dereck_RPG.entities;
 using Dereck_RPG.entities.json;
 using Dereck_RPG.logger;
+using Faker;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
@@ -15,13 +16,8 @@ namespace Dereck_RPG.database
 
         public DbSet<Player> playerTable { get; set; }
         public DbSet<Monster> monsterTable { get; set; }
-
-        public DbSet<Items> itemsTable { get; set; }
-        public DbSet<Planetes> planetesTable { get; set; }
-        public DbSet<Regions> regionsTable { get; set; }
         public DbSet<Stats> statsTable { get; set; }
         
-
         Logger logger = new Logger("MySQLFullDB", LogMode.CURRENT_FOLDER, AlertMode.CONSOLE, "MYSQL", true);
 
 
@@ -35,29 +31,6 @@ namespace Dereck_RPG.database
         {
             if (this.Database.CreateIfNotExists())
             {
-                EntityGenerator<Planetes> generatorPlanete = new EntityGenerator<Planetes>();
-                for (int i = 0; i < genernumber; i++)
-                {
-                    planetesTable.Add(generatorPlanete.GenerateItem());
-                    logger.Log("Initalisation Planete:" + i);
-                }
-
-                EntityGenerator<Regions> generatorRegions = new EntityGenerator<Regions>();
-                for (int i = 0; i < genernumber; i++)
-                {
-                    regionsTable.Add(generatorRegions.GenerateItem());
-                    logger.Log("Initalisation Regions:" + i);
-                }
-                this.SaveChangesAsync();
-
-                EntityGenerator<Items> generatorItems = new EntityGenerator<Items>();
-                for (int i = 0; i < genernumber; i++)
-                {
-                    itemsTable.Add(generatorItems.GenerateItem());
-                    logger.Log("Initalisation Items:" + i);
-                }
-                this.SaveChangesAsync();
-
                 GenerateMonster();
                 this.SaveChangesAsync();
 
@@ -70,10 +43,6 @@ namespace Dereck_RPG.database
         {
 
         }
-
-
-
-
 
         #region GenerateDefaultMonster
        public void GenerateMonster()
@@ -127,9 +96,8 @@ namespace Dereck_RPG.database
 
         public void GenRandomMonster(Monster monster)
         {
-            Random rnd = new Random();
-            monster.Lvl = rnd.Next(1, 20);
-            monster.Vie = rnd.Next((1 * monster.Lvl), (100 * monster.Lvl)) * 75;
+            monster.Lvl = RandomNumber(1, 20);
+            monster.Vie = RandomNumber((1 * monster.Lvl), (100 * monster.Lvl)) * 75;
         }
 
         #endregion
@@ -189,14 +157,16 @@ namespace Dereck_RPG.database
 
         public void GenRandomPlayer(Player player)
         {
-            Random rnd = new Random();
-            player.Lvl = rnd.Next(1, 20);
-            player.Vie = rnd.Next((1 * player.Lvl), (100 * player.Lvl)) * 100;
+            player.Lvl = RandomNumber(1,100);
+            player.Vie = RandomNumber((1 * player.Lvl), (100 * player.Lvl)) * 100;
         }
-
+        
         #endregion
 
-
+        static int RandomNumber(int min, int max)
+        {
+            return Number.RandomNumber(min, max);
+        }
 
     }
 }

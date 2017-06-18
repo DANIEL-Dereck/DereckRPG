@@ -38,24 +38,6 @@ namespace Dereck_RPG.views
             NavigationService.Navigate(new PlayerAdmin());
         }
 
-        private void btnItem_Click(object sender, RoutedEventArgs e)
-        {
-            Page page = new Page();
-            NavigationService.Navigate(new ItemAdmin());
-        }
-
-        private void btnPlanetes_Click(object sender, RoutedEventArgs e)
-        {
-            Page page = new Page();
-            NavigationService.Navigate(new PlanetesAdmin());
-        }
-
-        private void btnRegion_Click(object sender, RoutedEventArgs e)
-        {
-            Page page = new Page();
-            NavigationService.Navigate(new RegionsAdmin());
-        }
-
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
             (this.Parent as Window).Close();

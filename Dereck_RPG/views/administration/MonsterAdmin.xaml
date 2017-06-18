@@ -22,9 +22,7 @@
         <StackPanel  Grid.Column="0" Grid.Row="0">
             <UC:MonsterUC x:Name="MonsterUC"/>
         </StackPanel>
-        <StackPanel  Grid.Column="1" Grid.Row="0">
-            <UC:ListMonsterUC x:Name="ListMonsterUC" Grid.RowSpan="2"/>
-        </StackPanel>
+            <UC:ListMonsterUC x:Name="ListMonsterUC" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
         <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
             <Button x:Name="btnNew" Content="New"/>
             <Button x:Name="btnOk" Content="Save"/>

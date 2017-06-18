@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.entities.enums
+namespace Dereck_RPG.viewmodel.playviewmodel
 {
-    public enum ItemCategory
+    class ComatAdminVM
     {
-        ARME,
-        ARMURE,
-        BIJOUX,
-        FAMILIER,
+        public ComatAdminVM()
+        {
+
+        }
     }
 }

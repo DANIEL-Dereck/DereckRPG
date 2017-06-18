@@ -29,7 +29,6 @@
         <TextBox x:Name="txtBVie" Text="{Binding Player.Vie, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"/>
 
         <Button x:Name="btnStats" Content="Stats" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
-        <Button x:Name="btnStuff" Content="Stuff" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"/>
 
         <Label x:Name="lblRace" Content="Race" Grid.Column="0" Grid.Row="5" />
         <ComboBox x:Name="txtBRace" Text="{Binding Player.Race, Mode=TwoWay}" Grid.Column="1" Grid.Row="5"/>

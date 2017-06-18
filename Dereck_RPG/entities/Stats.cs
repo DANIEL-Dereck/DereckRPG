@@ -1,4 +1,5 @@
 ﻿using Dereck_RPG.entities.bases;
+using Faker;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,11 +28,10 @@ namespace Dereck_RPG.entities
 
         public Stats GenRandomStats()
         {
-            Random rnd = new Random();
             Stats stat = new Stats();
-            stat.Attaque = rnd.Next(20, 1000);
-            stat.Defence = rnd.Next(20, 1000);
-            stat.Critique = rnd.Next(1, 100);
+            stat.Attaque = Number.RandomNumber(20, 1000);
+            stat.Defence = Number.RandomNumber(20, 1000);
+            stat.Critique = Number.RandomNumber(1, 100);
             return stat;
         }
 
@@ -51,6 +51,12 @@ namespace Dereck_RPG.entities
         {
             get { return attaque; }
             set { attaque = value; OnPropertyChanged("Attaque"); }
+        }
+
+        static int RandomNumber(int min, int max)
+        {
+            Random random = new Random(); return random.Next(min, max);
+
         }
 
     }

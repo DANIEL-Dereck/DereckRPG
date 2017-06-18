@@ -22,9 +22,7 @@
         <StackPanel  Grid.Column="0" Grid.Row="0">
             <UC:PlayerUC x:Name="PlayerUC"/>
         </StackPanel>
-        <StackPanel  Grid.Column="1" Grid.Row="0">
-            <UC:ListPlayerUC x:Name="ListPlayerUC" Grid.RowSpan="2"/>
-        </StackPanel>
+            <UC:ListPlayerUC x:Name="ListPlayerUC" Grid.RowSpan="2" Grid.Column="1" Grid.Row="0"/>
         <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
             <Button x:Name="btnNew" Content="New"/>
             <Button x:Name="btnOk" Content="Save"/>

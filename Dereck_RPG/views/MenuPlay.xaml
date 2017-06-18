@@ -22,21 +22,12 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-
-            <Label Grid.Row="0" Grid.Column="0" Content="Planete"/>
-            <UC:ListPlaneteUC Grid.Row="1" Grid.Column="0" x:Name="ListPlaneteUC"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Monster"/>
+            <UC:ListMonsterUC Grid.Row="1" Grid.Column="0" x:Name="ListMonsterUC"/>
             
-            <Label Grid.Row="0" Grid.Column="1" Content="Region"/>
-            <UC:ListRegionUC Grid.Row="1" Grid.Column="1" x:Name="ListRegionUC"/>
-
-            <Label Grid.Row="0" Grid.Column="2" Content="Monster"/>
-            <UC:ListMonsterUC Grid.Row="1" Grid.Column="2" x:Name="ListMonsterUC"/>
-            
-            <Label Grid.Row="0" Grid.Column="3" Content="Player"/>
-            <UC:ListPlayerUC Grid.Row="1" Grid.Column="3" x:Name="ListPlayerUC"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Player"/>
+            <UC:ListPlayerUC Grid.Row="1" Grid.Column="1" x:Name="ListPlayerUC"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Dereck_RPG.entities;
+using Dereck_RPG.viewmodel.playviewmodel;
 
 namespace Dereck_RPG.views.administration.playadmin
 {
@@ -20,9 +22,19 @@ namespace Dereck_RPG.views.administration.playadmin
     /// </summary>
     public partial class CombatAdmin : Page
     {
+        private Monster currentMonster;
+        private Player currentPlayer;
+
         public CombatAdmin()
         {
             InitializeComponent();
+            this.DataContext = new ComatAdminVM();
+        }
+
+        public CombatAdmin(Player currentPlayer, Monster currentMonster)
+        {
+            this.currentPlayer = currentPlayer;
+            this.currentMonster = currentMonster;
         }
     }
 }
