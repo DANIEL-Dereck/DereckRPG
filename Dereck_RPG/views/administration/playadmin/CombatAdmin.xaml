@@ -6,7 +6,7 @@
        xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
       xmlns:local="clr-namespace:Dereck_RPG.views.administration.playadmin"
       mc:Ignorable="d" 
-      Title="CombatAdmin">
+      Title="Combat Admininistration">
 
     <Grid>
         <Grid.RowDefinitions>

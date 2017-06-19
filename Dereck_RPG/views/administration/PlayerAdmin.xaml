@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:Dereck_RPG.views.administration"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PlayerAdmin">
+      Title="Player Administration">
 
     <Grid>
         <Grid.ColumnDefinitions>

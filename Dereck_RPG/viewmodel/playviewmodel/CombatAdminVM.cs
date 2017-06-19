@@ -45,6 +45,7 @@ namespace Dereck_RPG.viewmodel.playviewmodel
         {
             combatAdmin.CombatUC.PlayerAffUC.Player = this.currentPlayer;
             combatAdmin.CombatUC.PlayerAffUC.Stats = this.currentPlayer.Stats;
+
             combatAdmin.CombatUC.MonsterAffUC.Monster = this.currentMonster;
             combatAdmin.CombatUC.MonsterAffUC.Stats = this.currentMonster.Stats;
         }

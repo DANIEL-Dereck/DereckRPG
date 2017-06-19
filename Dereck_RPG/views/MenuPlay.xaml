@@ -6,7 +6,7 @@
       xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
       xmlns:local="clr-namespace:Dereck_RPG.views"
       mc:Ignorable="d" 
-      Title="MenuPlay">
+      Title="World Of Fantasy">
 
     <Grid>
         <Grid.RowDefinitions>

@@ -148,12 +148,12 @@ namespace Dereck_RPG.database
             playerTable.Add(player4);
 
             Player player5 = new Player();
-            player5.Name = "Ragnarg";
-            GenRandomPlayer(player4);
-            GenStatsPlayer(player4);
-            player4.Classe = entities.enums.Classe.BARBARE;
-            player4.Race = entities.enums.Race.HUMAIN;
-            playerTable.Add(player4);
+            player5.Name = "Ragnard";
+            GenRandomPlayer(player5);
+            GenStatsPlayer(player5);
+            player5.Classe = entities.enums.Classe.BARBARE;
+            player5.Race = entities.enums.Race.HUMAIN;
+            playerTable.Add(player5);
         }
 
         public void GenStatsPlayer(Player player)

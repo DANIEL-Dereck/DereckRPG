@@ -7,7 +7,7 @@
       xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="MonsterAdmin">
+      Title="Monster Administration">
 
     <Grid>
         <Grid.ColumnDefinitions>

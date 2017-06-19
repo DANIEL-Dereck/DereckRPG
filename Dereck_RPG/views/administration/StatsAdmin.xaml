@@ -7,7 +7,7 @@
                   xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="StatsAdmin">
+      Title="Stats Admininistration">
 
     <Grid>
         <Grid.ColumnDefinitions>
