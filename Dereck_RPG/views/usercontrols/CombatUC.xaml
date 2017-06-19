@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Dereck_RPG.views.usercontrols"
+             xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
              mc:Ignorable="d">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,63 +21,20 @@
             </Image.OpacityMask>
         </Image>
         <Grid Grid.Column="0" Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Content="Player Stats" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="Green"/>
-
-            <Label x:Name="lblPlayerName" Content="Name" Grid.Column="0" Grid.Row="1" />
-            <TextBlock x:Name="txtPlayerBName" Text="{Binding Player.Name, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"/>
-            <Label x:Name="lblPlayerLvl" Content="Lvl" Grid.Column="0" Grid.Row="2" />
-            <TextBlock x:Name="txtBPlayerLvl" Text="{Binding Player.Lvl, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"/>
-            <Label x:Name="lblPlayerVie" Content="Vie" Grid.Column="0" Grid.Row="3" />
-            <TextBlock x:Name="txtBPlayerVie" Text="{Binding Player.Vie, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"/>
-            <Label x:Name="lblPlayerAttaque" Content="Atq" Grid.Column="0" Grid.Row="4" />
-            <TextBlock x:Name="txtBPlayerAttaque" Text="{Binding Player.Stats.attaque, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"/>
-            <Label x:Name="lblPlayerDefence" Content="Def" Grid.Column="0" Grid.Row="5" />
-            <TextBlock x:Name="txtBPlayerDefence" Text="{Binding Player.Stats.defence, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5"/>
-            <Label x:Name="lblPlayerCritique" Content="Crit" Grid.Column="0" Grid.Row="6" />
-            <TextBlock x:Name="txtBPlayerCritique" Text="{Binding Player.Stats.critique, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="6"/>
+            <Label Content="Player Stats" Grid.Column="0" Grid.Row="0" Background="Green"/>
+            <UC:PlayerAffUC x:Name="PlayerAffUC" Grid.Column="0" Grid.Row="1"/>
         </Grid>
         <Grid Grid.Column="0" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Content="Monster Stats" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="Red"/>
-
-            <Label x:Name="lblMonsterName" Content="Name" Grid.Column="0" Grid.Row="1" />
-            <TextBlock x:Name="txtBMonsterName" Text="{Binding Monster.Name, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"/>
-            <Label x:Name="lblMonsterLvl" Content="Lvl" Grid.Column="0" Grid.Row="2" />
-            <TextBlock x:Name="txtBMonsterLvl" Text="{Binding Monster.Lvl, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"/>
-            <Label x:Name="lblMonsterVie" Content="Vie" Grid.Column="0" Grid.Row="3" />
-            <TextBlock x:Name="txtBMonsterVie" Text="{Binding Monster.Vie, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"/>
-            <Label x:Name="lblMonsterAttaque" Content="Atq" Grid.Column="0" Grid.Row="4" />
-            <TextBlock x:Name="txtBMonsterAttaque" Text="{Binding Monster.Stats.attaque, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"/>
-            <Label x:Name="lblMonsterDefence" Content="Def" Grid.Column="0" Grid.Row="5" />
-            <TextBlock x:Name="txtBMonsterDefence" Text="{Binding Monster.Stats.defence, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5"/>
-            <Label x:Name="lblMonsterCritique" Content="Crit" Grid.Column="0" Grid.Row="6" />
-            <TextBlock x:Name="txtBMonsterCritique" Text="{Binding Monster.Stats.critique, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="6"/>
-
+            <Label Content="Monster Stats" Grid.Column="0" Grid.Row="0" Background="Red"/>
+            <UC:MonsterAffUC x:Name="MonsterAffUC"  Grid.Column="0" Grid.Row="1"/>
         </Grid>
     </Grid>
 

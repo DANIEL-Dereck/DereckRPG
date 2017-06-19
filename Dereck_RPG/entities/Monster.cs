@@ -1,5 +1,6 @@
 ﻿using Dereck_RPG.entities.bases;
 using Dereck_RPG.entities.enums;
+using Faker;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -47,52 +48,53 @@ namespace Dereck_RPG.entities
         }
 
         #region method
-        public void attaque(Player adversaire)
+        public int attaque()
         {
             //Attaque (stats attaque) - def enemie
-            //si Crit attaque + 150%
+            //si Crit attaque + 100%
             if (doACrit())
             {
+                return (this.Stats.Attaque * 2);
             }
             else
             {
+                return (this.Stats.Attaque);
             }
         }
 
-        public void defence()
+        public int defence()
         {
             //bloque une attaque
-            // si crit +150%def
+            // si crit +100%def
             if (doACrit())
             {
+                return (this.Stats.Defence * 2);
             }
             else
             {
+                return (this.Stats.Defence);
             }
 
         }
 
         public void regeneration()
         {
-            //Regeneration de 7% de la vie actuel
-            //si Crit Regeneration de 15% de la vie actuel
-            int regen;
+            double regen;
 
             if (doACrit())
             {
-                regen = this.vie % 15;
+                regen = this.Vie * (0.15) ;
             }
             else
             {
-                regen = this.vie % 7;
+                regen = this.Vie * (0.07);
             }
-            this.vie = this.vie + regen;
+            this.vie = this.vie + (int)regen;
         }
 
         private bool doACrit()
         {
-            Random rnd = new Random();
-            if (rnd.Next(0, 100) <= this.stats.Critique)
+            if (Number.RandomNumber(0, 100) <= this.stats.Critique)
             {
                 return (true);
             }

@@ -6,7 +6,6 @@
        xmlns:UC="clr-namespace:Dereck_RPG.views.usercontrols"
       xmlns:local="clr-namespace:Dereck_RPG.views.administration.playadmin"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
       Title="CombatAdmin">
 
     <Grid>
@@ -26,10 +25,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="Attaque" Content="Attaque" Grid.Column="0" Grid.Row="0"></Button>
-            <Button x:Name="Defence" Content="Defence" Grid.Column="1" Grid.Row="0"></Button>
-            <Button x:Name="Abandonner" Content="Abandonner" Grid.Column="0" Grid.Row="1"></Button>
-            <Button x:Name="Regeneration" Content="Regeneration" Grid.Column="1" Grid.Row="1"></Button>
+            <Button x:Name="btnAttaque" Content="Attaque" Grid.Column="0" Grid.Row="0"></Button>
+            <Button x:Name="btnDefence" Content="Defence" Grid.Column="1" Grid.Row="0"></Button>
+            <Button x:Name="btnAbandonner" Content="Abandonner" Grid.Column="0" Grid.Row="1"></Button>
+            <Button x:Name="btnRegeneration" Content="Regeneration" Grid.Column="1" Grid.Row="1"></Button>
         </Grid>
     </Grid>
 </Page>

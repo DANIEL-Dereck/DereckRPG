@@ -23,6 +23,7 @@ namespace Dereck_RPG.views.usercontrols
         public CombatUC()
         {
             InitializeComponent();
+            base.DataContext = this;
         }
     }
 }

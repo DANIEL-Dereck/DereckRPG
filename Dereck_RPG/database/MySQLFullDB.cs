@@ -97,7 +97,7 @@ namespace Dereck_RPG.database
         public void GenRandomMonster(Monster monster)
         {
             monster.Lvl = RandomNumber(1, 20);
-            monster.Vie = RandomNumber((1 * monster.Lvl), (100 * monster.Lvl)) * 75;
+            monster.Vie = RandomNumber((1 * monster.Lvl), (100 * monster.Lvl));
         }
 
         #endregion
@@ -147,6 +147,13 @@ namespace Dereck_RPG.database
             player4.Race = entities.enums.Race.PANDICORNE;
             playerTable.Add(player4);
 
+            Player player5 = new Player();
+            player5.Name = "Ragnarg";
+            GenRandomPlayer(player4);
+            GenStatsPlayer(player4);
+            player4.Classe = entities.enums.Classe.BARBARE;
+            player4.Race = entities.enums.Race.HUMAIN;
+            playerTable.Add(player4);
         }
 
         public void GenStatsPlayer(Player player)
@@ -158,7 +165,7 @@ namespace Dereck_RPG.database
         public void GenRandomPlayer(Player player)
         {
             player.Lvl = RandomNumber(1,100);
-            player.Vie = RandomNumber((1 * player.Lvl), (100 * player.Lvl)) * 100;
+            player.Vie = RandomNumber((1 * player.Lvl), (100 * player.Lvl));
         }
         
         #endregion

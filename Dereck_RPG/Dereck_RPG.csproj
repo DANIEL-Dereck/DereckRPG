@@ -133,8 +133,14 @@
     <Compile Include="views\usercontrols\ListStatsUC.xaml.cs">
       <DependentUpon>ListStatsUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\usercontrols\MonsterAffUC.xaml.cs">
+      <DependentUpon>MonsterAffUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\usercontrols\MonsterUC.xaml.cs">
       <DependentUpon>MonsterUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\usercontrols\PlayerAffUC.xaml.cs">
+      <DependentUpon>PlayerAffUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\usercontrols\PlayerUC.xaml.cs">
       <DependentUpon>PlayerUC.xaml</DependentUpon>
@@ -214,9 +220,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\usercontrols\MonsterAffUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\usercontrols\MonsterUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\usercontrols\PlayerAffUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\usercontrols\PlayerUC.xaml">
       <Generator>MSBuild:Compile</Generator>

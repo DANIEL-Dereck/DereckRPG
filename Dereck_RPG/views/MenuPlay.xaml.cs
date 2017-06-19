@@ -1,4 +1,5 @@
 ﻿using Dereck_RPG.database;
+using Dereck_RPG.database.entiteslinks;
 using Dereck_RPG.entities;
 using Dereck_RPG.viewmodel.playviewmodel;
 using Dereck_RPG.views.administration.playadmin;
@@ -25,11 +26,11 @@ namespace Dereck_RPG.views
     /// </summary>
     public partial class MenuPlay : Page
     {
-        private Monster currentMonster;
-        private Player currentPlayer;
+        private Monster currentMonster = new Monster();
+        private Player currentPlayer = new Player();
 
-        MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
-        MySQLManager<Player> playerManager = new MySQLManager<Player>();
+        MySQLMonsterManager monsterManager = new MySQLMonsterManager();
+        MySQLPlayerManager playerManager = new MySQLPlayerManager();
 
         ObservableCollection<Monster> monsterList = new ObservableCollection<Monster>();
         ObservableCollection<Player> playerList = new ObservableCollection<Player>();
@@ -39,15 +40,16 @@ namespace Dereck_RPG.views
         public MenuPlay()
         {
             InitializeComponent();
+            InitActions();
             InitLists();
         }
 
         private async void InitLists()
         {
-            MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
+            MySQLMonsterManager monsterManager = new MySQLMonsterManager();
             this.ListMonsterUC.LoadItems((await monsterManager.Get()).ToList());
 
-            MySQLManager<Player> playerManager = new MySQLManager<Player>();
+            MySQLPlayerManager playerManager = new MySQLPlayerManager();
             this.ListPlayerUC.LoadItems((await playerManager.Get()).ToList());
 
         }
@@ -56,16 +58,30 @@ namespace Dereck_RPG.views
         {
             this.ListMonsterUC.ItemsList.SelectionChanged += MonsterList_SelectionChanged;
             this.ListPlayerUC.ItemsList.SelectionChanged += PlayerList_SelectionChanged;
+            RemoveDeadMonster();
+            RemoveDeadPlayer();
+        }
+
+        private void RemoveDeadMonster()
+        {
+            
+        }
+
+        private void RemoveDeadPlayer()
+        {
+
         }
 
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new Page();
-            NavigationService.Navigate(new CombatAdmin(currentPlayer, currentMonster));
-        }
-
-        private void InitLUCPlanete()
-        {
+            if (this.currentMonster.Id <= 0 || this.currentPlayer.Id <= 0)
+            {
+                System.Windows.MessageBox.Show("Select player and monster");
+            } else
+            {
+                Page page = new Page();
+                NavigationService.Navigate(new CombatAdmin(this.currentPlayer, this.currentMonster));
+            }
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
@@ -74,7 +90,6 @@ namespace Dereck_RPG.views
 
         }
 
-
         #region SelectionChange
         private void MonsterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -82,6 +97,7 @@ namespace Dereck_RPG.views
             {
                 Monster item = (e.AddedItems[0] as Monster);
                 this.currentMonster = item;
+                monsterManager.GetStats(this.currentMonster);
             }
         }
 
@@ -91,6 +107,7 @@ namespace Dereck_RPG.views
             {
                     Player item = (e.AddedItems[0] as Player);
                     this.currentPlayer = item;
+                playerManager.GetStats(this.currentPlayer);
             }
         }
         #endregion
