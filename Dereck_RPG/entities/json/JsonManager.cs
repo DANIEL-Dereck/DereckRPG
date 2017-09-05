@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.entities.json
+namespace WorldOfFantasy.entities.json
 {
     public class JsonManager
     {

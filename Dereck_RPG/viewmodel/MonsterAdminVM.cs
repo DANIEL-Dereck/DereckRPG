@@ -1,8 +1,8 @@
-﻿using Dereck_RPG.database;
-using Dereck_RPG.database.entiteslinks;
-using Dereck_RPG.entities;
-using Dereck_RPG.entities.enums;
-using Dereck_RPG.views.administration;
+﻿using WorldOfFantasy.database;
+using WorldOfFantasy.database.entiteslinks;
+using WorldOfFantasy.entities;
+using WorldOfFantasy.entities.enums;
+using WorldOfFantasy.views.administration;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Dereck_RPG.viewmodel
+namespace WorldOfFantasy.viewmodel
 {
     public class MonsterAdminVM
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.commandworker
+namespace WorldOfFantasy.commandworker
 {
     /// <summary>
     /// This class manages a Worker task wich goal is to execute each task from a command queue.

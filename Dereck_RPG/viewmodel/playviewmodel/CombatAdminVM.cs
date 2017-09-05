@@ -1,5 +1,5 @@
-﻿using Dereck_RPG.entities;
-using Dereck_RPG.views.administration.playadmin;
+﻿using WorldOfFantasy.entities;
+using WorldOfFantasy.views.administration.playadmin;
 using Faker;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Dereck_RPG.viewmodel.playviewmodel
+namespace WorldOfFantasy.viewmodel.playviewmodel
 {
     class CombatAdminVM
     {
@@ -33,10 +33,8 @@ namespace Dereck_RPG.viewmodel.playviewmodel
                 this.combatAdmin = combatAdmin;
                 this.currentPlayer = player;
                 this.currentMonster = monster;
-
-
                 this.tour = 0;
-            this.regen = 0;
+                this.regen = 0;
                 InitUC();
                 InitActions();
         }

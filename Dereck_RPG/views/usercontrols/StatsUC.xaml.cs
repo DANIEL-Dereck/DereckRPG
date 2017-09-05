@@ -1,4 +1,4 @@
-﻿using Dereck_RPG.entities;
+﻿using WorldOfFantasy.entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views.usercontrols
+namespace WorldOfFantasy.views.usercontrols
 {
     /// <summary>
     /// Logique d'interaction pour StatsUC.xaml

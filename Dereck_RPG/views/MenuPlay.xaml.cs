@@ -1,8 +1,8 @@
-﻿using Dereck_RPG.database;
-using Dereck_RPG.database.entiteslinks;
-using Dereck_RPG.entities;
-using Dereck_RPG.viewmodel.playviewmodel;
-using Dereck_RPG.views.administration.playadmin;
+﻿using WorldOfFantasy.database;
+using WorldOfFantasy.database.entiteslinks;
+using WorldOfFantasy.entities;
+using WorldOfFantasy.viewmodel.playviewmodel;
+using WorldOfFantasy.views.administration.playadmin;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,7 +19,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views
+namespace WorldOfFantasy.views
 {
     /// <summary>
     /// Logique d'interaction pour MenuPlay.xaml
@@ -51,7 +51,6 @@ namespace Dereck_RPG.views
 
             MySQLPlayerManager playerManager = new MySQLPlayerManager();
             this.ListPlayerUC.LoadItems((await playerManager.Get()).ToList());
-
         }
 
         private void InitActions()
@@ -77,7 +76,13 @@ namespace Dereck_RPG.views
             if (this.currentMonster.Id <= 0 || this.currentPlayer.Id <= 0)
             {
                 System.Windows.MessageBox.Show("Select player and monster");
-            } else
+            } else if (this.currentMonster.Vie <= 0)
+            {
+                System.Windows.MessageBox.Show("This monster is dead");
+            } else if (this.currentPlayer.Vie <= 0)
+            {
+                System.Windows.MessageBox.Show("This player is dead");
+            } else 
             {
                 Page page = new Page();
                 NavigationService.Navigate(new CombatAdmin(this.currentPlayer, this.currentMonster));

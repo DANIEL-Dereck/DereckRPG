@@ -12,11 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Dereck_RPG.entities;
-using Dereck_RPG.viewmodel.playviewmodel;
-using Dereck_RPG.views.usercontrols;
+using WorldOfFantasy.entities;
+using WorldOfFantasy.viewmodel.playviewmodel;
+using WorldOfFantasy.views.usercontrols;
 
-namespace Dereck_RPG.views.administration.playadmin
+namespace WorldOfFantasy.views.administration.playadmin
 {
     /// <summary>
     /// Logique d'interaction pour CombatAdmin.xaml

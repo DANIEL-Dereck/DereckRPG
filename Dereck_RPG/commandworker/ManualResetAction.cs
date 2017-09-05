@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.commandworker
+namespace WorldOfFantasy.commandworker
 {
     public class ManualResetAction
     {

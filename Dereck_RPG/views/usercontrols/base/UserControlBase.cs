@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace Dereck_RPG.views.usercontrols
+namespace WorldOfFantasy.views.usercontrols
 {
     public class UserControlBase : UserControl, INotifyPropertyChanged
     {

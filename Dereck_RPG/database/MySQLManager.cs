@@ -1,6 +1,6 @@
-﻿using Dereck_RPG.entities;
-using Dereck_RPG.entities.json;
-using Dereck_RPG.logger;
+﻿using WorldOfFantasy.entities;
+using WorldOfFantasy.entities.json;
+using WorldOfFantasy.logger;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.database
+namespace WorldOfFantasy.database
 {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class MySQLManager<TEntity> : DbContext where TEntity : class
@@ -25,12 +25,8 @@ namespace Dereck_RPG.database
 
         public async Task<TEntity> Insert(TEntity item)
         {
-            bool isDetached = this.Entry(item).State == EntityState.Detached;
-            if (isDetached)
-                this.DbSetT.Attach(item);
             this.DbSetT.Add(item);
             await this.SaveChangesAsync();
-            logger.Log(item);
             return item;
         }
 
@@ -38,9 +34,6 @@ namespace Dereck_RPG.database
         {
             foreach (var item in items)
             {
-                bool isDetached = this.Entry(item).State == EntityState.Detached;
-                if (isDetached)
-                    this.DbSetT.Attach(item);
                 this.DbSetT.Add(item);
             }
             await this.SaveChangesAsync();
@@ -51,13 +44,9 @@ namespace Dereck_RPG.database
         {
             await Task.Factory.StartNew(() =>
             {
-                bool isDetached = this.Entry(item).State == EntityState.Detached;
-                if (isDetached)
-                    this.DbSetT.Attach(item);
                 this.Entry<TEntity>(item).State = EntityState.Modified;
             });
             await this.SaveChangesAsync();
-            logger.Log(item);
             return item;
         }
 
@@ -67,9 +56,6 @@ namespace Dereck_RPG.database
             {
                 foreach (var item in items)
                 {
-                    bool isDetached = this.Entry(item).State == EntityState.Detached;
-                    if (isDetached)
-                        this.DbSetT.Attach(item);
                     this.Entry<TEntity>(item).State = EntityState.Modified;
                 }
             });
@@ -77,14 +63,9 @@ namespace Dereck_RPG.database
             return items;
         }
 
-        public async Task<TEntity> Get(Int32 id)
+        public async Task<TEntity> Get(Int32? id)
         {
-            TEntity item = await this.DbSetT.FindAsync(id) as TEntity;
-            bool isDetached = this.Entry(item).State == EntityState.Detached;
-            if (isDetached)
-                this.DbSetT.Attach(item);
-            logger.Log(item);
-            return item;
+            return await this.DbSetT.FindAsync(id) as TEntity;
         }
 
         public async Task<IEnumerable<TEntity>> Get()
@@ -103,12 +84,9 @@ namespace Dereck_RPG.database
         {
             await Task.Factory.StartNew(() =>
             {
-                bool isDetached = this.Entry(item).State == EntityState.Detached;
-                if (isDetached)
-                    this.DbSetT.Attach(item);
+                this.DbSetT.Attach(item);
                 this.DbSetT.Remove(item);
             });
-            logger.Log(item);
             return await this.SaveChangesAsync();
         }
 

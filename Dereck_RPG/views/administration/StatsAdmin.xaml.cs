@@ -1,6 +1,6 @@
-﻿using Dereck_RPG.database;
-using Dereck_RPG.entities;
-using Dereck_RPG.viewmodel;
+﻿using WorldOfFantasy.database;
+using WorldOfFantasy.entities;
+using WorldOfFantasy.viewmodel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views.administration
+namespace WorldOfFantasy.views.administration
 {
     /// <summary>
     /// Logique d'interaction pour StatsAdmin.xaml

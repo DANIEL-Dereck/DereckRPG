@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views.usercontrols
+namespace WorldOfFantasy.views.usercontrols
 {
     /// <summary>
     /// Logique d'interaction pour CombatUC.xaml
@@ -24,6 +24,11 @@ namespace Dereck_RPG.views.usercontrols
         {
             InitializeComponent();
             base.DataContext = this;
+        }
+
+        private void PlayerAffUC_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Dereck_RPG.entities.bases;
+﻿using WorldOfFantasy.entities.bases;
 using Faker;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.entities
+namespace WorldOfFantasy.entities
 {
     public class Stats : BaseDBEntity
     {
@@ -29,8 +29,8 @@ namespace Dereck_RPG.entities
         public Stats GenRandomStats()
         {
             Stats stat = new Stats();
-            stat.Attaque = Number.RandomNumber(100, 10000);
-            stat.Defence = Number.RandomNumber(100, 10000);
+            stat.Attaque = Number.RandomNumber(10, 1000);
+            stat.Defence = Number.RandomNumber(1, 500);
             stat.Critique = Number.RandomNumber(1, 100);
             return stat;
         }

@@ -1,13 +1,13 @@
 ﻿using ClassLibrary2.Entities.Generator;
-using Dereck_RPG.entities;
-using Dereck_RPG.entities.json;
-using Dereck_RPG.logger;
+using WorldOfFantasy.entities;
+using WorldOfFantasy.entities.json;
+using WorldOfFantasy.logger;
 using Faker;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
-namespace Dereck_RPG.database
+namespace WorldOfFantasy.database
 {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class MySQLFullDB : DbContext
@@ -165,7 +165,7 @@ namespace Dereck_RPG.database
         public void GenRandomPlayer(Player player)
         {
             player.Lvl = RandomNumber(1,100);
-            player.Vie = RandomNumber((10 * player.Lvl), (1000 * player.Lvl));
+            player.Vie = RandomNumber((10 * player.Lvl), (100 * player.Lvl));
         }
         
         #endregion

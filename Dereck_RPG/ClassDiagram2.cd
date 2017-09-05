@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Dereck_RPG.App">
+  <Class Name="WorldOfFantasy.App">
     <Position X="6" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACSAACAGAIIQAAIAAAABAAAAAQACAEAAAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.MainWindow" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.MainWindow" BaseTypeListCollapsed="true">
     <Position X="6" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAhAAAAAABAAACAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -15,28 +15,28 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.commandworker.CommandWorker">
+  <Class Name="WorldOfFantasy.commandworker.CommandWorker">
     <Position X="11.5" Y="2.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AABAEAAEACAAIAQAAAAAIABAACAAAQCIIAAgAAJAiAA=</HashCode>
       <FileName>commandworker\CommandWorker.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.commandworker.ManualResetAction">
+  <Class Name="WorldOfFantasy.commandworker.ManualResetAction">
     <Position X="9" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>commandworker\ManualResetAction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.database.MySQLFullDB">
+  <Class Name="WorldOfFantasy.database.MySQLFullDB">
     <Position X="20.25" Y="2.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAABEAAAQAQAAACAAAEAAAQEAABAACAAAEAAAAAgAQ=</HashCode>
       <FileName>database\MySQLFullDB.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.entities.ConnectionString">
+  <Class Name="WorldOfFantasy.entities.ConnectionString">
     <Position X="13.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAFAAAABUAAAAAAAACAAAgAgAAIAAAgAAAAI=</HashCode>
@@ -57,7 +57,7 @@
       <FileName>entities\generator\TypeEnum.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.entities.json.JsonManager">
+  <Class Name="WorldOfFantasy.entities.json.JsonManager">
     <Position X="28" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAQAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
@@ -71,61 +71,61 @@
       <FileName>entities\reflection\Reflectionner.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.logger.Logger">
+  <Class Name="WorldOfFantasy.logger.Logger">
     <Position X="26.5" Y="7.75" Width="3" />
     <TypeIdentifier>
       <HashCode>BAKIQCAIGGSAIiAUFIJSCAIASDgRCEABAQCWAMGABAQ=</HashCode>
       <FileName>logger\Logger.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.logger.Logger2">
+  <Class Name="WorldOfFantasy.logger.Logger2">
     <Position X="24.5" Y="7.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAQAAAAAAAAAgAAABgEAEAAAAAAAFgAAAI=</HashCode>
       <FileName>logger\Logger2.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.Properties.Resources">
+  <Class Name="WorldOfFantasy.Properties.Resources">
     <Position X="13.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.Properties.Settings">
+  <Class Name="WorldOfFantasy.Properties.Settings">
     <Position X="22.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.viewmodel.MonsterAdminVM">
+  <Class Name="WorldOfFantasy.viewmodel.MonsterAdminVM">
     <Position X="17.5" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AgAEAIQCBAAAAAEAIAAIAAAFAgAIQAABQAigAAABAQA=</HashCode>
       <FileName>viewmodel\MonsterAdminVM.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.viewmodel.PlayerAdminVM">
+  <Class Name="WorldOfFantasy.viewmodel.PlayerAdminVM">
     <Position X="11.5" Y="8.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAEAIAABAAAAAEAAAAAAAAlAEAIAACAEAiAAAAAAQA=</HashCode>
       <FileName>viewmodel\PlayerAdminVM.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.viewmodel.StatsAdminVM">
+  <Class Name="WorldOfFantasy.viewmodel.StatsAdminVM">
     <Position X="9" Y="4.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAEAIEABAAAAAEAIAAIAAAFAgAIAAAAAACAAAAAAQA=</HashCode>
       <FileName>viewmodel\StatsAdminVM.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.viewmodel.playviewmodel.CombatAdminVM">
+  <Class Name="WorldOfFantasy.viewmodel.playviewmodel.CombatAdminVM">
     <Position X="17.5" Y="3" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAEJEAEAAAAAAACAACBAAACAACBIAAAAAEAAAA=</HashCode>
       <FileName>viewmodel\playviewmodel\CombatAdminVM.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dereck_RPG.views.administration.MonsterAdmin" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.administration.MonsterAdmin" BaseTypeListCollapsed="true">
     <Position X="19.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -133,7 +133,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.administration.PlayerAdmin" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.administration.PlayerAdmin" BaseTypeListCollapsed="true">
     <Position X="14" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -141,7 +141,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.administration.StatsAdmin" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.administration.StatsAdmin" BaseTypeListCollapsed="true">
     <Position X="22.25" Y="4.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -149,7 +149,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.administration.playadmin.CombatAdmin" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.administration.playadmin.CombatAdmin" BaseTypeListCollapsed="true">
     <Position X="6" Y="8.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -157,7 +157,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.MenuAdministration" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.MenuAdministration" BaseTypeListCollapsed="true">
     <Position X="22.5" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -165,7 +165,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.MenuPlay" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.MenuPlay" BaseTypeListCollapsed="true">
     <Position X="8.75" Y="8.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>QAAEgAQAFAAAAAAAAAAAAAAkAAAAAACBGAAAAAABAAA=</HashCode>
@@ -173,7 +173,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.usercontrols.ListMonsterUC" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.usercontrols.ListMonsterUC" BaseTypeListCollapsed="true">
     <Position X="15.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAACAAAAAAgAAAQAAEAAAAAAAAAAA=</HashCode>
@@ -181,7 +181,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.usercontrols.ListPlayerUC" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.usercontrols.ListPlayerUC" BaseTypeListCollapsed="true">
     <Position X="15.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAACAAAAAAgAAAQAAEAAAAAAAAAAA=</HashCode>
@@ -189,7 +189,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Dereck_RPG.views.usercontrols.ListStatsUC" BaseTypeListCollapsed="true">
+  <Class Name="WorldOfFantasy.views.usercontrols.ListStatsUC" BaseTypeListCollapsed="true">
     <Position X="15.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAACAAAAAAgAAAQAAEAAAAAAAAAAA=</HashCode>
@@ -197,35 +197,35 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Enum Name="Dereck_RPG.entities.enums.Classe">
+  <Enum Name="WorldOfFantasy.entities.enums.Classe">
     <Position X="26.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAI=</HashCode>
       <FileName>entities\enums\Classe.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Dereck_RPG.entities.enums.MonsterRace">
+  <Enum Name="WorldOfFantasy.entities.enums.MonsterRace">
     <Position X="24.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAIEAAAAAAAAAAAAAA=</HashCode>
       <FileName>entities\enums\MonsterRace.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Dereck_RPG.entities.enums.Race">
+  <Enum Name="WorldOfFantasy.entities.enums.Race">
     <Position X="28" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAQAAAAAgAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>entities\enums\Race.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Dereck_RPG.logger.AlertMode">
+  <Enum Name="WorldOfFantasy.logger.AlertMode">
     <Position X="25.75" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAQAAAAAAAAAQQgAAAAAAAAAAAAE=</HashCode>
       <FileName>logger\AlertMode.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Dereck_RPG.logger.LogMode">
+  <Enum Name="WorldOfFantasy.logger.LogMode">
     <Position X="28" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABUAAAAAACAAAAgAAAAAAAAAAAQA=</HashCode>

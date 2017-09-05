@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dereck_RPG.Properties
+namespace WorldOfFantasy.Properties
 {
 
 

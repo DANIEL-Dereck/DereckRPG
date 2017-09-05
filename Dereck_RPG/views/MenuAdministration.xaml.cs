@@ -1,4 +1,4 @@
-﻿using Dereck_RPG.views.administration;
+﻿using WorldOfFantasy.views.administration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG.views
+namespace WorldOfFantasy.views
 {
     /// <summary>
     /// Logique d'interaction pour MenuAdministration.xaml

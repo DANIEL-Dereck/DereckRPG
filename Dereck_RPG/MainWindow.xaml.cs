@@ -1,6 +1,6 @@
-﻿using Dereck_RPG.database;
-using Dereck_RPG.logger;
-using Dereck_RPG.views;
+﻿using WorldOfFantasy.database;
+using WorldOfFantasy.logger;
+using WorldOfFantasy.views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dereck_RPG
+namespace WorldOfFantasy
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -25,6 +25,7 @@ namespace Dereck_RPG
     {
         Logger logger = new Logger("myLogger", LogMode.CURRENT_FOLDER, AlertMode.OVERLAY, "MaintWindows", true);
         MySQLFullDB msload = new MySQLFullDB();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Dereck_RPG
         {
             NavigationWindow window = new NavigationWindow();
 
+            /*
             int height = 500;
             int width = 730;
 
@@ -58,13 +60,15 @@ namespace Dereck_RPG
             window.MaxWidth = width;
             window.MinHeight = height;
             window.MinWidth = width;
-            window.Content = new MenuPlay();
-            window.Show();
+            */
+                window.Content = new MenuPlay();
+                window.ShowDialog();
         }
 
         private void btnAdministration_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
+            /*
             int height = 500;
             int width = 730;
 
@@ -72,8 +76,9 @@ namespace Dereck_RPG
             window.MaxWidth = width;
             window.MinHeight = height;
             window.MinWidth = width;
-            window.Content = new MenuAdministration();
-            window.Show();
+            */
+                window.Content = new MenuAdministration();
+                window.ShowDialog();
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)

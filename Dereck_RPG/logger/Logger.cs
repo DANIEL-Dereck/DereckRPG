@@ -13,8 +13,8 @@ using System.Threading;
 using System.Windows.Media.Animation;
 using System.IO;
 using System.Windows.Navigation;
-using Dereck_RPG.commandworker;
-namespace Dereck_RPG.logger
+using WorldOfFantasy.commandworker;
+namespace WorldOfFantasy.logger
 {
     public class Logger
     {

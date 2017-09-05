@@ -1,4 +1,4 @@
-﻿using Dereck_RPG.commandworker;
+﻿using WorldOfFantasy.commandworker;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Dereck_RPG.logger
+namespace WorldOfFantasy.logger
 {
     public class Logger2
     {

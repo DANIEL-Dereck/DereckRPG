@@ -1,5 +1,5 @@
-﻿using Dereck_RPG.entities.bases;
-using Dereck_RPG.entities.enums;
+﻿using WorldOfFantasy.entities.bases;
+using WorldOfFantasy.entities.enums;
 using Faker;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.entities
+namespace WorldOfFantasy.entities
 {
     public class Monster : BaseDBEntity
     {

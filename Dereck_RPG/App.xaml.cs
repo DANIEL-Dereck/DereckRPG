@@ -1,4 +1,4 @@
-﻿using Dereck_RPG.logger;
+﻿using WorldOfFantasy.logger;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Dereck_RPG
+namespace WorldOfFantasy
 {
     public partial class App : System.Windows.Application
     {

@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Dereck_RPG.entities;
+using WorldOfFantasy.entities;
 
-namespace Dereck_RPG.views.usercontrols
+namespace WorldOfFantasy.views.usercontrols
 {
     /// <summary>
     /// Logique d'interaction pour MonsterUC.xaml

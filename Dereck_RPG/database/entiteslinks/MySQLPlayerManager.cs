@@ -1,4 +1,4 @@
-﻿using Dereck_RPG.entities;
+﻿using WorldOfFantasy.entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dereck_RPG.database.entiteslinks
+namespace WorldOfFantasy.database.entiteslinks
 {
     class MySQLPlayerManager : MySQLManager<Player>
     {

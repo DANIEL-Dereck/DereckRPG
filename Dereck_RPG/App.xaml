@@ -1,7 +1,7 @@
-﻿<Application x:Class="Dereck_RPG.App"
+﻿<Application x:Class="WorldOfFantasy.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Dereck_RPG"
+             xmlns:local="clr-namespace:WorldOfFantasy"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
