@@ -25,11 +25,11 @@
         <Label x:Name="lblMonsterVie" Content="Vie" Grid.Column="0" Grid.Row="2" />
         <TextBlock x:Name="txtBMonsterVie" Text="{Binding Monster.Vie, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"/>
         <Label x:Name="lblMonsterAttaque" Content="Atq" Grid.Column="0" Grid.Row="3" />
-        <TextBlock x:Name="txtBMonsterAttaque" Text="{Binding Stats.attaque, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock x:Name="txtBMonsterAttaque" Text="{Binding Monster.Stats.attaque, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"/>
         <Label x:Name="lblMonsterDefence" Content="Def" Grid.Column="0" Grid.Row="4" />
-        <TextBlock x:Name="txtBMonsterDefence" Text="{Binding Stats.defence, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"/>
+        <TextBlock x:Name="txtBMonsterDefence" Text="{Binding Monster.Stats.defence, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"/>
         <Label x:Name="lblMonsterCritique" Content="Crit" Grid.Column="0" Grid.Row="5" />
-        <TextBlock x:Name="txtBMonsterCritique" Text="{Binding Stats.critique, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5"/>
+        <TextBlock x:Name="txtBMonsterCritique" Text="{Binding Monster.Stats.critique, Mode=TwoWay}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5"/>
 
     </Grid>
 

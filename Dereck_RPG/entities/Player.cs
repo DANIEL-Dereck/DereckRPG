@@ -72,11 +72,11 @@ namespace Dereck_RPG.entities
             //si Crit attaque + 100%
             if (doACrit())
             {
-                return (this.Stats.Attaque * 2);
+                return ((this.Stats.Attaque * 2) + this.Lvl);
             }
             else
             {
-                return (this.Stats.Attaque);
+                return (this.Stats.Attaque + this.Lvl);
             }
         }
 

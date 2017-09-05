@@ -47,7 +47,7 @@ namespace Dereck_RPG.database
         #region GenerateDefaultMonster
        public void GenerateMonster()
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < genernumber; i++)
             {
                 Monster monster = new Monster();
                 monster.Name = "Orc Mal Lecher";
@@ -57,7 +57,7 @@ namespace Dereck_RPG.database
                 monsterTable.Add(monster);
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < genernumber; i++)
             {
                 Monster monster = new Monster();
                 monster.Name = "Gob";
@@ -67,7 +67,7 @@ namespace Dereck_RPG.database
                 monsterTable.Add(monster);
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < genernumber; i++)
             {
                 Monster monster = new Monster();
                 monster.Name = "Tas d'os";
@@ -77,7 +77,7 @@ namespace Dereck_RPG.database
                 monsterTable.Add(monster);
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < genernumber; i++)
             {
                 Monster monster = new Monster();
                 monster.Name = "Rodeur";
@@ -165,7 +165,7 @@ namespace Dereck_RPG.database
         public void GenRandomPlayer(Player player)
         {
             player.Lvl = RandomNumber(1,100);
-            player.Vie = RandomNumber((1 * player.Lvl), (100 * player.Lvl));
+            player.Vie = RandomNumber((10 * player.Lvl), (1000 * player.Lvl));
         }
         
         #endregion

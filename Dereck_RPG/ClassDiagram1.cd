@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dereck_RPG.database.entiteslinks.MySQLMonsterManager">
+    <Position X="6.5" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>database\entiteslinks\MySQLMonsterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.database.entiteslinks.MySQLPlayerManager">
+    <Position X="9.25" Y="11" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>database\entiteslinks\MySQLPlayerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.database.MySQLManager&lt;TEntity&gt;">
+    <Position X="7.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAABCAAAAAAAAAAEIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>database\MySQLManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.entities.bases.BaseDBEntity">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>entities\base\BaseDBEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.entities.bases.BaseEntity">
+    <Position X="17.25" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>entities\base\BaseEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.entities.Monster">
+    <Position X="15" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAQAAAAgAAAAICAAAQAAAAEAAAAAACAAQEAgAM=</HashCode>
+      <FileName>entities\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.entities.Player">
+    <Position X="17.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAEAEAQAAAAggAAAIKAAAQAAAAEAAAAAAAAAQEAAAM=</HashCode>
+      <FileName>entities\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.entities.Stats">
+    <Position X="19.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAQAAAgEAAAY=</HashCode>
+      <FileName>entities\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.UserControlBase">
+    <Position X="6.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>views\usercontrols\base\UserControlBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.CombatUC">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>views\usercontrols\CombatUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.MonsterAffUC">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAA=</HashCode>
+      <FileName>views\usercontrols\MonsterAffUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.MonsterUC">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAA=</HashCode>
+      <FileName>views\usercontrols\MonsterUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.PlayerAffUC">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAA=</HashCode>
+      <FileName>views\usercontrols\PlayerAffUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.PlayerUC">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAA=</HashCode>
+      <FileName>views\usercontrols\PlayerUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dereck_RPG.views.usercontrols.StatsUC">
+    <Position X="12.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>views\usercontrols\StatsUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

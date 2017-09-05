@@ -29,8 +29,8 @@ namespace Dereck_RPG.entities
         public Stats GenRandomStats()
         {
             Stats stat = new Stats();
-            stat.Attaque = Number.RandomNumber(100, 1000);
-            stat.Defence = Number.RandomNumber(100, 1000);
+            stat.Attaque = Number.RandomNumber(100, 10000);
+            stat.Defence = Number.RandomNumber(100, 10000);
             stat.Critique = Number.RandomNumber(1, 100);
             return stat;
         }
