@@ -23,7 +23,9 @@ namespace WorldOfFantasy.viewmodel
         private MonsterAdmin monsterAdmin;
         private StatsAdmin statsAdmin;
 
-        MySQLMonsterManager monsterManager = new MySQLMonsterManager();
+//        MySQLMonsterManager monsterManager = new MySQLMonsterManager();
+        MySQLManager<Monster> monsterManager = new MySQLManager<Monster>();
+
         MySQLManager<Stats> statsManager = new MySQLManager<Stats>();
 
         ObservableCollection<Monster> monsterList = new ObservableCollection<Monster>();
