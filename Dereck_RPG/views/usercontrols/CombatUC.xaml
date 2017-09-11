@@ -15,9 +15,9 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Source="/Dereck_RPG;component/images/2Background.jpg" Grid.Column="1" Grid.RowSpan="2">
+        <Image Source="/WorldOfFantasy;component/images/2Background.jpg" Grid.Column="1" Grid.RowSpan="2">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/Dereck_RPG;component/images/Background.jpg"/>
+                <ImageBrush ImageSource="/WorldOfFantasy;component/images/Background.jpg"/>
             </Image.OpacityMask>
         </Image>
         <Grid Grid.Column="0" Grid.Row="0">
