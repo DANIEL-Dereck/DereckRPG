@@ -34,6 +34,7 @@ namespace WorldOfFantasy.views.administration
         {
             InitializeComponent();
             this.DataContext = monsterAdminVM;
+            monsterAdminVM.LoadStatsPage(this);
             InitLists();
         }
 
@@ -41,6 +42,7 @@ namespace WorldOfFantasy.views.administration
         {
             InitializeComponent();
             this.DataContext = playerAdminVM;
+            playerAdminVM.LoadStatsPage(this);
             InitLists();
         }
 

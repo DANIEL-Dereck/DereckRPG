@@ -35,7 +35,7 @@
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
                         <Label x:Name="lblAtq" Grid.Column="0" Grid.Row="0" />
-                        <TextBlock x:Name="txtBAtq" TextWrapping="Wrap" Text="{Binding Attaque, Mode=TwoWay}" Grid.Column="1" Grid.Row="0"/>
+                        <TextBlock x:Name="txtBAtq" TextWrapping="Wrap" Text="{Binding Attack, Mode=TwoWay}" Grid.Column="1" Grid.Row="0"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

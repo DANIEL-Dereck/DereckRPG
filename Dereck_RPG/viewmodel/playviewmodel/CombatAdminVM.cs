@@ -52,13 +52,13 @@ namespace WorldOfFantasy.viewmodel.playviewmodel
 
         private void InitActions()
         {
-            this.combatAdmin.btnAttaque.Click += btnAttaque_Click;
+            this.combatAdmin.btnattack.Click += btnattack_Click;
             this.combatAdmin.btnDefence.Click += btnDefence_Click;
             this.combatAdmin.btnRegeneration.Click += btnRegeneration_Click;
             this.combatAdmin.btnAbandonner.Click += btnAbandonner_Click;
         }
 
-        private void btnAttaque_Click(object sender, RoutedEventArgs e)
+        private void btnattack_Click(object sender, RoutedEventArgs e)
         {
             int monsterAction = 0;
             if (regen <= maxregen)
@@ -72,14 +72,14 @@ namespace WorldOfFantasy.viewmodel.playviewmodel
 
             if (monsterAction == 0)
             {
-                currentMonster.Vie = currentMonster.Vie - currentPlayer.attaque();
-                currentPlayer.Vie = currentPlayer.Vie - currentMonster.attaque();
+                currentMonster.Vie = currentMonster.Vie - currentPlayer.attack();
+                currentPlayer.Vie = currentPlayer.Vie - currentMonster.attack();
             }
             else if (monsterAction == 1)
             {
-                if ((currentMonster.Vie + currentMonster.defence() - currentPlayer.attaque()) <= currentMonster.Vie)
+                if ((currentMonster.Vie + currentMonster.defence() - currentPlayer.attack()) <= currentMonster.Vie)
                 {
-                    currentMonster.Vie = currentMonster.Vie + currentMonster.defence() - currentPlayer.attaque();
+                    currentMonster.Vie = currentMonster.Vie + currentMonster.defence() - currentPlayer.attack();
                 }
             }
             else
@@ -108,9 +108,9 @@ namespace WorldOfFantasy.viewmodel.playviewmodel
 
             if (monsterAction == 0)
             {
-                if ((currentPlayer.Vie + currentPlayer.defence() - currentMonster.attaque()) <= currentPlayer.Vie)
+                if ((currentPlayer.Vie + currentPlayer.defence() - currentMonster.attack()) <= currentPlayer.Vie)
                 {
-                    currentPlayer.Vie = currentPlayer.Vie + currentPlayer.defence() - currentMonster.attaque();
+                    currentPlayer.Vie = currentPlayer.Vie + currentPlayer.defence() - currentMonster.attack();
                 }
             }
             else if (monsterAction == 1)
@@ -144,7 +144,7 @@ namespace WorldOfFantasy.viewmodel.playviewmodel
 
             if (monsterAction == 0)
             {
-                currentPlayer.Vie = currentPlayer.Vie - currentMonster.attaque();
+                currentPlayer.Vie = currentPlayer.Vie - currentMonster.attack();
             } else if (monsterAction == 1)
             {
                 currentMonster.defence();

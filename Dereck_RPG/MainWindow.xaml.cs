@@ -34,12 +34,12 @@ namespace WorldOfFantasy
             Image BgMenuI = new Image();
             ImageBrush BgMenuIB = new ImageBrush();
 
-            BgMenuI.Source = new BitmapImage(new Uri(@"../../images/DereckRPGBackground.jpg", UriKind.Relative));
+            BgMenuI.Source = new BitmapImage(new Uri(@"../../images/Background.jpg", UriKind.Relative));
             BgMenuIB.ImageSource = BgMenuI.Source;
             menuGrid.Background = BgMenuIB;
 
             // Menu image
-            imgTitle.Source = new BitmapImage(new Uri(@"images/DereckRPGMenu.png", UriKind.Relative));
+            imgTitle.Source = new BitmapImage(new Uri(@"images/Menu.png", UriKind.Relative));
 
             //logger.Log("Test1");
             //logger.Log("Test2", LogMode.NONE, AlertMode.TOAST);

@@ -9,9 +9,9 @@ namespace WorldOfFantasy.entities.enums
     public enum Classe
     {
         ARCHER,
-        SORCIER,
-        BARBARE,
+        WIZARD,
+        BARBAROUS,
         TEMPLIER,
-        PRETRE,
+        PRIEST,
     }
 }

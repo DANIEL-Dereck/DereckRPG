@@ -10,7 +10,7 @@ namespace WorldOfFantasy.entities.enums
     {
         ORC,
         GOBLIN,
-        SQUELETTE,
+        SKELETON,
         ZOMBIE,
     }
 }

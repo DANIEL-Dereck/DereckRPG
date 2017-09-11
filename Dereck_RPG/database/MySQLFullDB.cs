@@ -41,11 +41,21 @@ namespace WorldOfFantasy.database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            /*
+            modelBuilder.Entity<Monster>()
+                .HasOptional(x => x.Stats)
+                .WithOptionalPrincipal()
+                .Map(x => x.MapKey("Monster_Id"));
 
+            modelBuilder.Entity<Player>()
+                .HasOptional(x => x.Stats)
+                .WithOptionalPrincipal()
+                .Map(x => x.MapKey("Player_Id"));
+                */
         }
 
         #region GenerateDefaultMonster
-       public void GenerateMonster()
+        public void GenerateMonster()
         {
             for (int i = 0; i < genernumber; i++)
             {
@@ -73,7 +83,7 @@ namespace WorldOfFantasy.database
                 monster.Name = "Tas d'os";
                 GenRandomMonster(monster);
                 GenStatsMonster(monster);
-                monster.MonsterRace = entities.enums.MonsterRace.SQUELETTE;
+                monster.MonsterRace = entities.enums.MonsterRace.SKELETON;
                 monsterTable.Add(monster);
             }
 
@@ -112,48 +122,57 @@ namespace WorldOfFantasy.database
             GenRandomPlayer(player);
             GenStatsPlayer(player);
             player.Classe = entities.enums.Classe.ARCHER;
-            player.Race = entities.enums.Race.ELFE;
+            player.Race = entities.enums.Race.ELF;
             playerTable.Add(player);
 
             Player player1 = new Player();
             player1.Name = "Conan";
             GenRandomPlayer(player1);
             GenStatsPlayer(player1);
-            player1.Classe = entities.enums.Classe.BARBARE;
-            player1.Race = entities.enums.Race.NAIN;
+            player1.Classe = entities.enums.Classe.BARBAROUS;
+            player1.Race = entities.enums.Race.DWARF;
             playerTable.Add(player1);
 
             Player player2 = new Player();
             player2.Name = "Sparadrap";
             GenRandomPlayer(player2);
             GenStatsPlayer(player2);
-            player2.Classe = entities.enums.Classe.PRETRE;
-            player2.Race = entities.enums.Race.HUMAIN;
+            player2.Classe = entities.enums.Classe.PRIEST;
+            player2.Race = entities.enums.Race.HUMAN;
             playerTable.Add(player2);
 
             Player player3 = new Player();
-            player3.Name = "Amadeus";
+            player3.Name = "Wizzrobe";
             GenRandomPlayer(player3);
             GenStatsPlayer(player3);
-            player3.Classe = entities.enums.Classe.SORCIER;
-            player3.Race = entities.enums.Race.LAPOURS;
+            player3.Classe = entities.enums.Classe.WIZARD;
+            player3.Race = entities.enums.Race.CAT;
             playerTable.Add(player3);
 
             Player player4 = new Player();
-            player4.Name = "Pontius";
+            player4.Name = "Lizalfos";
             GenRandomPlayer(player4);
             GenStatsPlayer(player4);
             player4.Classe = entities.enums.Classe.TEMPLIER;
-            player4.Race = entities.enums.Race.PANDICORNE;
+            player4.Race = entities.enums.Race.LIZARD;
             playerTable.Add(player4);
 
             Player player5 = new Player();
             player5.Name = "Ragnard";
             GenRandomPlayer(player5);
             GenStatsPlayer(player5);
-            player5.Classe = entities.enums.Classe.BARBARE;
-            player5.Race = entities.enums.Race.HUMAIN;
+            player5.Classe = entities.enums.Classe.BARBAROUS;
+            player5.Race = entities.enums.Race.HUMAN;
             playerTable.Add(player5);
+
+            Player player6 = new Player();
+            player6.Name = "Link";
+            GenRandomPlayer(player6);
+            GenStatsPlayer(player6);
+            player6.Classe = entities.enums.Classe.TEMPLIER;
+            player6.Race = entities.enums.Race.ELF;
+            playerTable.Add(player6);
+
         }
 
         public void GenStatsPlayer(Player player)

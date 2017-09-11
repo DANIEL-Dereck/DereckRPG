@@ -8,10 +8,10 @@ namespace WorldOfFantasy.entities.enums
 {
     public enum Race
     {
-        HUMAIN,
-        ELFE,
-        NAIN,
-        LAPOURS,
-        PANDICORNE,
+        HUMAN,
+        ELF,
+        DWARF,
+        CAT,
+        LIZARD,
     }
 }

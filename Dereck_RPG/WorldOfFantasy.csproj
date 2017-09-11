@@ -282,13 +282,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\DereckRPGMenu.png" />
+    <Resource Include="images\Menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\2DereckRPGBackground.jpg" />
+    <Resource Include="images\2Background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\DereckRPGBackground.jpg" />
+    <Resource Include="images\Background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

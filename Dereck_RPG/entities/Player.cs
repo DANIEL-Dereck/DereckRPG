@@ -66,23 +66,23 @@ namespace WorldOfFantasy.entities
         #endregion
 
         #region method
-        public int attaque()
+        public int attack()
         {
-            //Attaque (stats attaque) - def enemie
-            //si Crit attaque + 100%
+            //attack (stats attack) - def enemie
+            //si Crit attack + 100%
             if (doACrit())
             {
-                return ((this.Stats.Attaque * 2) + this.Lvl);
+                return ((this.Stats.Attack * 2) + this.Lvl);
             }
             else
             {
-                return (this.Stats.Attaque + this.Lvl);
+                return (this.Stats.Attack + this.Lvl);
             }
         }
 
         public int defence()
         {
-            //bloque une attaque
+            //bloque une attack
             // si crit +100%def
             if (doACrit())
             {
@@ -112,7 +112,7 @@ namespace WorldOfFantasy.entities
 
         private bool doACrit()
         {
-            if (Number.RandomNumber(0, 100) <= this.stats.Critique)
+            if (Number.RandomNumber(0, 100) <= this.stats.Critical)
             {
                 return (true);
             }

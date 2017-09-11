@@ -25,9 +25,9 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="btnAttaque" Content="Attaque" Grid.Column="0" Grid.Row="0"></Button>
+            <Button x:Name="btnattack" Content="attack" Grid.Column="0" Grid.Row="0"></Button>
             <Button x:Name="btnDefence" Content="Defence" Grid.Column="1" Grid.Row="0"></Button>
-            <Button x:Name="btnAbandonner" Content="Abandonner" Grid.Column="0" Grid.Row="1"></Button>
+            <Button x:Name="btnAbandonner" Content="Abandon" Grid.Column="0" Grid.Row="1"></Button>
             <Button x:Name="btnRegeneration" Content="Regeneration" Grid.Column="1" Grid.Row="1"></Button>
         </Grid>
     </Grid>

@@ -10,10 +10,13 @@ namespace WorldOfFantasy.entities
 {
     public class Stats : BaseDBEntity
     {
-        private int attaque;
+        #region attribute
+        private int attack;
         private int defence;
-        private int critique;
+        private int critical;
+        #endregion
 
+        #region constructor
         public Stats()
         {
 
@@ -21,24 +24,17 @@ namespace WorldOfFantasy.entities
 
         public Stats(int att, int def, int crit)
         {
-            this.attaque = att;
+            this.attack = att;
             this.defence = def;
-            this.critique = crit;
+            this.critical = crit;
         }
+        #endregion
 
-        public Stats GenRandomStats()
+        #region properties
+        public int Critical
         {
-            Stats stat = new Stats();
-            stat.Attaque = Number.RandomNumber(10, 1000);
-            stat.Defence = Number.RandomNumber(1, 500);
-            stat.Critique = Number.RandomNumber(1, 100);
-            return stat;
-        }
-
-        public int Critique
-        {
-            get { return critique; }
-            set { critique = value; OnPropertyChanged("Critique"); }
+            get { return critical; }
+            set { critical = value; OnPropertyChanged("critical"); }
         }
 
         public int Defence
@@ -47,10 +43,21 @@ namespace WorldOfFantasy.entities
             set { defence = value; OnPropertyChanged("Defence"); }
         }
 
-        public int Attaque
+        public int Attack
         {
-            get { return attaque; }
-            set { attaque = value; OnPropertyChanged("Attaque"); }
+            get { return attack; }
+            set { attack = value; OnPropertyChanged("attack"); }
+        }
+        #endregion
+
+        #region method
+        public Stats GenRandomStats()
+        {
+            Stats stat = new Stats();
+            stat.attack = Number.RandomNumber(10, 1000);
+            stat.Defence = Number.RandomNumber(1, 500);
+            stat.critical = Number.RandomNumber(1, 100);
+            return stat;
         }
 
         static int RandomNumber(int min, int max)
@@ -59,5 +66,11 @@ namespace WorldOfFantasy.entities
             return random.Next(min, max);
         }
 
+        #endregion
+
+        public String ToString()
+        {
+            return ("ATK: " + this.Attack + "| DEF: " + this.Defence + "| CRIT: " + this.Critical);
+        }
     }
 }

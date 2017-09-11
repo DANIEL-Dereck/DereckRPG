@@ -52,6 +52,5 @@ namespace WorldOfFantasy.views.usercontrols
         {
             Obs.Remove(item);
         }
-
     }
 }

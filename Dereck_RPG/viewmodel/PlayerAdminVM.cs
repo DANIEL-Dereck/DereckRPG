@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using WorldOfFantasy.database.entiteslinks;
 
 namespace WorldOfFantasy.viewmodel
 {
@@ -17,8 +18,14 @@ namespace WorldOfFantasy.viewmodel
     {
         private Player currentPlayer;
         private PlayerAdmin playerAdmin;
-        MySQLManager<Player> playerManager = new MySQLManager<Player>();
+
+//        MySQLManager<Player> playerManager = new MySQLManager<Player>();
+        MySQLPlayerManager playerManager = new MySQLPlayerManager();
+
         ObservableCollection<Player> playerList = new ObservableCollection<Player>();
+
+        private Stats currentStats;
+        private StatsAdmin statsAdmin;
 
         public PlayerAdminVM(PlayerAdmin playerAdmin)
         {
@@ -30,6 +37,50 @@ namespace WorldOfFantasy.viewmodel
             this.playerAdmin.ListPlayerUC.ItemsList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
+
+        public void LoadStatsPage(StatsAdmin statsAdmin)
+        {
+            this.statsAdmin = statsAdmin;
+            InitLUCStats();
+            InitUC();
+            ClicksGenerator();
+        }
+
+        private void InitLUCStats()
+        {
+            playerManager.GetStats(currentPlayer);
+        }
+
+        private void ClicksGenerator()
+        {
+            this.statsAdmin.btnNew.Click += btnNewStats_Click;
+            this.statsAdmin.btnOk.Click += btnOkStats_Click;
+            this.statsAdmin.btnDelete.Click += btnDeleteStats_Click;
+        }
+
+        private void btnStats_Click(object sender, RoutedEventArgs e)
+        {
+            this.playerAdmin.NavigationService.Navigate(new StatsAdmin(this));
+        }
+
+        private async void btnNewStats_Click(object sender, RoutedEventArgs e)
+        {
+            await playerManager.Insert(this.playerAdmin.PlayerUC.Player);
+            InitLUCStats();
+        }
+
+        private async void btnOkStats_Click(object sender, RoutedEventArgs e)
+        {
+            await playerManager.Update(this.playerAdmin.PlayerUC.Player);
+            InitLUCStats();
+        }
+
+        private async void btnDeleteStats_Click(object sender, RoutedEventArgs e)
+        {
+            await playerManager.Delete(this.playerAdmin.PlayerUC.Player);
+            InitLUCStats();
+        }
+
 
         private void InitUC()
         {
@@ -112,11 +163,6 @@ namespace WorldOfFantasy.viewmodel
                 this.playerAdmin.PlayerUC.Player = item;
             }
             */
-        }
-
-        private void btnStats_Click(object sender, RoutedEventArgs e)
-        {
-            this.playerAdmin.NavigationService.Navigate(new StatsAdmin(this));
         }
 
     }

@@ -25,6 +25,8 @@ namespace WorldOfFantasy.viewmodel
 
             InitUC();
             InitActions();
+            this.statsAdmin.StatsUC.Stats = new Stats();
+            this.statsAdmin.ListStatsUC.itemList.SelectionChanged += ItemsList_SelectionChanged;
             InitLists();
         }
 

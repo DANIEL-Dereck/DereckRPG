@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorldOfFantasy.database.entiteslinks;
 
 namespace WorldOfFantasy.views.administration
 {
@@ -34,9 +35,9 @@ namespace WorldOfFantasy.views.administration
 
             private async void InitLists()
             {
-                MySQLManager<Player> playerManager = new MySQLManager<Player>();
-                this.ListPlayerUC.LoadItems((await playerManager.Get()).ToList());
-            }
+            MySQLPlayerManager playerManager = new MySQLPlayerManager();
+            this.ListPlayerUC.LoadItems((await playerManager.Get()).ToList());
         }
+    }
 }
 
